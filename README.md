@@ -63,11 +63,12 @@ and run on the board beside the splittable build: same digests, same chain-step 
 
 <p align="center"><img src="docs/img/signature.png" alt="Signing time on one, two and four atoms for the three families, and the split of that time between processor and atoms on four atoms" width="100%"></p>
 
-## One law for every gain
+## One law behind the gains
 
-The split makes a hash chain 1.80× faster, yet a full signature gains 1.26× on one atom and nothing on four. Amdahl's law says why:
-a faster core pays in proportion to the share of time spent in it. With that share measured, the law reproduces every gain on the board
-and the 2.4% that prior work found behind an accelerator, and it forecast two applications before they ran.
+The split raises hash-chain throughput 1.80×: two chains advance together, at 18.4 ns per chain. Yet a full signature gains 1.26× on
+one atom and nothing on four. Amdahl's law says why: a faster core pays in proportion to the share of time spent in it. With that share
+measured, the law predicts the gains of a chain, a signature and a tree to within 8%, and explains the 2.4% that prior work found behind
+an accelerator. Two more applications were forecast before they ran.
 
 <p align="center"><img src="docs/img/amdahl.png" alt="Amdahl's law with the measured gains of a chain step and of a full signature on one, two and four atoms" width="78%"></p>
 

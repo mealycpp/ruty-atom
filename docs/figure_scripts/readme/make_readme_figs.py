@@ -124,7 +124,7 @@ def amdahl():
     ax.plot([24 / 406.0], [1.024], "D", ms=9, color=GREY, mec=CARD, mew=1.6, zorder=4, label="Karl et al., from their cycle counts"); ax.annotate("2.4%", (24 / 406.0, 1.024), textcoords="offset points", xytext=(10, 8), color=SUB, fontsize=9.5)
     ax.set_xlim(0, 1); ax.set_ylim(0.96, 2.04); ax.set_xlabel("f : share of time spent in permutation rounds", color=SUB, fontsize=10, labelpad=6); ax.set_ylabel("gain from halving the rounds", color=SUB, fontsize=10, labelpad=6)
     ax.legend(loc="upper left", fontsize=9.3, frameon=False, labelcolor=TXT, labelspacing=0.5, handlelength=2.2)
-    fig.text(0.09, 0.925, "One law for every gain", color=TXT, fontsize=16, fontweight="medium"); fig.text(0.09, 0.865, "A faster core pays in proportion to the time spent in it. Bars show the distance between the board and the law.", color=SUB, fontsize=9.6)
+    fig.text(0.09, 0.925, "One law behind the gains", color=TXT, fontsize=16, fontweight="medium"); fig.text(0.09, 0.865, "A faster core pays in proportion to the time spent in it. Bars show the distance between the board and the law.", color=SUB, fontsize=9.6)
     save(fig, "amdahl.png")
 
 # ---------------------------------------------------------------- 5. system at a glance
