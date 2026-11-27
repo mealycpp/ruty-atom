@@ -15,7 +15,7 @@ _keys = re.findall(r"\\bibitem\{([^}]*)\}", open(_bbl).read())
 def ref(k): return " [%d]" % (_keys.index(k) + 1)   # reference numbers follow the compiled letter
 B = "#1f4e9c"; K = "0.12"; FS = 6.4; N = [1, 2, 4]; F = {1: 450, 2: 420, 4: 400}
 MEAS = dict(
-    kt_gbps=None,            # KT128, 16 MB, Gb/s at N = 1, 2, 4
+    kt_gbps=None,            # KT128, 16 MiB, Gb/s at N = 1, 2, 4
     kt_a53=None,             # (1 core, 4 cores) Gb/s, C on the board's A53
     tree_split=None, tree_turbo=None, tree_shake=None,   # M hash/s at N = 1, 2, 4, k = 16
     tree_xkcp=None,          # (MiniSHAKE128 1 core, 4 cores) M hash/s, XKCP permutation on the A53
@@ -40,7 +40,7 @@ for y, name, x, va in ((49.0, "SLotH" + ref("saarinen2024"), 4.25, "bottom"), (1
 ax.set_yscale("log"); ax.set_ylim(0.15, 120); ax.set_yticks([0.3, 1, 3, 10, 30, 100]); ax.set_yticklabels(["0.3", "1", "3", "10", "30", "100"]); ax.minorticks_off()
 ax.legend(fontsize=5.4, frameon=False, loc="lower left", bbox_to_anchor=(0.0, 0.08), handlelength=1.6, labelspacing=0.2, borderaxespad=0.2)
 # (b) KangarooTwelve, TurboSHAKE128  (measured: results\\modes_kt_*; forecast filed 19:23 before the run)
-ax = axs[1]; style(ax, "(b) TurboSHAKE128: KangarooTwelve, 16 MB", "Gb/s")
+ax = axs[1]; style(ax, "(b) TurboSHAKE128: KangarooTwelve, 16 MiB", "Gb/s")
 ax.plot(N, [17.4, 19.0, 19.0], ls="none", marker="D", ms=5.6, mfc="none", mec="0.25", mew=0.7, label="forecast, filed before the run", zorder=2)
 ax.plot(N, [17.48, 19.08, 19.07], "-", color=B, lw=0.9, marker="o", ms=4.2, label="RUTY-ATOM, measured", zorder=3)
 hline(ax, 3.5 / 0.51 * 8, "SkylakeX, AVX-512, software" + ref("keccakperf"))          # 0.51 c/B at 3.5 GHz, keccak.team

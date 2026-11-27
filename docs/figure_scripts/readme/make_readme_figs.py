@@ -36,7 +36,7 @@ def stats():
     tiles = [("645 LUTs", "cost of the second width", "8.7% over a fixed-width build"),
              ("480 MHz", "no clock cost", "fixed and splittable builds both meet it"),
              ("3.68 ms", "SLH-DSA-SHAKE-128f signature", "four atoms, byte-identical to FIPS 205"),
-             ("1.90 ms", "firmware authentication", "1 MB image hashed and verified, one atom"),
+             ("1.90 ms", "firmware authentication", "1 MiB image hashed and verified, one atom"),
              ("19.1 Gb/s", "KangarooTwelve", "two atoms fill the memory port"),
              ("33 M/s", "Merkle-tree hashes", "four atoms, 2¹⁶ leaves")]
     fig = plt.figure(figsize=(12, 3.5)); fig.patch.set_facecolor(BG)
@@ -86,7 +86,7 @@ def compare():
     for t, r in zip(ax.get_yticklabels(), rows[::-1]): t.set_color(TXT if r[2] == GOLD else SUB)
     ax.set_xscale("log"); ax.set_xlim(0.1, 1300); ax.set_xticks([0.1, 1, 10, 100, 1000]); ax.set_xticklabels(["0.1", "1", "10", "100", "1000"]); ax.grid(axis="y", lw=0); ax.set_ylim(-0.6, len(rows) - 0.4)
     # (b) KangarooTwelve: bars, linear, zero baseline
-    ax = axs[1]; axstyle(ax, "KangarooTwelve, 16 MB", "throughput, Gb/s (higher is better)")
+    ax = axs[1]; axstyle(ax, "KangarooTwelve, 16 MiB", "throughput, Gb/s (higher is better)")
     rows = [("A53, 1 core *", 1.39, GREY), ("A53, 4 cores *", 5.42, GREY), ("RUTY-ATOM, 1 atom", 17.48, GOLD), ("RUTY-ATOM, 2 atoms", 19.08, GOLD), ("RUTY-ATOM, 4 atoms", 19.07, GOLD),
             ("Haswell, AVX2 †", 3.2 / 1.41 * 8, GREY), ("SkylakeX, AVX-512 †", 3.5 / 0.51 * 8, GREY)]
     for i, (n, v, col) in enumerate(rows[::-1]):

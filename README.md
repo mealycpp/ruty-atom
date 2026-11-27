@@ -41,12 +41,16 @@ One real application per hash family, each run end to end on the board and set b
 | Family | Application | RUTY-ATOM | Against |
 |---|---|---|---|
 | **SHAKE** | SLH-DSA-SHAKE-128f keygen / sign / verify | 0.21 / 3.68 / 1.24 ms on four atoms, byte-identical to FIPS 205 | signs faster than SLotH, SPHINCSLET and Trident's hypertree part; Sun et al. are faster on every operation and Trident verifies faster |
-| **SHAKE** | Firmware authentication, 1 MB | 1.90 ms on one atom | no prior design reports megabyte messages |
-| **TurboSHAKE** | KangarooTwelve (RFC 9861), 16 MB | 19.1 Gb/s, all 18 RFC vectors reproduced | 3.5× the board's four Cortex-A53 cores |
+| **SHAKE** | Firmware authentication, 1 MiB | 1.90 ms on one atom | no prior design reports megabyte messages |
+| **TurboSHAKE** | KangarooTwelve (RFC 9861), 16 MiB | 19.1 Gb/s, all 18 RFC vectors reproduced | 3.5× the board's four Cortex-A53 cores |
 | **MiniSHAKE** | Merkle tree, 2¹⁶ leaves | 33.5 million hashes per second | 8.5× the Keccak team's C code on four cores |
 
 MiniSHAKE is a preprint construction, not a standard, and it has no published test vectors; here four implementations agree,
 one of them built on the Keccak team's own permutation code. Signatures made with TurboSHAKE or MiniSHAKE are not FIPS 205 signatures.
+
+**Scope.** RUTY-ATOM is the hash service of a root of trust, not the root itself. It assumes authenticated boot and a trusted bitstream,
+its scheduler runs under Linux in this prototype, and the atoms have no side-channel protection. Sizes are binary: 1 MiB is 1,048,576 bytes,
+also where a source comment or a log says MB.
 
 ## What it costs, and what the core gains
 
@@ -109,7 +113,7 @@ the time of every file as it stood on the author's disk.
 ## Run it on the board
 
 **Platform.** AUP-ZU3 board: Zynq UltraScale+ xczu3eg-sfvc784-2-e, four Cortex-A53 cores at 1.2 GHz, PYNQ Linux. The atoms run on their
-own clock (400 to 480 MHz); the bus and the memory port run at 300 MHz. The board needs `gcc`, `rustc`, PYNQ and 2 MB huge pages.
+own clock (400 to 480 MHz); the bus and the memory port run at 300 MHz. The board needs `gcc`, `rustc`, PYNQ and 2 MiB huge pages.
 
 **Layout on the board.** `~/Ruty/<image>/ruty.bit` and `ruty.hwh` for each image (`atom_v3_n1_450`, `atom_v3_n2_420`, `atom_v3_n4_400`,
 and the two fixed-width images), and the files of `software/` in `~/Ruty/apps/`. Every script loads the image it needs, runs detached,
@@ -133,10 +137,10 @@ Their outputs are the `check_*` files in `results/`.
 | The second width costs 645 LUTs and no clock | 8,064 against 7,419 LUTs; all builds meet 480 MHz | `synthesis/results_sys.txt`, `synthesis/reports/<build>/route_util_hier.rpt`, `route_timing.rpt` |
 | Fixed-width builds behave the same on the board | 0 mismatches; 59.7, 33.0 and 18.4 ns per chain step | `results/fixcheck_*_aup1.txt` (two runs) |
 | Standard signature, byte-identical to FIPS 205 | keygen 0.41 / 0.27 / 0.21, sign 9.78 / 5.56 / 3.68, verify 1.02 / 1.00 / 1.24 ms | `results/sign4_128f_std_*`, `check_sign4_128f_std_*_fips205.txt` |
-| Firmware authentication, 1 MB | 1.90 / 1.90 / 2.18 ms | `results/sign4_128f_fw_*`, `check_sign4_128f_fw_*_fips205.txt` |
+| Firmware authentication, 1 MiB | 1.90 / 1.90 / 2.18 ms | `results/sign4_128f_fw_*`, `check_sign4_128f_fw_*_fips205.txt` |
 | TurboSHAKE256 and MiniSHAKE128 signatures (not FIPS 205) | 6.81 / 3.97 / 3.00 and 5.41 / 3.51 / 3.12 ms | `results/sign4_128f_turbo_NONSTANDARD_*`, `sign4_128f_mini_NONSTANDARD_*`, `check_sign4_*_python.txt` |
 | Two tenants with full applications | at most 1.7% slower | `results/sign4_128f_tenants_4atoms_aup1.txt` |
-| KangarooTwelve, 16 MB | 7.68 / 7.04 / 7.04 ms, 18 RFC 9861 vectors | `results/modes_kt_*`, `modes_check_python.txt` |
+| KangarooTwelve, 16 MiB | 7.68 / 7.04 / 7.04 ms, 18 RFC 9861 vectors | `results/modes_kt_*`, `modes_check_python.txt` |
 | Merkle tree, 2¹⁶ leaves | 6.28 / 3.96 / 3.92 ms split; 8.47 / 4.58 / 3.96 ms wide | `results/modes_merkle_*` |
 | The Keccak team's C code on the Cortex-A53 | 133.7 ms on one core, 33.5 ms on four | `results/modes_xkcp_sw_a53_aup1.txt`, `modes_xkcp_digests_aup1.txt`, `modes_xkcp_roots_aup1.txt` |
 | Forecasts | filed before each run | `results/forecast_*.txt` |

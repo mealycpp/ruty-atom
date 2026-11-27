@@ -114,7 +114,7 @@ def forecasts():
             ("Split signature after the layout fix", "4.3 / 2.6 / 1.8 ms, within 25%", "5.41 / 3.53 / 3.13 ms", "+74%", 0, "processor lays out calls for 2.65 of 3.12 ms"),
             ("Scheduler that reads in place", "ten jobs, each within 10%", "nine within 10%", "+11.3%", 2, "cache-flush cost not in the model"),
             ("Two tenants, full applications", "at most 8% slower when shared", "at most 1.7%", "inside the bound", 1, ""),
-            ("KangarooTwelve, 16 MB", "7.7 / 7.05 / 7.05 ms", "7.68 / 7.04 / 7.04 ms", "−0.3%", 1, ""),
+            ("KangarooTwelve, 16 MiB", "7.7 / 7.05 / 7.05 ms", "7.68 / 7.04 / 7.04 ms", "−0.3%", 1, ""),
             ("Merkle tree, nine times", "each within 25%", "all within 7%", "7%", 1, ""),
             ("Split over wide, from Amdahl's law", "1.25 / 1.10 / 1.00×", "1.35 / 1.16 / 1.01×", "+8%", 1, ""),
             ("Cortex-A53 scaling, four cores", "3.6 to 3.9×", "3.99×", "+2% over the range", 0, "the software scaled better than forecast")]
