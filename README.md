@@ -71,7 +71,7 @@ and the 2.4% that prior work found behind an accelerator, and it forecast two ap
 
 <p align="center"><img src="docs/img/method.png" alt="gem5 and board measurements feed an event simulator that decides the number of atoms and the scheduler; each forecast is filed, then the board is run" width="100%"></p>
 
-<p align="center"><img src="docs/img/forecasts.png" alt="Eleven forecasts with their measured values: seven held and four missed" width="100%"></p>
+<p align="center"><img src="docs/img/forecasts.png" alt="Eleven forecasts with their measured values, the largest error of each, and the cause where a forecast fell outside its bound" width="100%"></p>
 
 The forecast files are in `results/` exactly as they were written. Git does not keep modification times, so `MANIFEST.sha256` records
 the time of every file as it stood on the author's disk.

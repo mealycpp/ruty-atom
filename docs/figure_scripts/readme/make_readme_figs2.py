@@ -104,31 +104,38 @@ def signature():
     save(fig, "signature.png")
 
 # ---------------------------------------------------------------- forecast scorecard
+WARN = "#f08c3c"
 def forecasts():
-    rows = [("Area of the second width", "7 to 12% more LUTs", "8.7%", True),
-            ("Standard signature, sign", "9.9 / 5.6 / 3.3 ms, within 20%", "9.70 / 5.66 / 3.70 ms", True),
-            ("Standard signature, key generation", "0.34 / 0.19 / 0.12 ms", "0.39 / 0.27 / 0.20 ms", False),
-            ("Standard signature, verification", "0.75 / 0.55 / 0.45 ms", "1.05 / 1.01 / 1.25 ms", False),
-            ("Split signature after the layout fix", "4.3 / 2.6 / 1.8 ms, within 25%", "5.41 / 3.53 / 3.13 ms", False),
-            ("Scheduler that reads in place", "within 10% of the model", "9 of 10 jobs within 10%", True),
-            ("Two tenants, full applications", "at most 8% slower when shared", "at most 1.7%", True),
-            ("KangarooTwelve, 16 MB", "7.7 / 7.05 / 7.05 ms", "7.68 / 7.04 / 7.04 ms", True),
-            ("Merkle tree, nine times", "each within 25%", "all within 7%", True),
-            ("Split over wide, from Amdahl's law", "1.25 / 1.10 / 1.00×", "1.35 / 1.16 / 1.01×", True),
-            ("Cortex-A53 scaling, four cores", "3.6 to 3.9×", "3.99× (better than forecast)", False)]
-    fig, ax = canvas(12, 0.42 * len(rows) + 1.75)
-    H = 0.42 * len(rows) + 1.75
-    ax.text(0.4, H - 0.42, "Every forecast, including the ones that failed", color=TXT, fontsize=17, fontweight="medium")
-    ax.text(0.4, H - 0.75, "Filed before the run, with a failure condition. They held where atoms, port or area set the answer, and failed where an unmeasured processor cost did.", color=SUB, fontsize=10)
-    y0 = H - 1.22
-    for x, t in ((0.5, "What was forecast"), (4.55, "Forecast"), (7.75, "Measured"), (10.75, "Result")): ax.text(x, y0, t, color=SUB, fontsize=9.6, fontweight="medium")
-    ax.plot([0.4, 11.6], [y0 - 0.16, y0 - 0.16], color=EDGE, lw=1.0)
-    for i, (what, fc, ms, ok) in enumerate(rows):
-        y = y0 - 0.45 - i * 0.42
-        if i % 2 == 0: ax.add_patch(Rectangle((0.4, y - 0.2), 11.2, 0.42, fc=CARD, ec="none"))
-        ax.text(0.5, y, what, color=TXT, fontsize=10.2, va="center"); ax.text(4.55, y, fc, color=SUB, fontsize=9.8, va="center"); ax.text(7.75, y, ms, color=TXT, fontsize=9.8, va="center")
-        col = GOOD if ok else BAD
-        ax.text(10.75, y, ("✓  held" if ok else "✕  missed"), color=col, fontsize=10.2, va="center", fontweight="medium", fontfamily="DejaVu Sans")
+    # (what, forecast, measured, largest error, state, cause found afterwards); state: 1 inside, 0 outside, 2 nine of ten
+    rows = [("Area of the second width", "7 to 12% more LUTs", "8.7%", "inside the range", 1, ""),
+            ("Standard signature, sign", "9.9 / 5.6 / 3.3 ms, within 20%", "9.70 / 5.66 / 3.70 ms", "+12%", 1, ""),
+            ("Standard signature, key generation", "0.34 / 0.19 / 0.12 ms", "0.39 / 0.27 / 0.20 ms", "+67%", 0, "no bound was set; the error grows with atoms"),
+            ("Standard signature, verification", "0.75 / 0.55 / 0.45 ms", "1.05 / 1.01 / 1.25 ms", "+179%", 0, "per-batch fixed cost on a chain was left out"),
+            ("Split signature after the layout fix", "4.3 / 2.6 / 1.8 ms, within 25%", "5.41 / 3.53 / 3.13 ms", "+74%", 0, "processor lays out calls for 2.65 of 3.12 ms"),
+            ("Scheduler that reads in place", "ten jobs, each within 10%", "nine within 10%", "+11.3%", 2, "cache-flush cost not in the model"),
+            ("Two tenants, full applications", "at most 8% slower when shared", "at most 1.7%", "inside the bound", 1, ""),
+            ("KangarooTwelve, 16 MB", "7.7 / 7.05 / 7.05 ms", "7.68 / 7.04 / 7.04 ms", "−0.3%", 1, ""),
+            ("Merkle tree, nine times", "each within 25%", "all within 7%", "7%", 1, ""),
+            ("Split over wide, from Amdahl's law", "1.25 / 1.10 / 1.00×", "1.35 / 1.16 / 1.01×", "+8%", 1, ""),
+            ("Cortex-A53 scaling, four cores", "3.6 to 3.9×", "3.99×", "+2% over the range", 0, "the software scaled better than forecast")]
+    W = 14.6; RH = 0.44
+    fig, ax = canvas(W, RH * len(rows) + 1.8)
+    H = RH * len(rows) + 1.8
+    ax.text(0.4, H - 0.42, "Every forecast, with its error", color=TXT, fontsize=17, fontweight="medium")
+    ax.text(0.4, H - 0.76, "Filed before each run. Green is inside the bound set in advance. Orange is outside it, with the cause found afterwards.", color=SUB, fontsize=10)
+    y0 = H - 1.24
+    X = (0.5, 4.15, 7.05, 9.45, 11.3)
+    for x, t in zip(X, ("What was forecast", "Forecast", "Measured", "Largest error", "Cause, where outside")): ax.text(x, y0, t, color=SUB, fontsize=9.6, fontweight="medium")
+    ax.plot([0.4, W - 0.4], [y0 - 0.16, y0 - 0.16], color=EDGE, lw=1.0)
+    for i, (what, fc, ms, err, st, why) in enumerate(rows):
+        y = y0 - 0.47 - i * RH
+        if i % 2 == 0: ax.add_patch(Rectangle((0.4, y - RH / 2), W - 0.8, RH, fc=CARD, ec="none"))
+        ax.text(X[0], y, what, color=TXT, fontsize=10.2, va="center"); ax.text(X[1], y, fc, color=SUB, fontsize=9.8, va="center"); ax.text(X[2], y, ms, color=TXT, fontsize=9.8, va="center")
+        col = GOOD if st == 1 else WARN
+        mark = "●" if st == 1 else ("◐" if st == 2 else "○")
+        ax.text(X[3], y, mark, color=col, fontsize=9.5, va="center", fontfamily="DejaVu Sans")
+        ax.text(X[3] + 0.26, y, err, color=col, fontsize=10.2, va="center", fontweight="medium")
+        if why: ax.text(X[4], y, why, color=SUB, fontsize=9.4, va="center")
     save(fig, "forecasts.png")
 
 if __name__ == "__main__":
