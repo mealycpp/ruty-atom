@@ -10,6 +10,9 @@ Rules this script follows
   * A measured value is never typed in here. It is read from a board log (results/), a Vivado report (synthesis/reports/)
     or the simulator (model/). The only constants in this file are the values PRINTED IN THE LETTER, which are what is
     being tested, a few published figures of other authors, and physical constants of the build (300 MHz bus clock).
+  * Table I is checked twice. First against the session the letter quotes (results/sign4_*, modes_*), whose logs hold the
+    median of 25 runs. Then against a second session (results/sign5_*, modes2_*) that logs all 25 times: the median is
+    recomputed from them and must agree with the letter within the 8% the letter states for session-to-session movement.
   * A check PASSES when the recomputed value, rounded to the number of digits the letter prints, equals the letter's
     value. The unrounded value, the file it came from and the calculation are always printed.
   * FAIL    : the evidence is there and gives a different value.
@@ -191,27 +194,34 @@ def cost():
 # ------------------------------------------------------------------------------------------------ 2. correctness evidence
 def vectors():
     """3,411 NIST and RFC test vectors on the hardware"""
-    found = []
+    need = [("atom_v3_n1_450", 0), ("atom_v3_n2_420", 0), ("atom_v3_n2_420", 1), ("atom_v3_n4_400", 0), ("atom_v3_n4_400", 1), ("atom_v3_n4_400", 2), ("atom_v3_n4_400", 3)]
+    got = {}; other = []
     for fn in sorted(os.listdir(RES)):
         if "kat" not in fn:
             continue
         t = read(os.path.join(RES, fn))
-        idm = re.search(r"RESULT id=([0-9a-f]+)", t)
-        tot = mis = 0
+        head = re.search(r"RESULT id=([0-9a-f]+)[^\n]*", t)
+        d = kv(head.group(0)) if head else {}
+        tot = mis = mod = 0
         for l in t.splitlines():
-            m = re.match(r"RESULT kat (\S+) vectors=(\d+) hardware_mismatches=(\d+)", l)
+            m = re.match(r"RESULT kat (\S+) vectors=(\d+) hardware_mismatches=(\d+) model_mismatches=(\d+)", l)
             if m:
-                tot += int(m.group(2)); mis += int(m.group(3))
-        if tot:
-            found.append((fn, idm.group(1) if idm else "?", tot, mis))
-    good = [f for f in found if f[1] == ATOM_ID and f[2] == 3411 and f[3] == 0]
-    listing = "; ".join("%s: build id %s, %d vectors, %d mismatches" % f for f in found) or "no vector log"
-    if good:
-        add("PASS", "3,411 NIST and RFC vectors pass on the atom build of the letter (id %s)" % ATOM_ID, "3,411, 0 mismatches", "%d, %d mismatches" % (good[0][2], good[0][3]),
-            "results/" + good[0][0], "sum of the per-suite 'vectors=' fields; sum of 'hardware_mismatches='")
-    else:
-        add("MISSING", "3,411 NIST and RFC vectors pass on the atom build of the letter (id %s)" % ATOM_ID, "3,411, 0 mismatches", "no vector run of build id %s" % ATOM_ID, "results/*kat*",
-            "vector logs in the repository: " + listing + ". The 3,411-vector run with 0 mismatches is of an EARLIER atom build, not of the build that produced the letter's measurements")
+                tot += int(m.group(2)); mis += int(m.group(3)); mod += int(m.group(4))
+        if not tot:
+            continue
+        if d.get("id") == ATOM_ID and "image" in d and "atom" in d:
+            got[(d["image"], int(d["atom"]))] = (fn, tot, mis, mod)
+        else:
+            other.append("%s: build id %s, %d vectors, %d hardware mismatches" % (fn, d.get("id", "?"), tot, mis))
+    for image, atom in need:
+        claim = "3,411 NIST and RFC vectors on %s, atom %d (build id %s)" % (image, atom, ATOM_ID)
+        if (image, atom) in got:
+            fn, tot, mis, mod = got[(image, atom)]
+            check_true(claim, tot == 3411 and mis == 0 and mod == 0, "3,411, 0 mismatches", "%d, %d hardware mismatches (software model: %d)" % (tot, mis, mod), "results/" + fn,
+                       "sum of the per-suite 'vectors=' fields; sums of 'hardware_mismatches=' and 'model_mismatches='; expected values are those of the published NIST and RFC 9861 files")
+        else:
+            add("MISSING", claim, "3,411, 0 mismatches", "no vector log for this atom", "results/kat3_%s_atom%d_aup1.txt" % (image, atom), "vector logs of other builds: " + ("; ".join(other) or "none"))
+    add("PASS", "vector runs of earlier builds kept in the repository (info)", "not printed", "; ".join(other) or "none", "results/*kat*", "listed for completeness; the letter's claim rests on the seven logs above", mandatory=False)
 
 
 def fips205():
@@ -344,11 +354,28 @@ def table():
                     T[("MK_e2e_turbo", n)] = float(d["e2e_with_layout_us"]) / 1000.0
         check("Merkle tree, 2^16 leaves, MiniSHAKE128 split, N=%d" % n, ("6.28", "3.96", "3.92")[i], T[("MK_minishake128", n)], p,
               "'RESULT merkle k=16 mode=minishake128_split...' median_us / 1000", unit=" ms")
-    # what the logs do not hold
-    sample_fields = [fn for fn in os.listdir(RES) if re.search(r"(samples|runs_ms|all_ms|each_ms)=", read(os.path.join(RES, fn)))]
-    add("MISSING", "the 25 individual run times behind each Table I median", "25 times per cell", "not logged", "results/sign4_*, results/modes_*",
-        "the board programs print n, min, quartiles, median and max of each cell, not the 25 times, so a median cannot be recomputed from individual runs; "
-        "every Table I check above compares the letter with the median the board program printed" + ("" if not sample_fields else " (files with sample lists: %s)" % ", ".join(sample_fields)))
+    # second session (run_audit.sh): the same programs with every individual time logged
+    def samples(d, field):
+        v = sorted(float(x) for x in d[field].split(","))
+        return v, v[len(v) // 2]
+    def second(claim, letter, d, field, scale, path):
+        v, m = samples(d, field)
+        printed = float(d["median_" + field.split("_")[1]])
+        dev = 100.0 * (m * scale / float(letter) - 1)
+        ok = len(v) == 25 and d.get("n") == "25" and abs(m - printed) < 1e-9 and abs(dev) <= 8.0
+        add("PASS" if ok else "FAIL", claim + ": second session, median recomputed from the 25 individual times", letter + " ms", "%.4f ms (%+.2f%% from the letter; %d times, %.4f to %.4f ms)" % (
+            m * scale, dev, len(v), v[0] * scale, v[-1] * scale), path, "13th of the 25 sorted values of '%s'; it equals the median the program printed; the letter states that times move by up to 8%% between sessions" % field)
+    for name, mode, v, op, letter in spec:
+        for i, n in enumerate((1, 2, 4)):
+            p = "results/sign5_128f_%s_%datoms_aup1.txt" % (mode, n)
+            second("%s, N=%d" % (name, n), letter[i], time_line(p, v, op), "samples_ms", 1.0, p)
+    for i, n in enumerate((1, 2, 4)):
+        p = "results/modes2_kt_%datoms_aup1.txt" % n
+        d = [kv(l) for l in lines_of(p, "RESULT kt ") if kv(l)["mlen"] == "16777216" and kv(l)["atoms"] == str(n)][0]
+        second("KangarooTwelve, 16 MiB, N=%d" % n, ("7.68", "7.04", "7.04")[i], d, "samples_us", 1e-3, p)
+        p = "results/modes2_merkle_%datoms_aup1.txt" % n
+        d = [kv(l) for l in lines_of(p, "RESULT merkle k=16") if kv(l)["atoms"] == str(n) and kv(l)["mode"].startswith("minishake128")][0]
+        second("Merkle tree, 2^16 leaves, MiniSHAKE128 split, N=%d" % n, ("6.28", "3.96", "3.92")[i], d, "samples_us", 1e-3, p)
 
 
 # ------------------------------------------------------------------------------------------------ 4. gains and comparisons recomputed from the table

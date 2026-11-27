@@ -127,6 +127,10 @@ checks every output against a reference inside the program, and reloads the four
 | KangarooTwelve and the Merkle trees, with the Cortex-A53 software baseline | `nohup bash ~/Ruty/apps/run_modes.sh 25 12,16,20 > ~/Ruty/apps/run_modes.log 2>&1 < /dev/null &` | `modes_kt_*`, `modes_merkle_*`, `modes_sw_a53_*` |
 | The Keccak team's permutation code as comparator (runs after the line above) | `bash ~/Ruty/apps/run_xkcp_modes.sh 25 12,16,20` | `modes_xkcp_*` |
 | Fixed-width builds against the splittable build | `bash ~/Ruty/apps/start_fixcheck.sh` | `fixcheck_*` |
+| The 3,411 NIST and RFC 9861 vectors on every atom of the three images, then Table I again with every individual run time logged | `nohup bash ~/Ruty/apps/run_audit.sh > ~/Ruty/apps/run_audit.log 2>&1 < /dev/null &` | `kat3_*`, `sign5_*`, `modes2_*`, `audit_run_log_aup1.txt` |
+
+**Test vectors.** `ruty_kat3.py` reads the NIST SHA-3 XOF byte-oriented vector files (`shakebytetestvectors.zip` from the NIST CAVP page) and the text of RFC 9861.
+They are not copied here; `results/audit_run_log_aup1.txt` lists the SHA-256 of each file that was used.
 
 **Independent checks, on any PC with Python 3.** `check_sign_fips205.py` compares keys and signatures with an independent FIPS 205
 implementation; `check_sign_variant2.py` and `check_modes2.py` recompute the non-standard variants, KangarooTwelve and the tree roots.
@@ -150,11 +154,10 @@ from the raw file, the file, and the calculation, with one of three verdicts:
 | `FAIL` | the evidence is there and gives a different value |
 | `MISSING` | the evidence the claim needs is not in the repository |
 
-The exit code is 0 only when every mandatory check passes. `reproduce/last_output.txt` is the output of the script on the commit that added it,
-including the open items it found.
+The exit code is 0 only when every mandatory check passes. `reproduce/last_output.txt` is its output on the current commit.
 
 **What it covers.** LUTs, flip-flops and clocks of every build from the implementation reports; the hash-chain step from the hardware clock
-counter; every cell of Table I from the median the board program logged over its 25 runs; the gains, limits and comparisons derived from them;
+counter; every cell of Table I twice, from the median logged in the session the letter quotes and from the 25 individual times of a second session; the gains, limits and comparisons derived from them;
 Amdahl's law with its measured share; the 116 width changes; the test vectors; the byte-identical FIPS 205 checks; the simulator re-run against
 the 46 logged board times; the forecast errors; and the order of forecast and run from the times in `MANIFEST.sha256`.
 
@@ -188,6 +191,7 @@ python3 model/sim/dfg_sim_gem5.py
 | Claim in the letter | Value | Where to look |
 |---|---|---|
 | The second width costs 645 LUTs and no clock | 8,064 against 7,419 LUTs; all builds meet 480 MHz | `synthesis/results_sys.txt`, `synthesis/reports/<build>/route_util_hier.rpt`, `route_timing.rpt` |
+| The 3,411 NIST and RFC 9861 test vectors | 0 mismatches on each of the 7 atoms of the three images | `results/kat3_*_aup1.txt` |
 | Fixed-width builds behave the same on the board | 0 mismatches; 59.7, 33.0 and 18.4 ns per chain step | `results/fixcheck_*_aup1.txt` (two runs) |
 | Standard signature, byte-identical to FIPS 205 | keygen 0.41 / 0.27 / 0.21, sign 9.78 / 5.56 / 3.68, verify 1.02 / 1.00 / 1.24 ms | `results/sign4_128f_std_*`, `check_sign4_128f_std_*_fips205.txt` |
 | Firmware authentication, 1 MiB | 1.90 / 1.90 / 2.18 ms | `results/sign4_128f_fw_*`, `check_sign4_128f_fw_*_fips205.txt` |

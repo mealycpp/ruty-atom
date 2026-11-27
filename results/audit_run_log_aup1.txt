@@ -1,0 +1,79 @@
+START 2026-11-27 06:39:05 reps=25 hapi units active: 0
+40bd9af1b7b4a24bb8deebfe3d1514ce1a3f91e9274390fda5fc85fc0735c215  ruty_kat3.py
+a85d630f00b57aa9ee1c43cebe4df6036da8747c4f1452c9bda27221476ae729  /home/xilinx/Ruty/atom_v1_n1_350/ruty_ref.py
+826b319c265448f5268c7e36f432de31315dd8155eaa038ba76d1acd0d03736f  /home/xilinx/Ruty/atom_v1_n1_350/kat/SHAKE12
+78b0e751fd8c8eb455ec8f98debb2f2c2e39f04f5241850e190326238baf83dc  /home/xilinx/Ruty/atom_v1_n1_350/kat/SHAKE12
+c7384e3f84247d90e6b0af9ac618a968bb65f5dcbe9c2ee7e8a66475c551764b  /home/xilinx/Ruty/atom_v1_n1_350/kat/SHAKE12
+56ac04dd47c8063bdd08fd7744aef55c22c22946d722012460703bcae0b2583f  /home/xilinx/Ruty/atom_v1_n1_350/kat/SHAKE12
+f7881838fa013853993bf7e0814de0ab53ee93a4dbc2b7bce5bed7cc81e6985f  /home/xilinx/Ruty/atom_v1_n1_350/kat/SHAKE25
+95e5929344f4309e70f16e42620bd393d7a69b3f2577231ff5adcda1b395c6c8  /home/xilinx/Ruty/atom_v1_n1_350/kat/SHAKE25
+a21dd9180a0f0139fa8d4056919f8194ddaca2f36dc5aafa70723682099d64f5  /home/xilinx/Ruty/atom_v1_n1_350/kat/SHAKE25
+90fb72336900b22284477b76d0868fc2822ae42a114079c6c8a7fbda12eb52ca  /home/xilinx/Ruty/atom_v1_n1_350/kat/SHAKE25
+ce6d2bc42c4f69e435fec1c3f237e100181c35c188fc672736c92d764e65899d  /home/xilinx/Ruty/atom_v1_n1_350/kat/rfc9861
+== kat atom_v3_n1_450 atom 0 06:39:05
+RESULT kat summary vectors=3411 mismatches=0 ALL_MATCH
+== kat atom_v3_n2_420 atom 0 06:51:55
+RESULT kat summary vectors=3411 mismatches=0 ALL_MATCH
+== kat atom_v3_n4_400 atom 0 07:04:48
+RESULT kat summary vectors=3411 mismatches=0 ALL_MATCH
+5a43ef93527fb04f7e91608ec6d6fd1c4a2548f095f6e6d29fc8fb4a80e226d5  ruty_sign5.rs
+858dcaa0bd84ef3cbc7f309a5850c258db38cbd95f2ebc5ade002638c0f6e2fa  ruty_modes2.rs
+== timing atom_v3_n1_450 07:18:33
+loaded
+-- sign5 std exit=0
+RESULT summary mode=std mismatches=0 ALL_MATCH
+-- sign5 turbo exit=0
+RESULT summary mode=turbo mismatches=0 ALL_MATCH
+-- sign5 mini exit=0
+RESULT summary mode=mini mismatches=0 ALL_MATCH
+-- sign5 fw exit=0
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+-- kt exit=0
+RESULT ktvec summary vectors=18 atom_runs=18 atom_runs_ok=18 ALL_RFC9861_VECTORS_MATCH
+RESULT ktedge summary runs=15 ok=15 ALL_MATCH
+RESULT summary what=kt mismatches=0 ALL_MATCH
+-- merkle exit=0
+RESULT summary what=merkle mismatches=0 ALL_MATCH
+== timing atom_v3_n2_420 07:21:20
+loaded
+-- sign5 std exit=0
+RESULT summary mode=std mismatches=0 ALL_MATCH
+-- sign5 turbo exit=0
+RESULT summary mode=turbo mismatches=0 ALL_MATCH
+-- sign5 mini exit=0
+RESULT summary mode=mini mismatches=0 ALL_MATCH
+-- sign5 fw exit=0
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+-- kt exit=0
+RESULT ktvec summary vectors=18 atom_runs=36 atom_runs_ok=36 ALL_RFC9861_VECTORS_MATCH
+RESULT ktedge summary runs=30 ok=30 ALL_MATCH
+RESULT summary what=kt mismatches=0 ALL_MATCH
+-- merkle exit=0
+RESULT summary what=merkle mismatches=0 ALL_MATCH
+== timing atom_v3_n4_400 07:24:06
+loaded
+-- sign5 std exit=0
+RESULT summary mode=std mismatches=0 ALL_MATCH
+-- sign5 turbo exit=0
+RESULT summary mode=turbo mismatches=0 ALL_MATCH
+-- sign5 mini exit=0
+RESULT summary mode=mini mismatches=0 ALL_MATCH
+-- sign5 fw exit=0
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+-- kt exit=0
+RESULT ktvec summary vectors=18 atom_runs=54 atom_runs_ok=54 ALL_RFC9861_VECTORS_MATCH
+RESULT ktedge summary runs=45 ok=45 ALL_MATCH
+RESULT summary what=kt mismatches=0 ALL_MATCH
+-- merkle exit=0
+RESULT summary what=merkle mismatches=0 ALL_MATCH
+== kat atom_v3_n2_420 atom 1 07:26:54
+RESULT kat summary vectors=3411 mismatches=0 ALL_MATCH
+== kat atom_v3_n4_400 atom 1 07:39:43
+RESULT kat summary vectors=3411 mismatches=0 ALL_MATCH
+== kat atom_v3_n4_400 atom 2 07:52:32
+RESULT kat summary vectors=3411 mismatches=0 ALL_MATCH
+== kat atom_v3_n4_400 atom 3 08:05:35
+RESULT kat summary vectors=3411 mismatches=0 ALL_MATCH
+== reload four-atom image 08:18:32
+loaded
+ALL DONE 2026-11-27 08:18:40
