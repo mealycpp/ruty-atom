@@ -414,6 +414,10 @@ PASS    Merkle tree, 2^16 leaves, MiniSHAKE128 split, N=4: second session, media
           letter: 3.92 ms | recomputed: 3.9149 ms (-0.13% from the letter; 25 times, 3.8924 to 4.0559 ms)
           source: results/modes2_merkle_4atoms_aup1.txt
           how:    13th of the 25 sorted values of 'samples_us'; it equals the median the program printed; the letter states that times move by up to 8% between sessions
+PASS    spread of the 25 runs of a Table I cell: interquartile range, worst of the 24 cells
+          letter: under 4% | recomputed: 3.09% of the median (Key generation, SHAKE256, N=1); median over the cells 0.45%; largest full range 11.8% (Key generation, SHAKE256, N=4)
+          source: results/sign5_128f_std_1atoms_aup1.txt
+          how:    19th minus 7th of the 25 sorted values of samples_ms / samples_us, over the 13th, for each cell of Table I
 
 == 5. Gains and limits
 PASS    measured gain of a TurboSHAKE256 signature over SHAKE256, N=1
@@ -700,7 +704,7 @@ PASS    forecast file older than the first log of its run: forecast_sign_2026-11
           how:    modification times (UTC) recorded when the release was staged: results/forecast_sign_2026-11-26.txt against results/sign_128f_1atoms_aup1.txt
 
 == Summary
-mandatory checks: 158   PASS 158   FAIL 0   MISSING 0
+mandatory checks: 159   PASS 159   FAIL 0   MISSING 0
 informational checks: 14   PASS 14   other 0
 
 Not covered by this script (no log in the repository can decide them): the count of 754 one-bit multiplexers (10, 712, 32), which is a property of rtl/atom/atom_seq3.v;

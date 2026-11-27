@@ -40,6 +40,8 @@ class Missing(Exception):
     pass
 
 
+L_IQR = "4"     # the letter: "their interquartile range is under 4% of the median"
+
 def section(name):
     _section[0] = name
 
@@ -358,8 +360,10 @@ def table():
     def samples(d, field):
         v = sorted(float(x) for x in d[field].split(","))
         return v, v[len(v) // 2]
+    IQR = []
     def second(claim, letter, d, field, scale, path):
         v, m = samples(d, field)
+        if len(v) == 25: IQR.append((100.0 * (v[18] - v[6]) / m, 100.0 * (v[-1] - v[0]) / m, claim, path))
         printed = float(d["median_" + field.split("_")[1]])
         dev = 100.0 * (m * scale / float(letter) - 1)
         ok = len(v) == 25 and d.get("n") == "25" and abs(m - printed) < 1e-9 and abs(dev) <= 8.0
@@ -376,6 +380,14 @@ def table():
         p = "results/modes2_merkle_%datoms_aup1.txt" % n
         d = [kv(l) for l in lines_of(p, "RESULT merkle k=16") if kv(l)["atoms"] == str(n) and kv(l)["mode"].startswith("minishake128")][0]
         second("Merkle tree, 2^16 leaves, MiniSHAKE128 split, N=%d" % n, ("6.28", "3.96", "3.92")[i], d, "samples_us", 1e-3, p)
+    # spread of the 25 runs behind each of the 24 cells of Table I (second session)
+    if len(IQR) == 24:
+        worst = max(IQR); typ = sorted(x[0] for x in IQR)[12]; wr = max(IQR, key=lambda x: x[1])
+        add("PASS" if worst[0] < float(L_IQR) else "FAIL", "spread of the 25 runs of a Table I cell: interquartile range, worst of the 24 cells", "under " + L_IQR + "%",
+            "%.2f%% of the median (%s); median over the cells %.2f%%; largest full range %.1f%% (%s)" % (worst[0], worst[2], typ, wr[1], wr[2]), worst[3],
+            "19th minus 7th of the 25 sorted values of samples_ms / samples_us, over the 13th, for each cell of Table I")
+    else:
+        add("MISSING", "spread of the 25 runs of a Table I cell: interquartile range", "under " + L_IQR + "%", "%d of 24 cells have 25 logged times" % len(IQR), "results/sign5_*, results/modes2_*")
 
 
 # ------------------------------------------------------------------------------------------------ 4. gains and comparisons recomputed from the table
