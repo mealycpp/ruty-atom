@@ -140,6 +140,7 @@ Their outputs are the `check_*` files in `results/`.
 | Firmware authentication, 1 MiB | 1.90 / 1.90 / 2.18 ms | `results/sign4_128f_fw_*`, `check_sign4_128f_fw_*_fips205.txt` |
 | TurboSHAKE256 and MiniSHAKE128 signatures (not FIPS 205) | 6.81 / 3.97 / 3.00 and 5.41 / 3.51 / 3.12 ms | `results/sign4_128f_turbo_NONSTANDARD_*`, `sign4_128f_mini_NONSTANDARD_*`, `check_sign4_*_python.txt` |
 | Two tenants with full applications | at most 1.7% slower | `results/sign4_128f_tenants_4atoms_aup1.txt` |
+| Width changed between jobs on running atoms | 116 changes (57 to the split state, 59 back), 0 wrong digests | `results/atom_tenants_n4_400_aup1.txt` |
 | KangarooTwelve, 16 MiB | 7.68 / 7.04 / 7.04 ms, 18 RFC 9861 vectors | `results/modes_kt_*`, `modes_check_python.txt` |
 | Merkle tree, 2¹⁶ leaves | 6.28 / 3.96 / 3.92 ms split; 8.47 / 4.58 / 3.96 ms wide | `results/modes_merkle_*` |
 | The Keccak team's C code on the Cortex-A53 | 133.7 ms on one core, 33.5 ms on four | `results/modes_xkcp_sw_a53_aup1.txt`, `modes_xkcp_digests_aup1.txt`, `modes_xkcp_roots_aup1.txt` |
