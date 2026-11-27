@@ -1,0 +1,68 @@
+RESULT swvec idx=1 threads=1 ok=1
+RESULT swvec idx=2 threads=1 ok=1
+RESULT swvec idx=3 threads=1 ok=1
+RESULT swvec idx=4 threads=1 ok=1
+RESULT swvec idx=5 threads=1 ok=1
+RESULT swvec idx=6 threads=1 ok=1
+RESULT swvec idx=7 threads=1 ok=1
+RESULT swvec idx=8 threads=1 ok=1
+RESULT swvec idx=9 threads=1 ok=1
+RESULT swvec idx=10 threads=1 ok=1
+RESULT swvec idx=11 threads=1 ok=1
+RESULT swvec idx=12 threads=1 ok=1
+RESULT swvec idx=13 threads=1 ok=1
+RESULT swvec idx=14 threads=1 ok=1
+RESULT swvec idx=15 threads=1 ok=1
+RESULT swvec idx=16 threads=1 ok=1
+RESULT swvec idx=17 threads=1 ok=1
+RESULT swvec idx=18 threads=1 ok=1
+RESULT swvec summary threads=1 ok=18 of 18 ALL_RFC9861_VECTORS_MATCH
+RESULT swvec idx=1 threads=4 ok=1
+RESULT swvec idx=2 threads=4 ok=1
+RESULT swvec idx=3 threads=4 ok=1
+RESULT swvec idx=4 threads=4 ok=1
+RESULT swvec idx=5 threads=4 ok=1
+RESULT swvec idx=6 threads=4 ok=1
+RESULT swvec idx=7 threads=4 ok=1
+RESULT swvec idx=8 threads=4 ok=1
+RESULT swvec idx=9 threads=4 ok=1
+RESULT swvec idx=10 threads=4 ok=1
+RESULT swvec idx=11 threads=4 ok=1
+RESULT swvec idx=12 threads=4 ok=1
+RESULT swvec idx=13 threads=4 ok=1
+RESULT swvec idx=14 threads=4 ok=1
+RESULT swvec idx=15 threads=4 ok=1
+RESULT swvec idx=16 threads=4 ok=1
+RESULT swvec idx=17 threads=4 ok=1
+RESULT swvec idx=18 threads=4 ok=1
+RESULT swvec summary threads=4 ok=18 of 18 ALL_RFC9861_VECTORS_MATCH
+RESULT swkt mlen=65536 threads=1 n=25 min_us=374.06 q1_us=374.39 median_us=374.87 q3_us=375.14 max_us=439.07 spread_max_over_min=1.1738 GBps_median=0.1748 Gbps_median=1.399 kt128=a18da3a6b2cda25e05c98f24038882c1293c93332f534aac963fd212eaeeeaeb
+RESULT swflat alg=shake128 mlen=65536 threads=1 n=25 min_us=683.69 q1_us=684.02 median_us=684.32 q3_us=685.73 max_us=905.30 spread_max_over_min=1.3241 GBps_median=0.0958 Gbps_median=0.766 digest=b8f5b9c32ba6138b44d1894bd464b8cbea56a9ec2cdfcac066a6ec226ee712d0
+RESULT swflat alg=turboshake128 mlen=65536 threads=1 n=25 min_us=375.00 q1_us=375.14 median_us=375.35 q3_us=375.74 max_us=397.82 spread_max_over_min=1.0609 GBps_median=0.1746 Gbps_median=1.397 digest=dbf62962d39c6aab6f7ba08e095baa521162fddcf6c4fc8034d96995d6e7a9c1
+RESULT swkt mlen=1048576 threads=1 n=25 min_us=5954.55 q1_us=5957.88 median_us=5963.37 q3_us=5986.17 max_us=6048.51 spread_max_over_min=1.0158 GBps_median=0.1758 Gbps_median=1.407 kt128=836017a6fd13f7a06492500e7a65201301d199ded92c935c46c3f0ca5ab496d7
+RESULT swflat alg=shake128 mlen=1048576 threads=1 n=25 min_us=10944.77 q1_us=10950.02 median_us=10955.27 q3_us=10982.51 max_us=11204.00 spread_max_over_min=1.0237 GBps_median=0.0957 Gbps_median=0.766 digest=7e1367506c1becd0cb19cf5b90de3662a4586c40b55c7a6936d0ea6ad842b975
+RESULT swflat alg=turboshake128 mlen=1048576 threads=1 n=25 min_us=6001.50 q1_us=6006.33 median_us=6017.91 q3_us=6037.35 max_us=6100.62 spread_max_over_min=1.0165 GBps_median=0.1742 Gbps_median=1.394 digest=07de47bf5761948945a0b741b83aa2ca1e72db632017933c93fc25f14c832a97
+RESULT swkt mlen=16777216 threads=1 n=25 min_us=96362.52 q1_us=96542.88 median_us=96676.80 q3_us=96912.44 max_us=98407.71 spread_max_over_min=1.0212 GBps_median=0.1735 Gbps_median=1.388 kt128=9eb044fafacb92627fb22034e062859f78506b28d9302e1ef1899432eb168491
+RESULT swflat alg=shake128 mlen=16777208 threads=1 n=25 min_us=175913.90 q1_us=176043.67 median_us=176190.42 q3_us=176600.58 max_us=181380.32 spread_max_over_min=1.0311 GBps_median=0.0952 Gbps_median=0.762 digest=a059183a182226d9434988c5fde1d0121418f662e180d21e1ee095846e7497f5
+RESULT swflat alg=turboshake128 mlen=16777208 threads=1 n=25 min_us=96515.84 q1_us=97592.16 median_us=98055.35 q3_us=99202.93 max_us=133264.81 spread_max_over_min=1.3808 GBps_median=0.1711 Gbps_median=1.369 digest=919192f5dc64586a991da2cef975666fa14765caa4211db98943cc46e20f3047
+RESULT swkt mlen=65536 threads=4 n=25 min_us=142.11 q1_us=142.26 median_us=142.56 q3_us=142.68 max_us=170.70 spread_max_over_min=1.2012 GBps_median=0.4597 Gbps_median=3.678 kt128=a18da3a6b2cda25e05c98f24038882c1293c93332f534aac963fd212eaeeeaeb
+RESULT swkt mlen=1048576 threads=4 n=25 min_us=1552.81 q1_us=1554.73 median_us=1567.69 q3_us=1582.45 max_us=2107.47 spread_max_over_min=1.3572 GBps_median=0.6689 Gbps_median=5.351 kt128=836017a6fd13f7a06492500e7a65201301d199ded92c935c46c3f0ca5ab496d7
+RESULT swkt mlen=16777216 threads=4 n=25 min_us=24412.52 q1_us=24573.28 median_us=24734.95 q3_us=30467.99 max_us=51534.78 spread_max_over_min=2.1110 GBps_median=0.6783 Gbps_median=5.426 kt128=9eb044fafacb92627fb22034e062859f78506b28d9302e1ef1899432eb168491
+RESULT swmerkle k=12 alg=minishake128 threads=1 hashes=8191 n=25 min_us=7408.31 q1_us=7409.33 median_us=7410.92 q3_us=7415.21 max_us=7578.82 spread_max_over_min=1.0230 Mhash_per_s=1.1053 root=99a36caeb6e6c12882a47088a32364283b4107198083a17ec8700ef7498797a4
+RESULT swmerkle k=12 alg=turboshake128 threads=1 hashes=8191 n=25 min_us=7520.95 q1_us=7525.88 median_us=7527.47 q3_us=7530.07 max_us=7560.43 spread_max_over_min=1.0052 Mhash_per_s=1.0881 root=5f2fecc10503e9553d751c2a82580f3e0ef84db89eb6e5cba4c65bf7cc6f8737
+RESULT swmerkle k=12 alg=shake128 threads=1 hashes=8191 n=25 min_us=14001.67 q1_us=14005.75 median_us=14011.42 q3_us=14021.68 max_us=14128.18 spread_max_over_min=1.0090 Mhash_per_s=0.5846 root=1dce4d842a8cfc7beebbeb1a2eab4803dc46c48ddb803eb76f7eedb05e629f00
+RESULT swmerkle k=16 alg=minishake128 threads=1 hashes=131071 n=25 min_us=119612.79 q1_us=119674.86 median_us=119832.52 q3_us=120059.40 max_us=122875.85 spread_max_over_min=1.0273 Mhash_per_s=1.0938 root=7acca6ffb9322b3d5e041462e6d02a7e2803371fc64a2f60a6642e6a77c6bd0b
+RESULT swmerkle k=16 alg=turboshake128 threads=1 hashes=131071 n=25 min_us=121348.88 q1_us=121373.06 median_us=121393.19 q3_us=121637.51 max_us=123121.05 spread_max_over_min=1.0146 Mhash_per_s=1.0797 root=35f66976586a82d859435b0a924281de661c06f77b50374ac55a58772376ee96
+RESULT swmerkle k=16 alg=shake128 threads=1 hashes=131071 n=25 min_us=225131.31 q1_us=225254.93 median_us=225447.47 q3_us=225966.24 max_us=228507.14 spread_max_over_min=1.0150 Mhash_per_s=0.5814 root=bd50fba1cff918b722f2c9137cbc1e916f7eab33d3493f0807f827a01c0e9673
+RESULT swmerkle k=20 alg=minishake128 threads=1 hashes=2097151 n=25 min_us=1916917.88 q1_us=1918252.33 median_us=1918816.67 q3_us=1924553.29 max_us=2135895.60 spread_max_over_min=1.1142 Mhash_per_s=1.0929 root=c91a430de84619d588c26873d4fc2b857d2061fef6664cab758b7433ce1c015d
+RESULT swmerkle k=20 alg=turboshake128 threads=1 hashes=2097151 n=25 min_us=1945732.44 q1_us=1946849.32 median_us=1947558.29 q3_us=1948704.20 max_us=1961522.81 spread_max_over_min=1.0081 Mhash_per_s=1.0768 root=f463461db1729c84c56f06c8429c7bdde02ad83cf9b9322605d3f649b6d7ae7c
+RESULT swmerkle k=20 alg=shake128 threads=1 hashes=2097151 n=25 min_us=3609367.03 q1_us=3611163.17 median_us=3619882.06 q3_us=3631684.48 max_us=4011457.75 spread_max_over_min=1.1114 Mhash_per_s=0.5793 root=d6a19c6804de97db298fcbde1540b9d72fc9d30cb515b2dfe3e753f888697fdc
+RESULT swmerkle k=12 alg=minishake128 threads=4 hashes=8191 n=25 min_us=1849.12 q1_us=1849.87 median_us=1850.47 q3_us=1869.25 max_us=1931.20 spread_max_over_min=1.0444 Mhash_per_s=4.4264 root=99a36caeb6e6c12882a47088a32364283b4107198083a17ec8700ef7498797a4
+RESULT swmerkle k=12 alg=turboshake128 threads=4 hashes=8191 n=25 min_us=1878.46 q1_us=1878.91 median_us=1885.06 q3_us=1888.30 max_us=1936.96 spread_max_over_min=1.0311 Mhash_per_s=4.3452 root=5f2fecc10503e9553d751c2a82580f3e0ef84db89eb6e5cba4c65bf7cc6f8737
+RESULT swmerkle k=12 alg=shake128 threads=4 hashes=8191 n=25 min_us=3498.27 q1_us=3504.69 median_us=3505.68 q3_us=3515.55 max_us=3916.13 spread_max_over_min=1.1194 Mhash_per_s=2.3365 root=1dce4d842a8cfc7beebbeb1a2eab4803dc46c48ddb803eb76f7eedb05e629f00
+RESULT swmerkle k=16 alg=minishake128 threads=4 hashes=131071 n=25 min_us=29900.54 q1_us=29936.81 median_us=30004.79 q3_us=30111.71 max_us=31959.06 spread_max_over_min=1.0688 Mhash_per_s=4.3683 root=7acca6ffb9322b3d5e041462e6d02a7e2803371fc64a2f60a6642e6a77c6bd0b
+RESULT swmerkle k=16 alg=turboshake128 threads=4 hashes=131071 n=25 min_us=30305.78 q1_us=30361.64 median_us=30406.51 q3_us=30514.81 max_us=31152.94 spread_max_over_min=1.0280 Mhash_per_s=4.3106 root=35f66976586a82d859435b0a924281de661c06f77b50374ac55a58772376ee96
+RESULT swmerkle k=16 alg=shake128 threads=4 hashes=131071 n=25 min_us=56261.21 q1_us=56314.51 median_us=56370.07 q3_us=56476.24 max_us=57667.17 spread_max_over_min=1.0250 Mhash_per_s=2.3252 root=bd50fba1cff918b722f2c9137cbc1e916f7eab33d3493f0807f827a01c0e9673
+RESULT swmerkle k=20 alg=minishake128 threads=4 hashes=2097151 n=25 min_us=479911.11 q1_us=480330.56 median_us=480860.48 q3_us=482086.11 max_us=488891.22 spread_max_over_min=1.0187 Mhash_per_s=4.3612 root=c91a430de84619d588c26873d4fc2b857d2061fef6664cab758b7433ce1c015d
+RESULT swmerkle k=20 alg=turboshake128 threads=4 hashes=2097151 n=25 min_us=486766.61 q1_us=487025.95 median_us=487550.36 q3_us=488526.75 max_us=491198.89 spread_max_over_min=1.0091 Mhash_per_s=4.3014 root=f463461db1729c84c56f06c8429c7bdde02ad83cf9b9322605d3f649b6d7ae7c
+RESULT swmerkle k=20 alg=shake128 threads=4 hashes=2097151 n=25 min_us=902568.61 q1_us=903649.80 median_us=905383.16 q3_us=937256.33 max_us=1687526.14 spread_max_over_min=1.8697 Mhash_per_s=2.3163 root=d6a19c6804de97db298fcbde1540b9d72fc9d30cb515b2dfe3e753f888697fdc

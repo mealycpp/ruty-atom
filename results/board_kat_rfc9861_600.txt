@@ -1,0 +1,8 @@
+RESULT id=52552012 slices_per_clock=32 version=18
+RESULT kat RFC9861 skipped turboshake128 M=ptn(17**6 bytes) (message larger than the test buffer)
+RESULT kat RFC9861 skipped turboshake256 M=ptn(17**6 bytes) (message larger than the test buffer)
+RESULT kat RFC9861_turboshake128 vectors=15 hardware_mismatches=0 model_mismatches=0
+RESULT kat RFC9861_turboshake128 skipped=1
+RESULT kat RFC9861_turboshake256 vectors=14 hardware_mismatches=0 model_mismatches=0
+RESULT kat RFC9861_turboshake256 skipped=1
+RESULT kat summary vectors=29 mismatches=0 ALL_MATCH

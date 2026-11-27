@@ -1,0 +1,8 @@
+RESULT engines=8 engine_mhz=450 ids=52552017 52552017 52552017 52552017 52552017 52552017 52552017 52552017
+RESULT chain_multi alg=shake256 running=1 chains_each=8000 ns_per_step=220.0..220.0 Mchains_per_s=0.303 wall_ms=26.4 mismatches=0
+RESULT chain_multi alg=shake256 running=8 chains_each=8000 ns_per_step=220.0..220.0 Mchains_per_s=2.424 wall_ms=26.5 mismatches=0
+RESULT chain_multi alg=turboshake256 running=1 chains_each=8000 ns_per_step=140.0..140.0 Mchains_per_s=0.476 wall_ms=16.8 mismatches=0
+RESULT chain_multi alg=turboshake256 running=8 chains_each=8000 ns_per_step=140.0..140.0 Mchains_per_s=3.809 wall_ms=16.9 mismatches=0
+RESULT chain_multi alg=minishake128 running=1 chains_each=8000 ns_per_step=86.7..86.7 Mchains_per_s=0.769 wall_ms=10.4 mismatches=0
+RESULT chain_multi alg=minishake128 running=8 chains_each=8000 ns_per_step=86.7..86.7 Mchains_per_s=6.153 wall_ms=10.5 mismatches=0
+RESULT chain_multi summary mismatches=0 ALL_MATCH

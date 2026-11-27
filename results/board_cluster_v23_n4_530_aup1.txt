@@ -1,0 +1,16 @@
+RESULT cluster engines=4 engine_mhz=530 ids=52552017 52552017 52552017 52552017
+RESULT cluster atoms=1 split=0 wide=1 Mchains_per_s=0.357 mismatches=0
+RESULT cluster atoms=1 split=1 wide=0 Mchains_per_s=0.906 mismatches=0
+RESULT cluster atoms=2 split=0 wide=2 Mchains_per_s=0.714 mismatches=0
+RESULT cluster atoms=2 split=1 wide=1 Mchains_per_s=1.263 mismatches=0
+RESULT cluster atoms=2 split=2 wide=0 Mchains_per_s=1.812 mismatches=0
+RESULT cluster atoms=3 split=0 wide=3 Mchains_per_s=1.071 mismatches=0
+RESULT cluster atoms=3 split=1 wide=2 Mchains_per_s=1.620 mismatches=0
+RESULT cluster atoms=3 split=2 wide=1 Mchains_per_s=2.169 mismatches=0
+RESULT cluster atoms=3 split=3 wide=0 Mchains_per_s=2.718 mismatches=0
+RESULT cluster atoms=4 split=0 wide=4 Mchains_per_s=1.428 mismatches=0
+RESULT cluster atoms=4 split=1 wide=3 Mchains_per_s=1.976 mismatches=0
+RESULT cluster atoms=4 split=2 wide=2 Mchains_per_s=2.525 mismatches=0
+RESULT cluster atoms=4 split=3 wide=1 Mchains_per_s=3.074 mismatches=0
+RESULT cluster atoms=4 split=4 wide=0 Mchains_per_s=3.623 mismatches=0
+RESULT cluster summary mismatches=0 ALL_MATCH

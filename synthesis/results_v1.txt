@@ -1,0 +1,10 @@
+RESULT keccak_dual_m8 period=2.000 wns=0.141 whs=0.019 fmax=537.9 levels=2 lut=4269 ff=1739 muxf=530
+RESULT ruty_core_m8 period=2.000 wns=0.255 whs=0.024 fmax=573.1 levels=3 lut=4428 ff=1739 muxf=549
+RESULT ruty_core_m16 period=2.000 wns=0.118 whs=0.019 fmax=531.3 levels=5 lut=5139 ff=1739 muxf=937
+RESULT keccak_single_m8 period=2.000 wns=0.151 whs=0.019 fmax=540.8 levels=2 lut=4248 ff=1721 muxf=530
+RESULT ruty_core_m8 period=1.300 wns=-0.299 whs=0.019 fmax=625.4 levels=5 lut=4429 ff=1747 muxf=549
+RESULT ruty_core_m8 period=1.500 wns=-0.069 whs=0.021 fmax=637.3 levels=5 lut=4429 ff=1750 muxf=549
+RESULT bufg ruty_core_m8 period=1.400 wns=-0.339 whs=0.014 fmax=575.0 levels=5 lut=4428 ff=1746 muxf=549
+RESULT bufg ruty_core_m4 period=1.400 wns=-0.240 whs=0.008 fmax=609.8 levels=5 lut=4121 ff=1762 muxf=310
+RESULT bufg ruty_core_m16 period=1.500 wns=-0.323 whs=0.011 fmax=548.5 levels=5 lut=5144 ff=1750 muxf=937
+RESULT bufg ruty_core_m32 period=1.800 wns=-0.051 whs=0.011 fmax=540.2 levels=5 lut=6525 ff=1751 muxf=1711

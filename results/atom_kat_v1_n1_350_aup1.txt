@@ -1,0 +1,16 @@
+RESULT id=5255201e slices_per_clock=32 version=30
+RESULT kat NIST_shake128_ShortMsg vectors=337 hardware_mismatches=0 model_mismatches=0
+RESULT kat NIST_shake128_LongMsg vectors=100 hardware_mismatches=0 model_mismatches=0
+RESULT kat NIST_shake128_VariableOut vectors=1126 hardware_mismatches=0 model_mismatches=0
+RESULT kat NIST_shake128_MonteCarlo(100x1000_hashes) vectors=100 hardware_mismatches=0 model_mismatches=0
+RESULT kat NIST_shake256_ShortMsg vectors=273 hardware_mismatches=0 model_mismatches=0
+RESULT kat NIST_shake256_LongMsg vectors=100 hardware_mismatches=0 model_mismatches=0
+RESULT kat NIST_shake256_VariableOut vectors=1246 hardware_mismatches=0 model_mismatches=0
+RESULT kat NIST_shake256_MonteCarlo(100x1000_hashes) vectors=100 hardware_mismatches=0 model_mismatches=0
+RESULT kat RFC9861 skipped turboshake128 M=ptn(17**6 bytes) (message larger than the test buffer)
+RESULT kat RFC9861 skipped turboshake256 M=ptn(17**6 bytes) (message larger than the test buffer)
+RESULT kat RFC9861_turboshake128 vectors=15 hardware_mismatches=0 model_mismatches=0
+RESULT kat RFC9861_turboshake128 skipped=1
+RESULT kat RFC9861_turboshake256 vectors=14 hardware_mismatches=0 model_mismatches=0
+RESULT kat RFC9861_turboshake256 skipped=1
+RESULT kat summary vectors=3411 mismatches=0 ALL_MATCH

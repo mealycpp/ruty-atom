@@ -1,0 +1,10 @@
+RESULT id=52552021 version=33
+RESULT fips205_chain_vector MATCH status=02 got=3a666d7625b1d02f484e003f1df7aa4d
+RESULT chain_check alg=shake256 chains=82 mismatches=0
+RESULT chain_check alg=turboshake256 chains=82 mismatches=0
+RESULT chain_check alg=minishake128 chains=82 mismatches=0
+RESULT chain_time alg=shake256 chains=2000 steps=30000 hw_clocks=575901 ns_per_step=64.0 ns_per_chain=960 mismatches=0
+RESULT chain_time alg=turboshake256 chains=2000 steps=30000 hw_clocks=318759 ns_per_step=35.4 ns_per_chain=531 mismatches=0
+RESULT chain_time alg=minishake128 chains=2000 steps=30000 hw_clocks=177328 ns_per_step=19.7 ns_per_chain=296 mismatches=0
+RESULT plain_batch_after_chain mismatches=0
+RESULT chain summary mismatches=0 ALL_MATCH

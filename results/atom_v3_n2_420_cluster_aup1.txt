@@ -1,0 +1,7 @@
+RESULT cluster engines=2 engine_mhz=420 ids=52552021 52552021
+RESULT cluster atoms=1 split=0 wide=1 Mchains_per_s=1.042 mismatches=0
+RESULT cluster atoms=1 split=1 wide=0 Mchains_per_s=3.385 mismatches=0
+RESULT cluster atoms=2 split=0 wide=2 Mchains_per_s=2.084 mismatches=0
+RESULT cluster atoms=2 split=1 wide=1 Mchains_per_s=4.427 mismatches=0
+RESULT cluster atoms=2 split=2 wide=0 Mchains_per_s=6.771 mismatches=0
+RESULT cluster summary mismatches=0 ALL_MATCH

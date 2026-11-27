@@ -1,0 +1,21 @@
+RUTY atom: forecast for the job-graph (DFG) scheduler, filed BEFORE the measurement (see the file time stamp; do not edit after the run).
+
+Job graph on the 4-atom image (400 MHz): 22 XMSS trees of SLH-DSA-128f in SHAKE256 (6 dependent stages per tree, the chain stage runs inside
+the atom), plus B tag nodes (2400 MiniSHAKE128 tags each, split atoms) and F firmware nodes (1 MB TurboSHAKE128 each, one wide atom per image).
+Three policies on the same graph and the same data:
+  serial      : one tenant after another, each on all atoms (trees, then tags, then firmware)
+  graph       : any ready node on any free atom, tenants alternate, no limit on stream nodes
+  graph+rule  : stream nodes may load the port up to its measured limit and no further (tags = 1 unit, firmware = 2 units, budget 2);
+                every other atom goes to tree nodes
+Known from earlier runs: trees alone on 4 atoms 2.48 ms; tags about 23.5 M/s at the port limit; firmware about 2.2 to 2.4 GB/s at the port limit.
+
+Forecast, mix B=8, F=2 (streams need about 1.7 ms of port time):
+  serial      4.0 to 4.6 ms
+  graph+rule  3.1 to 3.8 ms, that is 12% to 28% below serial
+  graph       within 6% of graph+rule (either side)
+Forecast, mix B=4, F=1: graph+rule 8% to 20% below serial.   Forecast, mix B=16, F=4: graph+rule 12% to 30% below serial.
+Forecast, trees only (B=0, F=0): all three policies within 3% of each other and within 5% of 2.48 ms.
+Atom utilization (share of atom time spent running a node): higher under graph+rule than under serial in every mix with streams.
+All roots, tags and firmware digests correct under every policy.
+The claim "a scheduler that knows the limits does better than first-come" FAILS if graph+rule is not at least 8% faster than serial at B=8, F=2,
+or if any digest is wrong.

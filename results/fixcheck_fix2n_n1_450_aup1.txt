@@ -1,0 +1,6 @@
+RESULT fixcheck image=atom_fix2n_n1_m16_300_450 mode=n engine_mhz=450 id=52552021 functions=minishake128
+RESULT fixcheck hash_check image=atom_fix2n_n1_m16_300_450 alg=minishake128 digests=128 mismatches=0 first=[]
+RESULT fixcheck chain_check image=atom_fix2n_n1_m16_300_450 alg=minishake128 chains=98 mismatches=0
+RESULT fixcheck chain_time image=atom_fix2n_n1_m16_300_450 alg=minishake128 chains=4096 steps_per_chain=15 reps=7 hw_clocks_best=338761 hw_clocks_worst=338849 hw_clocks_all=338761/338770/338849/338766/338771/338771/338765 step_ns_per_chain=18.379 ns_per_chain=275.68 Mhashes_per_s=54.410 Mchains_per_s=3.6273 wall_us_best=1129.7 mismatches=0
+RESULT fixcheck width_bit_ignored image=atom_fix2n_n1_m16_300_450 alg=minishake128 width_bit_written=0 digests=8 mismatches=0 BIT_IS_DEAD_IN_HARDWARE
+RESULT fixcheck summary image=atom_fix2n_n1_m16_300_450 mismatches=0 ALL_MATCH

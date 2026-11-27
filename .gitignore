@@ -1,0 +1,8 @@
+# build products and local tools
+target/
+*.o
+__pycache__/
+*.pyc
+.Xil/
+*.jou
+*.log.bak

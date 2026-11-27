@@ -1,0 +1,21 @@
+FORECAST: ruty_sign3 (word-wise split-atom layout, two XMSS trees per node, hybrid suite), written 2026-11-26 16:57 PST (PC clock),
+BEFORE any board run of ruty_sign3. NON-STANDARD rows (mini, hybrid, turbo) are NOT FIPS 205.
+
+Inputs measured with ruty_sign.rs (same day, aup1): mini sign 1 atom 9.17 ms with processor layout 6.29 ms and atom busy 2.61 ms
+(PRF_msg/H_msg 0.004, FORS 0.32, trees 2.15, WOTS 0.13); std processor layout 2.18 ms for about 19,660 calls = 111 ns per call.
+Old split layout: 6.29 ms / 19,660 calls = 320 ns per call.
+Assumption: word layout brings split-mode cost to 55-80 ns per call (about half the wide per-call cost, since one 64-bit word carries two jobs),
+i.e. a layout total of 1.1-1.6 ms; between batches about 0.3 ms of gaps at one atom (as in std: 9.61 - 7.2 - 2.18).
+
+Point forecast (median sign, ms) and range:
+  mini   1 atom @450: 4.3 (3.4-5.4)   2 atoms @420: 2.6 (2.0-3.3)   4 atoms @400: 1.8 (1.4-2.3)
+  hybrid 1 atom @450: 4.2 (3.3-5.3)   2 atoms @420: 2.6 (2.0-3.3)   4 atoms @400: 1.8 (1.4-2.3)
+  std (re-measured, wide path not changed in substance): 9.70 / 5.66 / 3.70 within 3%.
+  turbo (re-measured): 6.70 / 3.95 / (previous run) within 3%.
+Split layout per call (profile line layout_ns_per_call, sign, mini): <= 111 ns (the wide per-call cost), expected 55-80 ns.
+Verify on fewer atoms (std, 4-atom image): spreading each layer's chains over 1 or 2 atoms instead of 4 brings verify from 1.25 ms
+to 1.10 ms (1 part) and 1.00 ms (2 parts); the cause forecast: more, smaller batches (206 vs 148 vs 119) on a latency-bound path.
+
+Pre-set failure threshold: a mini or hybrid sign row FAILS if its median lies more than 25% from the point forecast; the forecast as a whole
+fails if 2 or more of those 6 rows fail. The split-layout target fails if layout_ns_per_call > 111 ns.
+Correctness bar: every timed signature equals the first; the program's own software verify accepts it; the Python second path agrees.

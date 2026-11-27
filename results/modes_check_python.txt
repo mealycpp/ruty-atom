@@ -1,0 +1,119 @@
+OK   selfcheck pure-python w=64 SHAKE128 len=0 vs hashlib
+OK   selfcheck pure-python w=64 TurboSHAKE128 len=0 vs pycryptodome
+OK   selfcheck pure-python w=64 SHAKE128 len=3 vs hashlib
+OK   selfcheck pure-python w=64 TurboSHAKE128 len=3 vs pycryptodome
+OK   selfcheck pure-python w=64 SHAKE128 len=600 vs hashlib
+OK   selfcheck pure-python w=64 TurboSHAKE128 len=600 vs pycryptodome
+OK   selfcheck pycryptodome KT128 RFC9861 ptn(17^3)
+OK   selfcheck pycryptodome KT128 RFC9861 ptn(8192),C=ptn(8190)
+== modes_kt_1atoms_aup1.txt
+OK   modes_kt_1atoms_aup1.txt KT128 mlen=65536 vs pycryptodome KangarooTwelve
+OK   modes_kt_1atoms_aup1.txt flat SHAKE128 len=65536 vs hashlib
+OK   modes_kt_1atoms_aup1.txt flat TurboSHAKE128 len=65536 vs pycryptodome
+OK   modes_kt_1atoms_aup1.txt KT128 mlen=1048576 vs pycryptodome KangarooTwelve
+OK   modes_kt_1atoms_aup1.txt flat SHAKE128 len=1048576 vs hashlib
+OK   modes_kt_1atoms_aup1.txt flat TurboSHAKE128 len=1048576 vs pycryptodome
+OK   modes_kt_1atoms_aup1.txt KT128 mlen=16777216 vs pycryptodome KangarooTwelve
+OK   modes_kt_1atoms_aup1.txt flat SHAKE128 len=16777208 vs hashlib
+OK   modes_kt_1atoms_aup1.txt flat TurboSHAKE128 len=16777208 vs pycryptodome
+== modes_kt_2atoms_aup1.txt
+OK   modes_kt_2atoms_aup1.txt KT128 mlen=65536 vs pycryptodome KangarooTwelve
+OK   modes_kt_2atoms_aup1.txt flat SHAKE128 len=65536 vs hashlib
+OK   modes_kt_2atoms_aup1.txt flat TurboSHAKE128 len=65536 vs pycryptodome
+OK   modes_kt_2atoms_aup1.txt KT128 mlen=1048576 vs pycryptodome KangarooTwelve
+OK   modes_kt_2atoms_aup1.txt flat SHAKE128 len=1048576 vs hashlib
+OK   modes_kt_2atoms_aup1.txt flat TurboSHAKE128 len=1048576 vs pycryptodome
+OK   modes_kt_2atoms_aup1.txt KT128 mlen=16777216 vs pycryptodome KangarooTwelve
+OK   modes_kt_2atoms_aup1.txt flat SHAKE128 len=16777208 vs hashlib
+OK   modes_kt_2atoms_aup1.txt flat TurboSHAKE128 len=16777208 vs pycryptodome
+== modes_kt_4atoms_aup1.txt
+OK   modes_kt_4atoms_aup1.txt KT128 mlen=65536 vs pycryptodome KangarooTwelve
+OK   modes_kt_4atoms_aup1.txt flat SHAKE128 len=65536 vs hashlib
+OK   modes_kt_4atoms_aup1.txt flat TurboSHAKE128 len=65536 vs pycryptodome
+OK   modes_kt_4atoms_aup1.txt KT128 mlen=1048576 vs pycryptodome KangarooTwelve
+OK   modes_kt_4atoms_aup1.txt flat SHAKE128 len=1048576 vs hashlib
+OK   modes_kt_4atoms_aup1.txt flat TurboSHAKE128 len=1048576 vs pycryptodome
+OK   modes_kt_4atoms_aup1.txt KT128 mlen=16777216 vs pycryptodome KangarooTwelve
+OK   modes_kt_4atoms_aup1.txt flat SHAKE128 len=16777208 vs hashlib
+OK   modes_kt_4atoms_aup1.txt flat TurboSHAKE128 len=16777208 vs pycryptodome
+== modes_merkle_1atoms_aup1.txt
+OK   modes_merkle_1atoms_aup1.txt Merkle k=12 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_1atoms_aup1.txt Merkle k=12 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_1atoms_aup1.txt Merkle k=12 shake128_wide root vs Python (hashlib)
+OK   modes_merkle_1atoms_aup1.txt Merkle k=16 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_1atoms_aup1.txt Merkle k=16 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_1atoms_aup1.txt Merkle k=16 shake128_wide root vs Python (hashlib)
+OK   modes_merkle_1atoms_aup1.txt Merkle k=20 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_1atoms_aup1.txt Merkle k=20 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_1atoms_aup1.txt Merkle k=20 shake128_wide root vs Python (hashlib)
+== modes_merkle_2atoms_aup1.txt
+OK   modes_merkle_2atoms_aup1.txt Merkle k=12 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_2atoms_aup1.txt Merkle k=12 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_2atoms_aup1.txt Merkle k=12 shake128_wide root vs Python (hashlib)
+OK   modes_merkle_2atoms_aup1.txt Merkle k=16 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_2atoms_aup1.txt Merkle k=16 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_2atoms_aup1.txt Merkle k=16 shake128_wide root vs Python (hashlib)
+OK   modes_merkle_2atoms_aup1.txt Merkle k=20 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_2atoms_aup1.txt Merkle k=20 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_2atoms_aup1.txt Merkle k=20 shake128_wide root vs Python (hashlib)
+== modes_merkle_4atoms_aup1.txt
+OK   modes_merkle_4atoms_aup1.txt Merkle k=12 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_4atoms_aup1.txt Merkle k=12 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_4atoms_aup1.txt Merkle k=12 shake128_wide root vs Python (hashlib)
+OK   modes_merkle_4atoms_aup1.txt Merkle k=16 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_4atoms_aup1.txt Merkle k=16 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_4atoms_aup1.txt Merkle k=16 shake128_wide root vs Python (hashlib)
+OK   modes_merkle_4atoms_aup1.txt Merkle k=20 minishake128_split_NONSTANDARD_TREE root vs Python (pure-Python Keccak-p[800])
+OK   modes_merkle_4atoms_aup1.txt Merkle k=20 turboshake128_wide_NONSTANDARD_TREE root vs Python (pycryptodome)
+OK   modes_merkle_4atoms_aup1.txt Merkle k=20 shake128_wide root vs Python (hashlib)
+== modes_sw_a53_aup1.txt
+OK   modes_sw_a53_aup1.txt A53 KT128 mlen=65536 threads=1 vs pycryptodome
+OK   modes_sw_a53_aup1.txt A53 flat shake128 len=65536 vs Python
+OK   modes_sw_a53_aup1.txt A53 flat turboshake128 len=65536 vs Python
+OK   modes_sw_a53_aup1.txt A53 KT128 mlen=1048576 threads=1 vs pycryptodome
+OK   modes_sw_a53_aup1.txt A53 flat shake128 len=1048576 vs Python
+OK   modes_sw_a53_aup1.txt A53 flat turboshake128 len=1048576 vs Python
+OK   modes_sw_a53_aup1.txt A53 KT128 mlen=16777216 threads=1 vs pycryptodome
+OK   modes_sw_a53_aup1.txt A53 flat shake128 len=16777208 vs Python
+OK   modes_sw_a53_aup1.txt A53 flat turboshake128 len=16777208 vs Python
+OK   modes_sw_a53_aup1.txt A53 KT128 mlen=65536 threads=4 vs pycryptodome
+OK   modes_sw_a53_aup1.txt A53 KT128 mlen=1048576 threads=4 vs pycryptodome
+OK   modes_sw_a53_aup1.txt A53 KT128 mlen=16777216 threads=4 vs pycryptodome
+OK   modes_sw_a53_aup1.txt swmerkle k=12 minishake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=12 turboshake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=12 shake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=16 minishake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=16 turboshake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=16 shake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=20 minishake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=20 turboshake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=20 shake128 threads=1 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=12 minishake128 threads=4 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=12 turboshake128 threads=4 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=12 shake128 threads=4 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=16 minishake128 threads=4 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=16 turboshake128 threads=4 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=16 shake128 threads=4 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=20 minishake128 threads=4 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=20 turboshake128 threads=4 root vs Python
+OK   modes_sw_a53_aup1.txt swmerkle k=20 shake128 threads=4 root vs Python
+== modes_xkcp_sw_a53_aup1.txt
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=12 minishake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=12 turboshake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=12 shake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=16 minishake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=16 turboshake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=16 shake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=20 minishake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=20 turboshake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=20 shake128 threads=1 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=12 minishake128 threads=4 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=12 turboshake128 threads=4 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=12 shake128 threads=4 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=16 minishake128 threads=4 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=16 turboshake128 threads=4 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=16 shake128 threads=4 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=20 minishake128 threads=4 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=20 turboshake128 threads=4 root vs Python
+OK   modes_xkcp_sw_a53_aup1.txt xkcpmerkle k=20 shake128 threads=4 root vs Python
+CHECK_SUMMARY ALL_OK

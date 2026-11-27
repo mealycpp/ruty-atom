@@ -1,0 +1,11 @@
+== software baseline on the ARM (one core, portable C, gcc -O3): CPU part	: 0xd03
+RESULT alg=shake128 len=34 out=840 count=400 ns_per_hash=8612.4 check=53934
+RESULT alg=shake128 len=34 out=504 count=400 ns_per_hash=5205.8 check=53934
+RESULT alg=turboshake128 len=65536 out=32 count=20 ns_per_hash=384433.7 check=3184
+RESULT alg=shake128 len=65536 out=32 count=20 ns_per_hash=688434.3 check=2489
+RESULT alg=turboshake256 len=232 out=32 count=2000 ns_per_hash=1964.5 check=254192
+RESULT alg=minishake128 len=100 out=16 count=2000 ns_per_hash=1879.5 check=254877
+RESULT alg=minishake256 len=48 out=32 count=2000 ns_per_hash=1934.1 check=252780
+RESULT alg=shake256 len=64 out=16 count=2000 ns_per_hash=1800.7 check=261144
+RESULT alg=turboshake256 len=64 out=16 count=2000 ns_per_hash=1007.0 check=253110
+RESULT alg=minishake128 len=64 out=16 count=2000 ns_per_hash=964.6 check=269449

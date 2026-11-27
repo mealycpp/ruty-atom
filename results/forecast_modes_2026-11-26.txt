@@ -1,0 +1,30 @@
+FORECAST for the native-application runs of the RUTY-ATOM modes (ruty_modes, modes_bench, xkcp_modes_bench), filed 2026-11-26 19:23 PST
+BEFORE any board run of these programs. Board aup1, v3 images: 1 atom @450 MHz, 2 @420, 4 @400. Times are medians of n = 25; atom times exclude
+the processor's cache clean of a CPU-written message (that is reported separately).
+Basis: measured earlier (PAPER_FACTS): one atom 1 MB flat TurboSHAKE128 17.69 Gb/s, SHAKE128 13.13 Gb/s at 450 MHz (atom-clock bound, scales with clock);
+port 19.2 Gb/s; small-job rates (keys, tags, logs) imply about 4 clocks of per-job overhead; squeeze 1 word / 2 clocks, absorb 1 word / clock.
+
+1. KT128 (RFC 9861) on the atoms, C empty, 32-byte output
+   16 MB : 1 atom 7.7 ms (17.4 Gb/s); 2 atoms 7.05 ms (19.0 Gb/s); 4 atoms 7.05 ms (19.0 Gb/s).
+   1 MB  : 1 atom 0.50 ms; 2 and 4 atoms 0.46 ms.          64 kB : 1 atom 45 us; 2 and 4 atoms 40 us.
+   Bound: the port from 2 atoms on; final node (73.7 kB at 16 MB) about 35 us = 0.5% serial; processor share under 3% at 1 MB and 16 MB.
+   FAILURE: 16 MB at 2 or 4 atoms below 17.3 Gb/s (90% of the port); 1 atom outside +-10%; 1 MB outside +-15%; 64 kB outside +-35%.
+2. Flat on ONE atom of each image (a sponge is serial), 1 MB: TurboSHAKE128 0.474 / 0.51 / 0.53 ms; SHAKE128 0.64 / 0.68 / 0.72 ms (+-10%).
+   KT128 / flat TurboSHAKE128 speed ratio at 16 MB: 0.99 (1 atom), 1.15 (2), 1.20 (4). FAILURE of "KT128 turns the atoms into port bandwidth":
+   ratio at 4 atoms below 1.10. KT128 / flat SHAKE128 at 16 MB: 1.33 / 1.55 / 1.63.
+3. A53 software KT128 (modes_bench, plain C): 1 core 0.20 GB/s (+-40%), 4 cores 0.75 GB/s; 4 atoms vs 4 cores about 3x, vs 1 core about 12x.
+4. Merkle tree, k = 16 (131,071 hashes, 32-byte values, 64-byte nodes), atoms:
+   1 atom : MiniSHAKE128 split 6.5 ms (20 M hash/s); TurboSHAKE128 wide 8.9 ms (14.7 M/s); SHAKE128 wide 12.3 ms (10.6 M/s).
+   2 atoms: 4.1 / 4.7 / 6.6 ms.        4 atoms: about 4.2 ms for all three (port bound, about 30 M hash/s).
+   Processor share (wide, values already in place): under 5%. Split: the interleave of the values costs about as much as the atoms at 4 atoms
+   (1 to 2 ms for 2 MB on the A53) and is reported separately. FAILURE: any row outside +-25%.
+5. GAIN LAW for the tree, split (MiniSHAKE128) over wide (TurboSHAKE128), equal 12 rounds: G = 1/((1-f) + f/g), g = 2 (two Keccak-p[800]
+   advance per round clock), f = share of the wide tree's critical-path time spent in permutation rounds.
+   Wide atom clocks per hash: leaf 4 absorb + 12 rounds + 8 squeeze + 4 overhead = 28 (f = 0.43); node 8 + 12 + 8 + 4 = 32 (f = 0.375).
+   Split moves the same bytes per hash through absorb and squeeze, so only the rounds halve.
+   N = 1: f = 0.40 -> G = 1.25 (predicted split/wide speed-up; accept 1.15-1.35). FAILURE if outside 1.10-1.40.
+   N = 2: nodes reach the port on both sides, f on the critical path about 0.2 -> G = 1.10 (accept 1.00-1.20).
+   N = 4: both sides port bound, f -> 0 -> G = 1.00 (accept 0.95-1.05). FAILURE if G > 1.10 at N = 4.
+6. Software trees on the A53 (k = 16): our plain C and the Keccak team's XKCP permutations (KeccakP-800 opt32 ua; KeccakP-1600 opt64 ua):
+   about 1 us per TurboSHAKE128 hash on one core (0.13 s per tree), SHAKE128 about 2x that. MiniSHAKE128 / TurboSHAKE128 time ratio 0.85-1.15
+   (on a 64-bit core a 32-bit-lane round costs about the same instructions as a 64-bit-lane round). XKCP within +-30% of our C. 4 cores 3.6-3.9x.

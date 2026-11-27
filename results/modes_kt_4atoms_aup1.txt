@@ -1,0 +1,76 @@
+RESULT modes engines=4 engine_mhz=400 what=kt reps=25 ids=52552021 52552021 52552021 52552021 arch=board
+RESULT ktvec idx=1 name=M=empty,C=empty,32 slen=1 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=1ac2d450fc3b4205d19da7bfca1b3751
+RESULT ktvec idx=1 name=M=empty,C=empty,32 slen=1 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=1ac2d450fc3b4205d19da7bfca1b3751
+RESULT ktvec idx=1 name=M=empty,C=empty,32 slen=1 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=1ac2d450fc3b4205d19da7bfca1b3751
+RESULT ktvec idx=2 name=M=empty,C=empty,64 slen=1 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=1ac2d450fc3b4205d19da7bfca1b3751
+RESULT ktvec idx=2 name=M=empty,C=empty,64 slen=1 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=1ac2d450fc3b4205d19da7bfca1b3751
+RESULT ktvec idx=2 name=M=empty,C=empty,64 slen=1 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=1ac2d450fc3b4205d19da7bfca1b3751
+RESULT ktvec idx=3 name=M=empty,C=empty,10032(last32) slen=1 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=e8dc563642f7228c84684c898405d3a8
+RESULT ktvec idx=3 name=M=empty,C=empty,10032(last32) slen=1 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=e8dc563642f7228c84684c898405d3a8
+RESULT ktvec idx=3 name=M=empty,C=empty,10032(last32) slen=1 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=e8dc563642f7228c84684c898405d3a8
+RESULT ktvec idx=4 name=M=ptn(1) slen=2 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=2bda92450e8b147f8a7cb629e784a058
+RESULT ktvec idx=4 name=M=ptn(1) slen=2 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=2bda92450e8b147f8a7cb629e784a058
+RESULT ktvec idx=4 name=M=ptn(1) slen=2 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=2bda92450e8b147f8a7cb629e784a058
+RESULT ktvec idx=5 name=M=ptn(17) slen=18 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=6bf75fa2239198db4772e36478f8e19b
+RESULT ktvec idx=5 name=M=ptn(17) slen=18 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=6bf75fa2239198db4772e36478f8e19b
+RESULT ktvec idx=5 name=M=ptn(17) slen=18 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=6bf75fa2239198db4772e36478f8e19b
+RESULT ktvec idx=6 name=M=ptn(17^2) slen=290 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=0c315ebcdedbf61426de7dcf8fb725d1
+RESULT ktvec idx=6 name=M=ptn(17^2) slen=290 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=0c315ebcdedbf61426de7dcf8fb725d1
+RESULT ktvec idx=6 name=M=ptn(17^2) slen=290 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=0c315ebcdedbf61426de7dcf8fb725d1
+RESULT ktvec idx=7 name=M=ptn(17^3) slen=4914 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=cb552e2ec77d9910701d578b457ddf77
+RESULT ktvec idx=7 name=M=ptn(17^3) slen=4914 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=cb552e2ec77d9910701d578b457ddf77
+RESULT ktvec idx=7 name=M=ptn(17^3) slen=4914 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=cb552e2ec77d9910701d578b457ddf77
+RESULT ktvec idx=8 name=M=ptn(17^4) slen=83522 leaves=10 atoms=1 sw_ok=true atoms_ok=true got=8701045e22205345ff4dda05555cbb5c
+RESULT ktvec idx=8 name=M=ptn(17^4) slen=83522 leaves=10 atoms=2 sw_ok=true atoms_ok=true got=8701045e22205345ff4dda05555cbb5c
+RESULT ktvec idx=8 name=M=ptn(17^4) slen=83522 leaves=10 atoms=4 sw_ok=true atoms_ok=true got=8701045e22205345ff4dda05555cbb5c
+RESULT ktvec idx=9 name=M=ptn(17^5) slen=1419858 leaves=173 atoms=1 sw_ok=true atoms_ok=true got=844d610933b1b9963cbdeb5ae3b6b05c
+RESULT ktvec idx=9 name=M=ptn(17^5) slen=1419858 leaves=173 atoms=2 sw_ok=true atoms_ok=true got=844d610933b1b9963cbdeb5ae3b6b05c
+RESULT ktvec idx=9 name=M=ptn(17^5) slen=1419858 leaves=173 atoms=4 sw_ok=true atoms_ok=true got=844d610933b1b9963cbdeb5ae3b6b05c
+RESULT ktvec idx=10 name=M=ptn(17^6) slen=24137570 leaves=2946 atoms=1 sw_ok=true atoms_ok=true got=3c390782a8a4e89fa6367f72feaaf132
+RESULT ktvec idx=10 name=M=ptn(17^6) slen=24137570 leaves=2946 atoms=2 sw_ok=true atoms_ok=true got=3c390782a8a4e89fa6367f72feaaf132
+RESULT ktvec idx=10 name=M=ptn(17^6) slen=24137570 leaves=2946 atoms=4 sw_ok=true atoms_ok=true got=3c390782a8a4e89fa6367f72feaaf132
+RESULT ktvec idx=11 name=M=empty,C=ptn(1) slen=3 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=fab658db63e94a246188bf7af69a1330
+RESULT ktvec idx=11 name=M=empty,C=ptn(1) slen=3 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=fab658db63e94a246188bf7af69a1330
+RESULT ktvec idx=11 name=M=empty,C=ptn(1) slen=3 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=fab658db63e94a246188bf7af69a1330
+RESULT ktvec idx=12 name=M=FF,C=ptn(41) slen=44 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=d848c5068ced736f4462159b9867fd4c
+RESULT ktvec idx=12 name=M=FF,C=ptn(41) slen=44 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=d848c5068ced736f4462159b9867fd4c
+RESULT ktvec idx=12 name=M=FF,C=ptn(41) slen=44 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=d848c5068ced736f4462159b9867fd4c
+RESULT ktvec idx=13 name=M=FF^3,C=ptn(41^2) slen=1687 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=c389e5009ae57120854c2e8c64670ac0
+RESULT ktvec idx=13 name=M=FF^3,C=ptn(41^2) slen=1687 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=c389e5009ae57120854c2e8c64670ac0
+RESULT ktvec idx=13 name=M=FF^3,C=ptn(41^2) slen=1687 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=c389e5009ae57120854c2e8c64670ac0
+RESULT ktvec idx=14 name=M=FF^7,C=ptn(41^3) slen=68932 leaves=8 atoms=1 sw_ok=true atoms_ok=true got=75d2f86a2e644566726b4fbcfc5657b9
+RESULT ktvec idx=14 name=M=FF^7,C=ptn(41^3) slen=68932 leaves=8 atoms=2 sw_ok=true atoms_ok=true got=75d2f86a2e644566726b4fbcfc5657b9
+RESULT ktvec idx=14 name=M=FF^7,C=ptn(41^3) slen=68932 leaves=8 atoms=4 sw_ok=true atoms_ok=true got=75d2f86a2e644566726b4fbcfc5657b9
+RESULT ktvec idx=15 name=M=ptn(8191) slen=8192 leaves=0 atoms=1 sw_ok=true atoms_ok=true got=1b577636f723643e990cc7d6a6598374
+RESULT ktvec idx=15 name=M=ptn(8191) slen=8192 leaves=0 atoms=2 sw_ok=true atoms_ok=true got=1b577636f723643e990cc7d6a6598374
+RESULT ktvec idx=15 name=M=ptn(8191) slen=8192 leaves=0 atoms=4 sw_ok=true atoms_ok=true got=1b577636f723643e990cc7d6a6598374
+RESULT ktvec idx=16 name=M=ptn(8192) slen=8193 leaves=1 atoms=1 sw_ok=true atoms_ok=true got=48f256f6772f9edfb6a8b661ec92dc93
+RESULT ktvec idx=16 name=M=ptn(8192) slen=8193 leaves=1 atoms=2 sw_ok=true atoms_ok=true got=48f256f6772f9edfb6a8b661ec92dc93
+RESULT ktvec idx=16 name=M=ptn(8192) slen=8193 leaves=1 atoms=4 sw_ok=true atoms_ok=true got=48f256f6772f9edfb6a8b661ec92dc93
+RESULT ktvec idx=17 name=M=ptn(8192),C=ptn(8189) slen=16384 leaves=1 atoms=1 sw_ok=true atoms_ok=true got=3ed12f70fb05ddb58689510ab3e4d23c
+RESULT ktvec idx=17 name=M=ptn(8192),C=ptn(8189) slen=16384 leaves=1 atoms=2 sw_ok=true atoms_ok=true got=3ed12f70fb05ddb58689510ab3e4d23c
+RESULT ktvec idx=17 name=M=ptn(8192),C=ptn(8189) slen=16384 leaves=1 atoms=4 sw_ok=true atoms_ok=true got=3ed12f70fb05ddb58689510ab3e4d23c
+RESULT ktvec idx=18 name=M=ptn(8192),C=ptn(8190) slen=16385 leaves=2 atoms=1 sw_ok=true atoms_ok=true got=6a7c1b6a5cd0d8c9ca943a4a216cc646
+RESULT ktvec idx=18 name=M=ptn(8192),C=ptn(8190) slen=16385 leaves=2 atoms=2 sw_ok=true atoms_ok=true got=6a7c1b6a5cd0d8c9ca943a4a216cc646
+RESULT ktvec idx=18 name=M=ptn(8192),C=ptn(8190) slen=16385 leaves=2 atoms=4 sw_ok=true atoms_ok=true got=6a7c1b6a5cd0d8c9ca943a4a216cc646
+RESULT ktvec summary vectors=18 atom_runs=54 atom_runs_ok=54 ALL_RFC9861_VECTORS_MATCH
+RESULT ktedge summary runs=45 ok=45 ALL_MATCH
+RESULT ktdig mlen=65536 clen=0 olen=32 kt128=a18da3a6b2cda25e05c98f24038882c1293c93332f534aac963fd212eaeeeaeb flat_len=65536 shake128=b8f5b9c32ba6138b44d1894bd464b8cbea56a9ec2cdfcac066a6ec226ee712d0 turboshake128=dbf62962d39c6aab6f7ba08e095baa521162fddcf6c4fc8034d96995d6e7a9c1 clean_message_us_median=7.92
+RESULT kt mlen=65536 atoms=1 engine_mhz=400 leaves=8 final_node_bytes=8460 n=25 min_us=38.52 q1_us=38.64 median_us=38.91 q3_us=39.06 max_us=39.78 spread_max_over_min=1.0327 Gbps_median=13.474 port_share=0.795 leaf_phase_us=32.76 final_node_us=5.58 s0_copy_us=3.12 proc_us=4.38 proc_share=0.113 e2e_with_clean_us=46.83 mismatches=0 VERIFIED
+RESULT kt mlen=65536 atoms=2 engine_mhz=400 leaves=8 final_node_bytes=8460 n=25 min_us=32.67 q1_us=32.73 median_us=33.18 q3_us=33.27 max_us=34.05 spread_max_over_min=1.0422 Gbps_median=15.801 port_share=0.933 leaf_phase_us=26.73 final_node_us=5.58 s0_copy_us=3.36 proc_us=4.71 proc_share=0.142 e2e_with_clean_us=41.10 mismatches=0 VERIFIED
+RESULT kt mlen=65536 atoms=4 engine_mhz=400 leaves=8 final_node_bytes=8460 n=25 min_us=32.13 q1_us=32.25 median_us=32.40 q3_us=32.64 max_us=33.12 spread_max_over_min=1.0308 Gbps_median=16.182 port_share=0.955 leaf_phase_us=26.25 final_node_us=5.58 s0_copy_us=3.39 proc_us=5.61 proc_share=0.173 e2e_with_clean_us=40.32 mismatches=0 VERIFIED
+RESULT flat alg=shake128 mlen=65536 atoms_in_image=4 atoms_used=1 engine_mhz=400 n=25 min_us=46.32 q1_us=46.32 median_us=46.35 q3_us=46.35 max_us=46.53 spread_max_over_min=1.0046 Gbps_median=11.311 port_share=0.589 e2e_with_clean_us=54.27 mismatches=0 VERIFIED
+RESULT flat alg=turboshake128 mlen=65536 atoms_in_image=4 atoms_used=1 engine_mhz=400 n=25 min_us=34.62 q1_us=34.65 median_us=34.65 q3_us=34.77 max_us=34.77 spread_max_over_min=1.0043 Gbps_median=15.131 port_share=0.788 e2e_with_clean_us=42.57 mismatches=0 VERIFIED
+RESULT ktdig mlen=1048576 clen=0 olen=32 kt128=836017a6fd13f7a06492500e7a65201301d199ded92c935c46c3f0ca5ab496d7 flat_len=1048576 shake128=7e1367506c1becd0cb19cf5b90de3662a4586c40b55c7a6936d0ea6ad842b975 turboshake128=07de47bf5761948945a0b741b83aa2ca1e72db632017933c93fc25f14c832a97 clean_message_us_median=110.13
+RESULT kt mlen=1048576 atoms=1 engine_mhz=400 leaves=128 final_node_bytes=12300 n=25 min_us=543.03 q1_us=543.27 median_us=543.39 q3_us=543.66 max_us=544.14 spread_max_over_min=1.0020 Gbps_median=15.438 port_share=0.817 leaf_phase_us=535.23 final_node_us=7.53 s0_copy_us=3.12 proc_us=4.89 proc_share=0.009 e2e_with_clean_us=653.52 mismatches=0 VERIFIED
+RESULT kt mlen=1048576 atoms=2 engine_mhz=400 leaves=128 final_node_bytes=12300 n=25 min_us=444.78 q1_us=444.96 median_us=445.35 q3_us=445.50 max_us=446.34 spread_max_over_min=1.0035 Gbps_median=18.836 port_share=0.996 leaf_phase_us=437.16 final_node_us=7.53 s0_copy_us=3.33 proc_us=5.13 proc_share=0.012 e2e_with_clean_us=555.48 mismatches=0 VERIFIED
+RESULT kt mlen=1048576 atoms=4 engine_mhz=400 leaves=128 final_node_bytes=12300 n=25 min_us=444.27 q1_us=444.42 median_us=444.75 q3_us=444.87 max_us=445.71 spread_max_over_min=1.0032 Gbps_median=18.861 port_share=0.998 leaf_phase_us=436.50 final_node_us=7.53 s0_copy_us=3.45 proc_us=6.18 proc_share=0.014 e2e_with_clean_us=554.88 mismatches=0 VERIFIED
+RESULT flat alg=shake128 mlen=1048576 atoms_in_image=4 atoms_used=1 engine_mhz=400 n=25 min_us=719.19 q1_us=719.22 median_us=719.22 q3_us=719.31 max_us=719.61 spread_max_over_min=1.0006 Gbps_median=11.664 port_share=0.607 e2e_with_clean_us=829.35 mismatches=0 VERIFIED
+RESULT flat alg=turboshake128 mlen=1048576 atoms_in_image=4 atoms_used=1 engine_mhz=400 n=25 min_us=532.80 q1_us=532.92 median_us=533.04 q3_us=533.10 max_us=533.46 spread_max_over_min=1.0012 Gbps_median=15.737 port_share=0.820 e2e_with_clean_us=643.17 mismatches=0 VERIFIED
+RESULT ktdig mlen=16777216 clen=0 olen=32 kt128=9eb044fafacb92627fb22034e062859f78506b28d9302e1ef1899432eb168491 flat_len=16777208 shake128=a059183a182226d9434988c5fde1d0121418f662e180d21e1ee095846e7497f5 turboshake128=919192f5dc64586a991da2cef975666fa14765caa4211db98943cc46e20f3047 clean_message_us_median=1890.74
+RESULT kt mlen=16777216 atoms=1 engine_mhz=400 leaves=2048 final_node_bytes=73741 n=25 min_us=8610.84 q1_us=8611.08 median_us=8611.41 q3_us=8611.53 max_us=8613.15 spread_max_over_min=1.0003 Gbps_median=15.586 port_share=0.819 leaf_phase_us=8571.84 final_node_us=38.61 s0_copy_us=3.42 proc_us=12.96 proc_share=0.002 e2e_with_clean_us=10502.16 mismatches=0 VERIFIED
+RESULT kt mlen=16777216 atoms=2 engine_mhz=400 leaves=2048 final_node_bytes=73741 n=25 min_us=7037.47 q1_us=7037.71 median_us=7038.04 q3_us=7038.40 max_us=7038.64 spread_max_over_min=1.0002 Gbps_median=19.070 port_share=1.001 leaf_phase_us=6998.74 final_node_us=38.61 s0_copy_us=3.42 proc_us=13.02 proc_share=0.002 e2e_with_clean_us=8928.78 mismatches=0 VERIFIED
+RESULT kt mlen=16777216 atoms=4 engine_mhz=400 leaves=2048 final_node_bytes=73741 n=25 min_us=7037.17 q1_us=7037.35 median_us=7037.62 q3_us=7037.83 max_us=7038.19 spread_max_over_min=1.0001 Gbps_median=19.071 port_share=1.002 leaf_phase_us=6998.20 final_node_us=38.61 s0_copy_us=3.42 proc_us=14.13 proc_share=0.002 e2e_with_clean_us=8928.36 mismatches=0 VERIFIED
+RESULT flat alg=shake128 mlen=16777208 atoms_in_image=4 atoms_used=1 engine_mhz=400 n=25 min_us=11485.88 q1_us=11485.94 median_us=11485.97 q3_us=11486.00 max_us=11486.42 spread_max_over_min=1.0000 Gbps_median=11.685 port_share=0.609 e2e_with_clean_us=13376.72 mismatches=0 VERIFIED
+RESULT flat alg=turboshake128 mlen=16777208 atoms_in_image=4 atoms_used=1 engine_mhz=400 n=25 min_us=8506.38 q1_us=8506.47 median_us=8506.56 q3_us=8506.59 max_us=8506.95 spread_max_over_min=1.0001 Gbps_median=15.778 port_share=0.822 e2e_with_clean_us=10397.31 mismatches=0 VERIFIED
+RESULT summary what=kt mismatches=0 ALL_MATCH

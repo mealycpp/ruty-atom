@@ -1,0 +1,15 @@
+COST start flush=false reps=40
+COST fill_secrets_280 min_ns=12990 mean_ns=13698 reps=40
+COST fill_chains_280 min_ns=12000 mean_ns=12962 reps=40
+COST fill_compress_8 min_ns=1530 mean_ns=2503 reps=40
+COST fill_level_4 min_ns=300 mean_ns=366 reps=40
+COST collect_280 min_ns=1500 mean_ns=1621 reps=40
+COST collect_8 min_ns=90 mean_ns=128 reps=40
+COST tags_copy_240kB min_ns=133921 mean_ns=156820 reps=40
+COST tags_collect_38kB min_ns=7320 mean_ns=8878 reps=40
+COST firmware_copy_1MB min_ns=615031 mean_ns=659018 reps=40
+COST tags_flush_only_240kB min_ns=60 mean_ns=178 reps=40
+COST firmware_flush_only_1MB min_ns=60 mean_ns=108 reps=40
+COST poll_1000_reads min_ns=2550 mean_ns=2572 reps=40
+COST shape_5_writes min_ns=60 mean_ns=64 reps=40
+COST end acc=0 sink=0

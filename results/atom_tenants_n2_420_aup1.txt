@@ -1,0 +1,8 @@
+RESULT tenants atoms=2 engine_mhz=420 ids=52552021 52552021 S=shake256_chains_x15 NS=6144 T=minishake128_tags_100to16 NT=9600
+RESULT tenants alone tenant=S atoms=1 time_us=5896.8 hw_us=5895.9 Mchains_per_s=1.042 mismatches=0
+RESULT tenants alone tenant=S atoms=2 time_us=2949.9 hw_us=2948.9 Mchains_per_s=2.083 mismatches=0
+RESULT tenants alone tenant=T atoms=1 time_us=698.5 hw_us=697.8 Mtags_per_s=13.744 mismatches=0
+RESULT tenants alone tenant=T atoms=2 time_us=409.2 hw_us=408.0 Mtags_per_s=23.462 mismatches=0
+RESULT tenants shared S_atoms=1 T_atoms=1 S_time_us=5896.8 S_hw_us=5896.0 S_alone_us=5896.8 S_vs_alone=1.0000 T_first_pass_us=699.3 T_hw_us=698.3 T_alone_us=698.5 T_vs_alone=1.0012 T_batches_while_S=9 T_Mtags_per_s_over_S_window=14.652 mismatches=0
+RESULT tenants reform rounds=60 width_changes=118 wide_to_split=59 split_to_wide=59 mismatches=0 shape_ns_per_atom=481 load_us_per_formation=8669.8
+RESULT tenants summary mismatches=0 ALL_MATCH

@@ -1,0 +1,56 @@
+START 19:29:50 hapi units active: 0
+== atom_v3_n1_450: hapi units active: 0
+RESULT id=52552021 version=33
+RESULT fips205_chain_vector MATCH status=02 got=3a666d7625b1d02f484e003f1df7aa4d
+RESULT chain_time alg=shake256 chains=2000 steps=30000 hw_clocks=537494 ns_per_step=59.7 ns_per_chain=896 mismatches=0
+RESULT chain_time alg=turboshake256 chains=2000 steps=30000 hw_clocks=297494 ns_per_step=33.1 ns_per_chain=496 mismatches=0
+RESULT chain_time alg=minishake128 chains=2000 steps=30000 hw_clocks=165492 ns_per_step=18.4 ns_per_chain=276 mismatches=0
+RESULT chain summary mismatches=0 ALL_MATCH
+clusters correct: 3
+RESULT cluster summary mismatches=0 ALL_MATCH
+RESULT cluster atoms=1 split=0 wide=1 Mchains_per_s=1.116 mismatches=0
+RESULT cluster atoms=1 split=1 wide=0 Mchains_per_s=3.627 mismatches=0
+RESULT sched2 alg=shake256 atoms=1 ms=7.479 batches=132 roots_wrong=0
+RESULT sched2 alg=turboshake256 atoms=1 ms=4.820 batches=132 roots_wrong=0
+RESULT sched2 alg=minishake128 atoms=1 ms=3.802 batches=132 roots_wrong=0
+RESULT sched2 summary roots_wrong=0 ALL_MATCH
+== atom_v3_n2_420: hapi units active: 0
+RESULT id=52552021 version=33
+RESULT fips205_chain_vector MATCH status=02 got=3a666d7625b1d02f484e003f1df7aa4d
+RESULT chain_time alg=shake256 chains=2000 steps=30000 hw_clocks=575901 ns_per_step=64.0 ns_per_chain=960 mismatches=0
+RESULT chain_time alg=turboshake256 chains=2000 steps=30000 hw_clocks=318759 ns_per_step=35.4 ns_per_chain=531 mismatches=0
+RESULT chain_time alg=minishake128 chains=2000 steps=30000 hw_clocks=177328 ns_per_step=19.7 ns_per_chain=296 mismatches=0
+RESULT chain summary mismatches=0 ALL_MATCH
+clusters correct: 6
+RESULT cluster summary mismatches=0 ALL_MATCH
+RESULT cluster atoms=2 split=0 wide=2 Mchains_per_s=2.084 mismatches=0
+RESULT cluster atoms=2 split=2 wide=0 Mchains_per_s=6.771 mismatches=0
+RESULT sched2 alg=shake256 atoms=1 ms=7.952 batches=132 roots_wrong=0
+RESULT sched2 alg=shake256 atoms=2 ms=4.149 batches=132 roots_wrong=0
+RESULT sched2 alg=turboshake256 atoms=1 ms=5.105 batches=132 roots_wrong=0
+RESULT sched2 alg=turboshake256 atoms=2 ms=2.652 batches=132 roots_wrong=0
+RESULT sched2 alg=minishake128 atoms=1 ms=3.969 batches=132 roots_wrong=0
+RESULT sched2 alg=minishake128 atoms=2 ms=2.255 batches=132 roots_wrong=0
+RESULT sched2 summary roots_wrong=0 ALL_MATCH
+== atom_v3_n4_400: hapi units active: 0
+RESULT id=52552021 version=33
+RESULT fips205_chain_vector MATCH status=02 got=3a666d7625b1d02f484e003f1df7aa4d
+RESULT chain_time alg=shake256 chains=2000 steps=30000 hw_clocks=604686 ns_per_step=67.2 ns_per_chain=1008 mismatches=0
+RESULT chain_time alg=turboshake256 chains=2000 steps=30000 hw_clocks=334754 ns_per_step=37.2 ns_per_chain=558 mismatches=0
+RESULT chain_time alg=minishake128 chains=2000 steps=30000 hw_clocks=186189 ns_per_step=20.7 ns_per_chain=310 mismatches=0
+RESULT chain summary mismatches=0 ALL_MATCH
+clusters correct: 15
+RESULT cluster summary mismatches=0 ALL_MATCH
+RESULT cluster atoms=4 split=0 wide=4 Mchains_per_s=3.970 mismatches=0
+RESULT cluster atoms=4 split=4 wide=0 Mchains_per_s=12.896 mismatches=0
+RESULT sched2 alg=shake256 atoms=1 ms=8.387 batches=132 roots_wrong=0
+RESULT sched2 alg=shake256 atoms=2 ms=4.344 batches=132 roots_wrong=0
+RESULT sched2 alg=shake256 atoms=4 ms=2.483 batches=132 roots_wrong=0
+RESULT sched2 alg=turboshake256 atoms=1 ms=5.308 batches=132 roots_wrong=0
+RESULT sched2 alg=turboshake256 atoms=2 ms=2.816 batches=132 roots_wrong=0
+RESULT sched2 alg=turboshake256 atoms=4 ms=1.734 batches=132 roots_wrong=0
+RESULT sched2 alg=minishake128 atoms=1 ms=4.096 batches=132 roots_wrong=0
+RESULT sched2 alg=minishake128 atoms=2 ms=2.284 batches=132 roots_wrong=0
+RESULT sched2 alg=minishake128 atoms=4 ms=1.881 batches=132 roots_wrong=0
+RESULT sched2 summary roots_wrong=0 ALL_MATCH
+== atom_v1_n6_300: hapi units active: 0

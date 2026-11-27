@@ -1,0 +1,9 @@
+RESULT fixcheck image=atom_fix2w_n1_m16_300_450 mode=w engine_mhz=450 id=52552021 functions=shake256,turboshake256
+RESULT fixcheck hash_check image=atom_fix2w_n1_m16_300_450 alg=shake256 digests=128 mismatches=0 first=[]
+RESULT fixcheck chain_check image=atom_fix2w_n1_m16_300_450 alg=shake256 chains=98 mismatches=0
+RESULT fixcheck chain_time image=atom_fix2w_n1_m16_300_450 alg=shake256 chains=4096 steps_per_chain=15 reps=7 hw_clocks_best=1100624 hw_clocks_worst=1100750 hw_clocks_all=1100624/1100750/1100624/1100701/1100624/1100624/1100729 step_ns_per_chain=59.713 ns_per_chain=895.69 Mhashes_per_s=16.747 Mchains_per_s=1.1165 wall_us_best=3669.3 mismatches=0
+RESULT fixcheck hash_check image=atom_fix2w_n1_m16_300_450 alg=turboshake256 digests=128 mismatches=0 first=[]
+RESULT fixcheck chain_check image=atom_fix2w_n1_m16_300_450 alg=turboshake256 chains=98 mismatches=0
+RESULT fixcheck chain_time image=atom_fix2w_n1_m16_300_450 alg=turboshake256 chains=4096 steps_per_chain=15 reps=7 hw_clocks_best=609103 hw_clocks_worst=609252 hw_clocks_all=609103/609164/609103/609105/609104/609104/609252 step_ns_per_chain=33.046 ns_per_chain=495.69 Mhashes_per_s=30.261 Mchains_per_s=2.0174 wall_us_best=2030.9 mismatches=0
+RESULT fixcheck width_bit_ignored image=atom_fix2w_n1_m16_300_450 alg=shake256 width_bit_written=1 digests=8 mismatches=0 BIT_IS_DEAD_IN_HARDWARE
+RESULT fixcheck summary image=atom_fix2w_n1_m16_300_450 mismatches=0 ALL_MATCH

@@ -1,0 +1,52 @@
+Model: design options, 4 atoms @400 MHz, graph+rule policy. ms (change against today's design), atom utilization
+ mix tags=0 fw=0: serial 2.360, today's graph+rule 2.360 util 0.84
+    chains cut in 4 + one node                    2.014 (-14.7%) util 0.91
+    chains cut in 4 + one node + no copy          2.014 (-14.7%) util 0.91
+    chains cut in 4 + one node + second core      2.014 (-14.7%) util 0.91
+    tree chains cut in 2 nodes                    2.171 (-8.0%) util 0.88
+    tree chains cut in 4 nodes                    2.185 (-7.5%) util 0.87
+    tree chains cut in 8 nodes                    2.239 (-5.1%) util 0.86
+    secrets+chains as one hardware node           2.314 (-2.0%) util 0.86
+    no copy for stream data                       2.360 (+0.0%) util 0.84
+    port budget 1                                 2.360 (+0.0%) util 0.84
+    port budget 3                                 2.360 (+0.0%) util 0.84
+    port budget 4                                 2.360 (+0.0%) util 0.84
+    second core lays out stream data              2.360 (+0.0%) util 0.84
+    tag nodes cut in 4                            2.360 (+0.0%) util 0.84
+ mix tags=8 fw=2: serial 5.997, today's graph+rule 5.432 util 0.77
+    chains cut in 4 + one node + no copy          2.780 (-48.8%) util 0.91
+    chains cut in 4 + one node + second core      2.780 (-48.8%) util 0.91
+    no copy for stream data                       3.047 (-43.9%) util 0.85
+    second core lays out stream data              3.047 (-43.9%) util 0.85
+    secrets+chains as one hardware node           5.100 (-6.1%) util 0.77
+    chains cut in 4 + one node                    5.337 (-1.8%) util 0.77
+    port budget 3                                 5.354 (-1.4%) util 0.76
+    port budget 4                                 5.476 (+0.8%) util 0.75
+    tag nodes cut in 4                            5.485 (+1.0%) util 0.76
+    tree chains cut in 2 nodes                    5.528 (+1.8%) util 0.76
+    tree chains cut in 4 nodes                    5.566 (+2.5%) util 0.76
+    port budget 1                                 5.641 (+3.8%) util 0.55
+    tree chains cut in 8 nodes                    5.693 (+4.8%) util 0.76
+ mix tags=16 fw=4: serial 9.277, today's graph+rule 8.832 util 0.74
+    no copy for stream data                       3.790 (-57.1%) util 0.85
+    second core lays out stream data              3.790 (-57.1%) util 0.85
+    chains cut in 4 + one node + no copy          3.796 (-57.0%) util 0.89
+    chains cut in 4 + one node + second core      3.796 (-57.0%) util 0.89
+    secrets+chains as one hardware node           8.583 (-2.8%) util 0.66
+    port budget 3                                 8.666 (-1.9%) util 0.75
+    tag nodes cut in 4                            8.745 (-1.0%) util 0.72
+    chains cut in 4 + one node                    8.766 (-0.8%) util 0.77
+    port budget 4                                 8.792 (-0.5%) util 0.73
+    tree chains cut in 4 nodes                    8.912 (+0.9%) util 0.76
+    tree chains cut in 2 nodes                    8.947 (+1.3%) util 0.76
+    tree chains cut in 8 nodes                    9.093 (+2.9%) util 0.76
+    port budget 1                                 11.282 (+27.7%) util 0.30
+
+Atom count beyond the device (model only), 400 MHz: today's design / chains cut in 4 + one node + no copy
+  atoms= 1  trees only 7.741 / 7.571    mixed(8,2) 13.381 / 10.245
+  atoms= 2  trees only 4.036 / 3.913    mixed(8,2) 8.034 / 5.397
+  atoms= 4  trees only 2.360 / 2.014    mixed(8,2) 5.432 / 2.780
+  atoms= 6  trees only 1.703 / 1.345    mixed(8,2) 4.800 / 1.910
+  atoms= 8  trees only 1.419 / 1.050    mixed(8,2) 4.545 / 1.913
+  atoms=12  trees only 1.123 / 0.794    mixed(8,2) 4.646 / 1.925
+  atoms=16  trees only 1.122 / 0.739    mixed(8,2) 4.712 / 1.951

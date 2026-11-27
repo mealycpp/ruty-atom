@@ -1,0 +1,53 @@
+RESULT dfg atoms=4 engine_mhz=400 ids=52552021 52552021 52552021 52552021
+RESULT dfg tenant_buffers tags_pa=0x78e00000 fw_pa=0x79200000 atom_pa=0x78600000 0x78800000 0x78a00000 0x78c00000
+RESULT dfg mode no_copy=false
+RESULT dfg mix=trees22+tags0x2400+fw0x1MB policy=serial atoms=4 ms=2.328 median_ms=2.367 trees_done_ms=2.328 tags_done_ms=0.000 fw_done_ms=0.000 atom_util=0.815 nodes=132 mismatches=0
+RESULT dfg mix=trees22+tags0x2400+fw0x1MB policy=graph atoms=4 ms=2.350 median_ms=2.363 trees_done_ms=2.349 tags_done_ms=0.000 fw_done_ms=0.000 atom_util=0.815 nodes=132 mismatches=0
+RESULT dfg mix=trees22+tags0x2400+fw0x1MB policy=graph+rule atoms=4 ms=2.356 median_ms=2.385 trees_done_ms=2.356 tags_done_ms=0.000 fw_done_ms=0.000 atom_util=0.814 nodes=132 mismatches=0
+RESULT dfg gain mix=tags0+fw0 graph_vs_serial=1.0093 rule_vs_serial=1.0122 rule_vs_graph=1.0028
+RESULT dfg mix=trees22+tags4x2400+fw1x1MB policy=serial atoms=4 ms=4.428 median_ms=4.630 trees_done_ms=2.364 tags_done_ms=3.954 fw_done_ms=4.427 atom_util=0.665 nodes=137 mismatches=0
+RESULT dfg mix=trees22+tags4x2400+fw1x1MB policy=graph atoms=4 ms=4.488 median_ms=8.456 trees_done_ms=4.487 tags_done_ms=2.162 fw_done_ms=2.772 atom_util=0.736 nodes=137 mismatches=0
+RESULT dfg mix=trees22+tags4x2400+fw1x1MB policy=graph+rule atoms=4 ms=4.039 median_ms=4.519 trees_done_ms=4.039 tags_done_ms=1.109 fw_done_ms=2.474 atom_util=0.738 nodes=137 mismatches=0
+RESULT dfg gain mix=tags4+fw1 graph_vs_serial=1.0136 rule_vs_serial=0.9123 rule_vs_graph=0.9001
+RESULT dfg mix=trees22+tags8x2400+fw2x1MB policy=serial atoms=4 ms=6.653 median_ms=6.768 trees_done_ms=2.384 tags_done_ms=6.153 fw_done_ms=6.652 atom_util=0.683 nodes=142 mismatches=0
+RESULT dfg mix=trees22+tags8x2400+fw2x1MB policy=graph atoms=4 ms=5.800 median_ms=6.295 trees_done_ms=5.799 tags_done_ms=2.690 fw_done_ms=4.136 atom_util=0.746 nodes=142 mismatches=0
+RESULT dfg mix=trees22+tags8x2400+fw2x1MB policy=graph+rule atoms=4 ms=5.792 median_ms=6.105 trees_done_ms=5.792 tags_done_ms=2.252 fw_done_ms=5.040 atom_util=0.739 nodes=142 mismatches=0
+RESULT dfg gain mix=tags8+fw2 graph_vs_serial=0.8717 rule_vs_serial=0.8707 rule_vs_graph=0.9988
+RESULT dfg mix=trees22+tags16x2400+fw4x1MB policy=serial atoms=4 ms=10.193 median_ms=13.987 trees_done_ms=2.369 tags_done_ms=8.389 fw_done_ms=10.193 atom_util=0.707 nodes=152 mismatches=0
+RESULT dfg mix=trees22+tags16x2400+fw4x1MB policy=graph atoms=4 ms=8.955 median_ms=9.217 trees_done_ms=8.955 tags_done_ms=4.532 fw_done_ms=7.498 atom_util=0.749 nodes=152 mismatches=0
+RESULT dfg mix=trees22+tags16x2400+fw4x1MB policy=graph+rule atoms=4 ms=8.877 median_ms=16.999 trees_done_ms=8.381 tags_done_ms=3.897 fw_done_ms=8.877 atom_util=0.725 nodes=152 mismatches=0
+RESULT dfg gain mix=tags16+fw4 graph_vs_serial=0.8786 rule_vs_serial=0.8709 rule_vs_graph=0.9913
+RESULT dfg mix=trees22+tags16x2400+fw0x1MB policy=serial atoms=4 ms=8.795 median_ms=14.478 trees_done_ms=2.379 tags_done_ms=8.773 fw_done_ms=0.000 atom_util=0.720 nodes=148 mismatches=0
+RESULT dfg mix=trees22+tags16x2400+fw0x1MB policy=graph atoms=4 ms=5.845 median_ms=5.974 trees_done_ms=5.844 tags_done_ms=4.044 fw_done_ms=0.000 atom_util=0.741 nodes=148 mismatches=0
+RESULT dfg mix=trees22+tags16x2400+fw0x1MB policy=graph+rule atoms=4 ms=6.108 median_ms=6.331 trees_done_ms=6.108 tags_done_ms=4.097 fw_done_ms=0.000 atom_util=0.731 nodes=148 mismatches=0
+RESULT dfg gain mix=tags16+fw0 graph_vs_serial=0.6646 rule_vs_serial=0.6945 rule_vs_graph=1.0450
+RESULT dfg mix=trees22+tags0x2400+fw4x1MB policy=serial atoms=4 ms=6.186 median_ms=6.531 trees_done_ms=2.383 tags_done_ms=0.000 fw_done_ms=6.186 atom_util=0.519 nodes=136 mismatches=0
+RESULT dfg mix=trees22+tags0x2400+fw4x1MB policy=graph atoms=4 ms=5.331 median_ms=5.416 trees_done_ms=5.331 tags_done_ms=0.000 fw_done_ms=3.660 atom_util=0.658 nodes=136 mismatches=0
+RESULT dfg mix=trees22+tags0x2400+fw4x1MB policy=graph+rule atoms=4 ms=5.208 median_ms=5.257 trees_done_ms=5.207 tags_done_ms=0.000 fw_done_ms=4.992 atom_util=0.689 nodes=136 mismatches=0
+RESULT dfg gain mix=tags0+fw4 graph_vs_serial=0.8618 rule_vs_serial=0.8419 rule_vs_graph=0.9768
+RESULT dfg mode no_copy=true
+RESULT dfg mix=trees22+tags0x2400+fw0x1MB policy=serial atoms=4 ms=2.332 median_ms=2.359 trees_done_ms=2.331 tags_done_ms=0.000 fw_done_ms=0.000 atom_util=0.815 nodes=132 mismatches=0
+RESULT dfg mix=trees22+tags0x2400+fw0x1MB policy=graph atoms=4 ms=2.341 median_ms=2.359 trees_done_ms=2.341 tags_done_ms=0.000 fw_done_ms=0.000 atom_util=0.817 nodes=132 mismatches=0
+RESULT dfg mix=trees22+tags0x2400+fw0x1MB policy=graph+rule atoms=4 ms=2.333 median_ms=2.365 trees_done_ms=2.333 tags_done_ms=0.000 fw_done_ms=0.000 atom_util=0.815 nodes=132 mismatches=0
+RESULT dfg gain mix=tags0+fw0 graph_vs_serial=1.0038 rule_vs_serial=1.0004 rule_vs_graph=0.9966
+RESULT dfg mix=trees22+tags4x2400+fw1x1MB policy=serial atoms=4 ms=3.379 median_ms=3.406 trees_done_ms=2.335 tags_done_ms=2.904 fw_done_ms=3.378 atom_util=0.729 nodes=137 mismatches=0
+RESULT dfg mix=trees22+tags4x2400+fw1x1MB policy=graph atoms=4 ms=2.806 median_ms=2.828 trees_done_ms=2.805 tags_done_ms=0.560 fw_done_ms=1.150 atom_util=0.810 nodes=137 mismatches=0
+RESULT dfg mix=trees22+tags4x2400+fw1x1MB policy=graph+rule atoms=4 ms=2.802 median_ms=2.809 trees_done_ms=2.801 tags_done_ms=0.632 fw_done_ms=1.370 atom_util=0.812 nodes=137 mismatches=0
+RESULT dfg gain mix=tags4+fw1 graph_vs_serial=0.8304 rule_vs_serial=0.8291 rule_vs_graph=0.9985
+RESULT dfg mix=trees22+tags8x2400+fw2x1MB policy=serial atoms=4 ms=4.121 median_ms=4.147 trees_done_ms=2.346 tags_done_ms=3.343 fw_done_ms=4.120 atom_util=0.744 nodes=142 mismatches=0
+RESULT dfg mix=trees22+tags8x2400+fw2x1MB policy=graph atoms=4 ms=3.499 median_ms=3.520 trees_done_ms=3.499 tags_done_ms=1.054 fw_done_ms=1.947 atom_util=0.835 nodes=142 mismatches=0
+RESULT dfg mix=trees22+tags8x2400+fw2x1MB policy=graph+rule atoms=4 ms=3.354 median_ms=3.402 trees_done_ms=3.354 tags_done_ms=1.194 fw_done_ms=2.670 atom_util=0.816 nodes=142 mismatches=0
+RESULT dfg gain mix=tags8+fw2 graph_vs_serial=0.8492 rule_vs_serial=0.8140 rule_vs_graph=0.9585
+RESULT dfg mix=trees22+tags16x2400+fw4x1MB policy=serial atoms=4 ms=5.797 median_ms=5.840 trees_done_ms=2.340 tags_done_ms=4.280 fw_done_ms=5.797 atom_util=0.822 nodes=152 mismatches=0
+RESULT dfg mix=trees22+tags16x2400+fw4x1MB policy=graph atoms=4 ms=5.345 median_ms=5.461 trees_done_ms=5.345 tags_done_ms=1.908 fw_done_ms=3.771 atom_util=0.840 nodes=152 mismatches=0
+RESULT dfg mix=trees22+tags16x2400+fw4x1MB policy=graph+rule atoms=4 ms=5.053 median_ms=5.065 trees_done_ms=4.055 tags_done_ms=2.308 fw_done_ms=5.052 atom_util=0.712 nodes=152 mismatches=0
+RESULT dfg gain mix=tags16+fw4 graph_vs_serial=0.9221 rule_vs_serial=0.8716 rule_vs_graph=0.9453
+RESULT dfg mix=trees22+tags16x2400+fw0x1MB policy=serial atoms=4 ms=4.061 median_ms=4.081 trees_done_ms=2.343 tags_done_ms=4.043 fw_done_ms=0.000 atom_util=0.802 nodes=148 mismatches=0
+RESULT dfg mix=trees22+tags16x2400+fw0x1MB policy=graph atoms=4 ms=3.697 median_ms=3.708 trees_done_ms=3.697 tags_done_ms=1.865 fw_done_ms=0.000 atom_util=0.814 nodes=148 mismatches=0
+RESULT dfg mix=trees22+tags16x2400+fw0x1MB policy=graph+rule atoms=4 ms=3.564 median_ms=3.596 trees_done_ms=3.563 tags_done_ms=2.317 fw_done_ms=0.000 atom_util=0.819 nodes=148 mismatches=0
+RESULT dfg gain mix=tags16+fw0 graph_vs_serial=0.9104 rule_vs_serial=0.8775 rule_vs_graph=0.9639
+RESULT dfg mix=trees22+tags0x2400+fw4x1MB policy=serial atoms=4 ms=4.219 median_ms=4.229 trees_done_ms=2.332 tags_done_ms=0.000 fw_done_ms=4.219 atom_util=0.795 nodes=136 mismatches=0
+RESULT dfg mix=trees22+tags0x2400+fw4x1MB policy=graph atoms=4 ms=3.845 median_ms=3.887 trees_done_ms=3.844 tags_done_ms=0.000 fw_done_ms=2.003 atom_util=0.827 nodes=136 mismatches=0
+RESULT dfg mix=trees22+tags0x2400+fw4x1MB policy=graph+rule atoms=4 ms=3.154 median_ms=3.171 trees_done_ms=3.153 tags_done_ms=0.000 fw_done_ms=2.856 atom_util=0.795 nodes=136 mismatches=0
+RESULT dfg gain mix=tags0+fw4 graph_vs_serial=0.9113 rule_vs_serial=0.7475 rule_vs_graph=0.8203
+RESULT dfg summary mismatches=0 ALL_MATCH

@@ -1,0 +1,381 @@
+START 01:23:41 modes=std turbo mini hybrid fw fw-turbo fw-mini fw-hybrid reps=25 hapi units active: 0
+5664c66e28015fd52c3122b371371b3afb0a1bf22899f7ff015f89079e0669ac  ruty_sign4.rs
+== atom_v3_n1_450 01:24:18
+loaded
+-- mode std exit=0
+RESULT check v=0 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=0 mode=std op=keygen atoms=1 mhz=450 n=25 min_ms=0.3939 q1_ms=0.3993 median_ms=0.4016 q3_ms=0.4081 max_ms=0.4470 spread_max_over_min=1.1347 wrong=0
+RESULT time v=0 mode=std op=sign atoms=1 mhz=450 n=25 min_ms=9.7502 q1_ms=9.7728 median_ms=9.7868 q3_ms=9.8335 max_ms=12.0793 spread_max_over_min=1.2389 wrong=0 msg_len=0
+RESULT time v=0 mode=std op=verify atoms=1 mhz=450 n=25 min_ms=1.0042 q1_ms=1.0148 median_ms=1.0243 q3_ms=1.0353 max_ms=1.1307 spread_max_over_min=1.1260 wrong=0
+RESULT check v=1 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=1 mode=std op=keygen atoms=1 mhz=450 n=25 min_ms=0.3931 q1_ms=0.4006 median_ms=0.4102 q3_ms=0.4134 max_ms=0.4256 spread_max_over_min=1.0826 wrong=0
+RESULT time v=1 mode=std op=sign atoms=1 mhz=450 n=25 min_ms=9.7540 q1_ms=9.7639 median_ms=9.7789 q3_ms=9.7887 max_ms=9.8281 spread_max_over_min=1.0076 wrong=0 msg_len=1024
+RESULT time v=1 mode=std op=verify atoms=1 mhz=450 n=25 min_ms=1.0133 q1_ms=1.0177 median_ms=1.0213 q3_ms=1.0265 max_ms=1.0341 spread_max_over_min=1.0205 wrong=0
+RESULT check v=2 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=2 mode=std op=keygen atoms=1 mhz=450 n=25 min_ms=0.3939 q1_ms=0.4007 median_ms=0.4014 q3_ms=0.4020 max_ms=0.4087 spread_max_over_min=1.0376 wrong=0
+RESULT time v=2 mode=std op=sign atoms=1 mhz=450 n=25 min_ms=9.7459 q1_ms=9.7584 median_ms=9.7656 q3_ms=9.7735 max_ms=9.8020 spread_max_over_min=1.0058 wrong=0 msg_len=33
+RESULT time v=2 mode=std op=verify atoms=1 mhz=450 n=25 min_ms=1.0132 q1_ms=1.0304 median_ms=1.0371 q3_ms=1.0393 max_ms=1.0530 spread_max_over_min=1.0393 wrong=0
+RESULT check v=3 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=3 mode=std op=keygen atoms=1 mhz=450 n=25 min_ms=0.3931 q1_ms=0.4004 median_ms=0.4009 q3_ms=0.4017 max_ms=0.4088 spread_max_over_min=1.0398 wrong=0
+RESULT time v=3 mode=std op=sign atoms=1 mhz=450 n=25 min_ms=9.7373 q1_ms=9.7406 median_ms=9.7441 q3_ms=9.7531 max_ms=9.7937 spread_max_over_min=1.0058 wrong=0 msg_len=1
+RESULT time v=3 mode=std op=verify atoms=1 mhz=450 n=25 min_ms=1.0303 q1_ms=1.0419 median_ms=1.0437 q3_ms=1.0453 max_ms=1.0705 spread_max_over_min=1.0390 wrong=0
+RESULT summary mode=std mismatches=0 ALL_MATCH
+-- mode turbo exit=0
+RESULT check v=0 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=0 mode=turbo op=keygen atoms=1 mhz=450 n=25 min_ms=0.2717 q1_ms=0.2774 median_ms=0.2789 q3_ms=0.2800 max_ms=0.2906 spread_max_over_min=1.0693 wrong=0
+RESULT time v=0 mode=turbo op=sign atoms=1 mhz=450 n=25 min_ms=6.7719 q1_ms=6.7933 median_ms=6.8062 q3_ms=6.8254 max_ms=6.9886 spread_max_over_min=1.0320 wrong=0 msg_len=0
+RESULT time v=0 mode=turbo op=verify atoms=1 mhz=450 n=25 min_ms=0.8395 q1_ms=0.8514 median_ms=0.8593 q3_ms=0.8651 max_ms=0.8864 spread_max_over_min=1.0560 wrong=0
+RESULT check v=1 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=1 mode=turbo op=keygen atoms=1 mhz=450 n=25 min_ms=0.2736 q1_ms=0.2782 median_ms=0.2796 q3_ms=0.2840 max_ms=0.3106 spread_max_over_min=1.1352 wrong=0
+RESULT time v=1 mode=turbo op=sign atoms=1 mhz=450 n=25 min_ms=6.7642 q1_ms=6.7867 median_ms=6.8066 q3_ms=6.8725 max_ms=7.0459 spread_max_over_min=1.0416 wrong=0 msg_len=1024
+RESULT time v=1 mode=turbo op=verify atoms=1 mhz=450 n=25 min_ms=0.8481 q1_ms=0.8724 median_ms=0.8835 q3_ms=0.8939 max_ms=0.9312 spread_max_over_min=1.0979 wrong=0
+RESULT check v=2 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=2 mode=turbo op=keygen atoms=1 mhz=450 n=25 min_ms=0.2726 q1_ms=0.2781 median_ms=0.2786 q3_ms=0.2790 max_ms=0.2877 spread_max_over_min=1.0555 wrong=0
+RESULT time v=2 mode=turbo op=sign atoms=1 mhz=450 n=25 min_ms=6.7645 q1_ms=6.7733 median_ms=6.7804 q3_ms=6.8277 max_ms=7.0445 spread_max_over_min=1.0414 wrong=0 msg_len=33
+RESULT time v=2 mode=turbo op=verify atoms=1 mhz=450 n=25 min_ms=0.8418 q1_ms=0.8558 median_ms=0.8666 q3_ms=0.8712 max_ms=0.9983 spread_max_over_min=1.1859 wrong=0
+RESULT check v=3 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=3 mode=turbo op=keygen atoms=1 mhz=450 n=25 min_ms=0.2733 q1_ms=0.2783 median_ms=0.2792 q3_ms=0.2796 max_ms=0.2889 spread_max_over_min=1.0571 wrong=0
+RESULT time v=3 mode=turbo op=sign atoms=1 mhz=450 n=25 min_ms=6.7756 q1_ms=6.7821 median_ms=6.7875 q3_ms=6.7945 max_ms=6.8329 spread_max_over_min=1.0085 wrong=0 msg_len=1
+RESULT time v=3 mode=turbo op=verify atoms=1 mhz=450 n=25 min_ms=0.8464 q1_ms=0.8516 median_ms=0.8546 q3_ms=0.8567 max_ms=0.8632 spread_max_over_min=1.0200 wrong=0
+RESULT summary mode=turbo mismatches=0 ALL_MATCH
+-- mode mini exit=0
+RESULT check v=0 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=0 mode=mini op=keygen atoms=1 mhz=450 n=25 min_ms=0.2190 q1_ms=0.2230 median_ms=0.2236 q3_ms=0.2252 max_ms=0.2359 spread_max_over_min=1.0770 wrong=0
+RESULT time v=0 mode=mini op=sign atoms=1 mhz=450 n=25 min_ms=5.3496 q1_ms=5.3641 median_ms=5.3722 q3_ms=5.3966 max_ms=5.4902 spread_max_over_min=1.0263 wrong=0 msg_len=0
+RESULT time v=0 mode=mini op=verify atoms=1 mhz=450 n=25 min_ms=1.1102 q1_ms=1.1273 median_ms=1.1356 q3_ms=1.1413 max_ms=1.2403 spread_max_over_min=1.1172 wrong=0
+RESULT check v=1 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=1 mode=mini op=keygen atoms=1 mhz=450 n=25 min_ms=0.2183 q1_ms=0.2234 median_ms=0.2244 q3_ms=0.2336 max_ms=0.2360 spread_max_over_min=1.0809 wrong=0
+RESULT time v=1 mode=mini op=sign atoms=1 mhz=450 n=25 min_ms=5.3863 q1_ms=5.3964 median_ms=5.4112 q3_ms=5.4177 max_ms=5.4474 spread_max_over_min=1.0113 wrong=0 msg_len=1024
+RESULT time v=1 mode=mini op=verify atoms=1 mhz=450 n=25 min_ms=1.1302 q1_ms=1.1411 median_ms=1.1446 q3_ms=1.1508 max_ms=1.1897 spread_max_over_min=1.0526 wrong=0
+RESULT check v=2 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=2 mode=mini op=keygen atoms=1 mhz=450 n=25 min_ms=0.2187 q1_ms=0.2243 median_ms=0.2341 q3_ms=0.2355 max_ms=0.2429 spread_max_over_min=1.1108 wrong=0
+RESULT time v=2 mode=mini op=sign atoms=1 mhz=450 n=25 min_ms=5.3506 q1_ms=5.3655 median_ms=5.3724 q3_ms=5.3779 max_ms=5.4198 spread_max_over_min=1.0129 wrong=0 msg_len=33
+RESULT time v=2 mode=mini op=verify atoms=1 mhz=450 n=25 min_ms=1.1227 q1_ms=1.1291 median_ms=1.1336 q3_ms=1.1408 max_ms=1.1536 spread_max_over_min=1.0275 wrong=0
+RESULT check v=3 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=3 mode=mini op=keygen atoms=1 mhz=450 n=25 min_ms=0.2182 q1_ms=0.2248 median_ms=0.2283 q3_ms=0.2359 max_ms=0.2444 spread_max_over_min=1.1200 wrong=0
+RESULT time v=3 mode=mini op=sign atoms=1 mhz=450 n=25 min_ms=5.3545 q1_ms=5.3598 median_ms=5.3687 q3_ms=5.3767 max_ms=5.4095 spread_max_over_min=1.0103 wrong=0 msg_len=1
+RESULT time v=3 mode=mini op=verify atoms=1 mhz=450 n=25 min_ms=1.1145 q1_ms=1.1262 median_ms=1.1296 q3_ms=1.1317 max_ms=1.1484 spread_max_over_min=1.0305 wrong=0
+RESULT summary mode=mini mismatches=0 ALL_MATCH
+-- mode hybrid exit=0
+RESULT check v=0 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=0 mode=hybrid op=keygen atoms=1 mhz=450 n=25 min_ms=0.2154 q1_ms=0.2193 median_ms=0.2206 q3_ms=0.2281 max_ms=0.2420 spread_max_over_min=1.1238 wrong=0
+RESULT time v=0 mode=hybrid op=sign atoms=1 mhz=450 n=25 min_ms=5.4630 q1_ms=5.4768 median_ms=5.4966 q3_ms=5.5112 max_ms=5.6479 spread_max_over_min=1.0338 wrong=0 msg_len=0
+RESULT time v=0 mode=hybrid op=verify atoms=1 mhz=450 n=25 min_ms=1.0732 q1_ms=1.0840 median_ms=1.0872 q3_ms=1.0928 max_ms=1.0999 spread_max_over_min=1.0249 wrong=0
+RESULT check v=1 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=1 mode=hybrid op=keygen atoms=1 mhz=450 n=25 min_ms=0.2149 q1_ms=0.2210 median_ms=0.2214 q3_ms=0.2219 max_ms=0.2273 spread_max_over_min=1.0576 wrong=0
+RESULT time v=1 mode=hybrid op=sign atoms=1 mhz=450 n=25 min_ms=5.4583 q1_ms=5.4705 median_ms=5.4766 q3_ms=5.4867 max_ms=5.5264 spread_max_over_min=1.0125 wrong=0 msg_len=1024
+RESULT time v=1 mode=hybrid op=verify atoms=1 mhz=450 n=25 min_ms=1.0853 q1_ms=1.1052 median_ms=1.1093 q3_ms=1.1140 max_ms=1.1313 spread_max_over_min=1.0424 wrong=0
+RESULT check v=2 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=2 mode=hybrid op=keygen atoms=1 mhz=450 n=25 min_ms=0.2152 q1_ms=0.2219 median_ms=0.2236 q3_ms=0.2256 max_ms=0.2743 spread_max_over_min=1.2741 wrong=0
+RESULT time v=2 mode=hybrid op=sign atoms=1 mhz=450 n=25 min_ms=5.4601 q1_ms=5.4777 median_ms=5.5056 q3_ms=5.5464 max_ms=9.9299 spread_max_over_min=1.8186 wrong=0 msg_len=33
+RESULT time v=2 mode=hybrid op=verify atoms=1 mhz=450 n=25 min_ms=1.0830 q1_ms=1.1023 median_ms=1.1192 q3_ms=1.1244 max_ms=1.1705 spread_max_over_min=1.0808 wrong=0
+RESULT check v=3 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=3 mode=hybrid op=keygen atoms=1 mhz=450 n=25 min_ms=0.2161 q1_ms=0.2208 median_ms=0.2226 q3_ms=0.2233 max_ms=0.2307 spread_max_over_min=1.0673 wrong=0
+RESULT time v=3 mode=hybrid op=sign atoms=1 mhz=450 n=25 min_ms=5.4625 q1_ms=5.4762 median_ms=5.4871 q3_ms=5.4979 max_ms=5.5396 spread_max_over_min=1.0141 wrong=0 msg_len=1
+RESULT time v=3 mode=hybrid op=verify atoms=1 mhz=450 n=25 min_ms=1.0645 q1_ms=1.0780 median_ms=1.0903 q3_ms=1.0963 max_ms=1.1070 spread_max_over_min=1.0399 wrong=0
+RESULT summary mode=hybrid mismatches=0 ALL_MATCH
+-- mode fw exit=0
+RESULT check v=fw mode=fw prehash=shake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw mode=fw op=signer_total n=25 min_ms=10.5923 q1_ms=10.6217 median_ms=10.6349 q3_ms=10.6504 max_ms=10.8057 spread_max_over_min=1.0201 wrong=0
+RESULT time v=fw mode=fw op=signer_hash_1MB n=25 min_ms=0.8593 q1_ms=0.8610 median_ms=0.8623 q3_ms=0.8644 max_ms=0.8771 spread_max_over_min=1.0207
+RESULT time v=fw mode=fw op=signer_sign n=25 min_ms=9.7300 q1_ms=9.7578 median_ms=9.7668 q3_ms=9.7806 max_ms=9.9296 spread_max_over_min=1.0205
+RESULT time v=fw mode=fw op=verifier_total n=25 min_ms=1.8763 q1_ms=1.8847 median_ms=1.8968 q3_ms=1.9024 max_ms=1.9382 spread_max_over_min=1.0330 wrong=0
+RESULT time v=fw mode=fw op=verifier_hash_1MB n=25 min_ms=0.8615 q1_ms=0.8635 median_ms=0.8786 q3_ms=0.8803 max_ms=0.8948 spread_max_over_min=1.0385
+RESULT time v=fw mode=fw op=verifier_verify n=25 min_ms=1.0117 q1_ms=1.0180 median_ms=1.0205 q3_ms=1.0247 max_ms=1.0541 spread_max_over_min=1.0419
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+-- mode fw-turbo exit=0
+RESULT check v=fw mode=fw-turbo prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PAS
+RESULT time v=fw mode=fw-turbo op=signer_total n=25 min_ms=7.4084 q1_ms=7.4239 median_ms=7.4354 q3_ms=7.4461 max_ms=7.5963 spread_max_over_min=1.0254 wrong=0
+RESULT time v=fw mode=fw-turbo op=signer_hash_1MB n=25 min_ms=0.6536 q1_ms=0.6555 median_ms=0.6563 q3_ms=0.6576 max_ms=0.6827 spread_max_over_min=1.0446
+RESULT time v=fw mode=fw-turbo op=signer_sign n=25 min_ms=6.7519 q1_ms=6.7649 median_ms=6.7735 q3_ms=6.7898 max_ms=6.9352 spread_max_over_min=1.0271
+RESULT time v=fw mode=fw-turbo op=verifier_total n=25 min_ms=1.4933 q1_ms=1.5110 median_ms=1.5237 q3_ms=1.5319 max_ms=1.5457 spread_max_over_min=1.0351 wrong=0
+RESULT time v=fw mode=fw-turbo op=verifier_hash_1MB n=25 min_ms=0.6529 q1_ms=0.6574 median_ms=0.6743 q3_ms=0.6752 max_ms=0.6760 spread_max_over_min=1.0353
+RESULT time v=fw mode=fw-turbo op=verifier_verify n=25 min_ms=0.8377 q1_ms=0.8482 median_ms=0.8517 q3_ms=0.8583 max_ms=0.8701 spread_max_over_min=1.0387
+RESULT summary mode=fw-turbo mismatches=0 ALL_MATCH
+-- mode fw-mini exit=0
+RESULT check v=fw mode=fw-mini prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw mode=fw-mini op=signer_total n=25 min_ms=6.0121 q1_ms=6.0270 median_ms=6.0411 q3_ms=6.0488 max_ms=6.2035 spread_max_over_min=1.0318 wrong=0
+RESULT time v=fw mode=fw-mini op=signer_hash_1MB n=25 min_ms=0.6533 q1_ms=0.6548 median_ms=0.6554 q3_ms=0.6566 max_ms=0.6593 spread_max_over_min=1.0092
+RESULT time v=fw mode=fw-mini op=signer_sign n=25 min_ms=5.3550 q1_ms=5.3723 median_ms=5.3850 q3_ms=5.3920 max_ms=5.5441 spread_max_over_min=1.0353
+RESULT time v=fw mode=fw-mini op=verifier_total n=25 min_ms=1.7667 q1_ms=1.7758 median_ms=1.7854 q3_ms=1.8012 max_ms=1.8229 spread_max_over_min=1.0318 wrong=0
+RESULT time v=fw mode=fw-mini op=verifier_hash_1MB n=25 min_ms=0.6560 q1_ms=0.6584 median_ms=0.6595 q3_ms=0.6705 max_ms=0.6744 spread_max_over_min=1.0280
+RESULT time v=fw mode=fw-mini op=verifier_verify n=25 min_ms=1.1089 q1_ms=1.1169 median_ms=1.1231 q3_ms=1.1332 max_ms=1.1491 spread_max_over_min=1.0363
+RESULT summary mode=fw-mini mismatches=0 ALL_MATCH
+-- mode fw-hybrid exit=0
+RESULT check v=fw mode=fw-hybrid prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PA
+RESULT time v=fw mode=fw-hybrid op=signer_total n=25 min_ms=6.1161 q1_ms=6.1459 median_ms=6.1563 q3_ms=6.1677 max_ms=6.3031 spread_max_over_min=1.0306 wrong=0
+RESULT time v=fw mode=fw-hybrid op=signer_hash_1MB n=25 min_ms=0.6515 q1_ms=0.6565 median_ms=0.6568 q3_ms=0.6577 max_ms=0.6691 spread_max_over_min=1.0269
+RESULT time v=fw mode=fw-hybrid op=signer_sign n=25 min_ms=5.4585 q1_ms=5.4916 median_ms=5.4971 q3_ms=5.5100 max_ms=5.6448 spread_max_over_min=1.0341
+RESULT time v=fw mode=fw-hybrid op=verifier_total n=25 min_ms=1.7152 q1_ms=1.7309 median_ms=1.7472 q3_ms=1.7502 max_ms=1.7927 spread_max_over_min=1.0452 wrong=0
+RESULT time v=fw mode=fw-hybrid op=verifier_hash_1MB n=25 min_ms=0.6563 q1_ms=0.6591 median_ms=0.6603 q3_ms=0.6618 max_ms=0.7109 spread_max_over_min=1.0831
+RESULT time v=fw mode=fw-hybrid op=verifier_verify n=25 min_ms=1.0561 q1_ms=1.0723 median_ms=1.0841 q3_ms=1.0884 max_ms=1.0942 spread_max_over_min=1.0361
+RESULT summary mode=fw-hybrid mismatches=0 ALL_MATCH
+== atom_v3_n2_420 01:27:26
+loaded
+-- mode std exit=0
+RESULT check v=0 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=0 mode=std op=keygen atoms=2 mhz=420 n=25 min_ms=0.2607 q1_ms=0.2680 median_ms=0.2712 q3_ms=0.2786 max_ms=0.2986 spread_max_over_min=1.1455 wrong=0
+RESULT time v=0 mode=std op=sign atoms=2 mhz=420 n=25 min_ms=5.5892 q1_ms=5.6428 median_ms=5.7764 q3_ms=9.7793 max_ms=21.5314 spread_max_over_min=3.8523 wrong=0 msg_len=0
+RESULT time v=0 mode=std op=verify atoms=2 mhz=420 n=25 min_ms=0.9707 q1_ms=0.9825 median_ms=0.9934 q3_ms=1.0194 max_ms=5.1317 spread_max_over_min=5.2865 wrong=0
+RESULT time v=0 mode=std op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.0734 q1_ms=1.0858 median_ms=1.1013 q3_ms=1.1130 max_ms=1.1559 spread_max_over_min=1.0769 wrong=0
+RESULT check v=1 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=1 mode=std op=keygen atoms=2 mhz=420 n=25 min_ms=0.2623 q1_ms=0.2680 median_ms=0.2686 q3_ms=0.2695 max_ms=0.2800 spread_max_over_min=1.0675 wrong=0
+RESULT time v=1 mode=std op=sign atoms=2 mhz=420 n=25 min_ms=5.5415 q1_ms=5.5508 median_ms=5.5561 q3_ms=5.5684 max_ms=5.6113 spread_max_over_min=1.0126 wrong=0 msg_len=1024
+RESULT time v=1 mode=std op=verify atoms=2 mhz=420 n=25 min_ms=0.9779 q1_ms=0.9920 median_ms=0.9972 q3_ms=1.0060 max_ms=1.0114 spread_max_over_min=1.0343 wrong=0
+RESULT time v=1 mode=std op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.0817 q1_ms=1.0945 median_ms=1.0974 q3_ms=1.0983 max_ms=1.1077 spread_max_over_min=1.0240 wrong=0
+RESULT check v=2 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=2 mode=std op=keygen atoms=2 mhz=420 n=25 min_ms=0.2606 q1_ms=0.2685 median_ms=0.2691 q3_ms=0.2698 max_ms=0.2762 spread_max_over_min=1.0600 wrong=0
+RESULT time v=2 mode=std op=sign atoms=2 mhz=420 n=25 min_ms=5.5464 q1_ms=5.5492 median_ms=5.5581 q3_ms=5.5631 max_ms=5.5907 spread_max_over_min=1.0080 wrong=0 msg_len=33
+RESULT time v=2 mode=std op=verify atoms=2 mhz=420 n=25 min_ms=0.9746 q1_ms=0.9993 median_ms=1.0053 q3_ms=1.0081 max_ms=1.0165 spread_max_over_min=1.0430 wrong=0
+RESULT time v=2 mode=std op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.0906 q1_ms=1.1024 median_ms=1.1044 q3_ms=1.1097 max_ms=1.1322 spread_max_over_min=1.0381 wrong=0
+RESULT check v=3 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=3 mode=std op=keygen atoms=2 mhz=420 n=25 min_ms=0.2596 q1_ms=0.2687 median_ms=0.2694 q3_ms=0.2700 max_ms=0.2734 spread_max_over_min=1.0530 wrong=0
+RESULT time v=3 mode=std op=sign atoms=2 mhz=420 n=25 min_ms=5.5382 q1_ms=5.5498 median_ms=5.5516 q3_ms=5.5634 max_ms=5.5973 spread_max_over_min=1.0107 wrong=0 msg_len=1
+RESULT time v=3 mode=std op=verify atoms=2 mhz=420 n=25 min_ms=0.9927 q1_ms=1.0090 median_ms=1.0145 q3_ms=1.0186 max_ms=1.0297 spread_max_over_min=1.0372 wrong=0
+RESULT time v=3 mode=std op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1102 q1_ms=1.1194 median_ms=1.1211 q3_ms=1.1229 max_ms=1.1322 spread_max_over_min=1.0198 wrong=0
+RESULT summary mode=std mismatches=0 ALL_MATCH
+-- mode turbo exit=0
+RESULT check v=0 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=0 mode=turbo op=keygen atoms=2 mhz=420 n=25 min_ms=0.1969 q1_ms=0.1996 median_ms=0.2009 q3_ms=0.2016 max_ms=0.2375 spread_max_over_min=1.2060 wrong=0
+RESULT time v=0 mode=turbo op=sign atoms=2 mhz=420 n=25 min_ms=3.9707 q1_ms=3.9834 median_ms=3.9881 q3_ms=3.9971 max_ms=4.2366 spread_max_over_min=1.0670 wrong=0 msg_len=0
+RESULT time v=0 mode=turbo op=verify atoms=2 mhz=420 n=25 min_ms=0.8497 q1_ms=0.8687 median_ms=0.8755 q3_ms=0.8804 max_ms=0.8868 spread_max_over_min=1.0437 wrong=0
+RESULT time v=0 mode=turbo op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=0.8795 q1_ms=0.8920 median_ms=0.8946 q3_ms=0.8961 max_ms=0.9219 spread_max_over_min=1.0482 wrong=0
+RESULT check v=1 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=1 mode=turbo op=keygen atoms=2 mhz=420 n=25 min_ms=0.1966 q1_ms=0.2013 median_ms=0.2021 q3_ms=0.2025 max_ms=0.2075 spread_max_over_min=1.0555 wrong=0
+RESULT time v=1 mode=turbo op=sign atoms=2 mhz=420 n=25 min_ms=3.9502 q1_ms=3.9614 median_ms=3.9657 q3_ms=3.9777 max_ms=4.0096 spread_max_over_min=1.0150 wrong=0 msg_len=1024
+RESULT time v=1 mode=turbo op=verify atoms=2 mhz=420 n=25 min_ms=0.8777 q1_ms=0.8893 median_ms=0.8938 q3_ms=0.8990 max_ms=0.9128 spread_max_over_min=1.0400 wrong=0
+RESULT time v=1 mode=turbo op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=0.8894 q1_ms=0.9005 median_ms=0.9019 q3_ms=0.9031 max_ms=0.9152 spread_max_over_min=1.0290 wrong=0
+RESULT check v=2 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=2 mode=turbo op=keygen atoms=2 mhz=420 n=25 min_ms=0.1949 q1_ms=0.2008 median_ms=0.2018 q3_ms=0.2023 max_ms=0.2097 spread_max_over_min=1.0759 wrong=0
+RESULT time v=2 mode=turbo op=sign atoms=2 mhz=420 n=25 min_ms=3.9560 q1_ms=3.9632 median_ms=3.9711 q3_ms=3.9942 max_ms=4.0408 spread_max_over_min=1.0214 wrong=0 msg_len=33
+RESULT time v=2 mode=turbo op=verify atoms=2 mhz=420 n=25 min_ms=0.8654 q1_ms=0.8790 median_ms=0.8873 q3_ms=0.8942 max_ms=0.9217 spread_max_over_min=1.0651 wrong=0
+RESULT time v=2 mode=turbo op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=0.8795 q1_ms=0.8945 median_ms=0.8968 q3_ms=0.9201 max_ms=0.9757 spread_max_over_min=1.1094 wrong=0
+RESULT check v=3 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=3 mode=turbo op=keygen atoms=2 mhz=420 n=25 min_ms=0.1950 q1_ms=0.2026 median_ms=0.2035 q3_ms=0.2047 max_ms=0.2180 spread_max_over_min=1.1182 wrong=0
+RESULT time v=3 mode=turbo op=sign atoms=2 mhz=420 n=25 min_ms=3.9361 q1_ms=3.9542 median_ms=3.9595 q3_ms=3.9680 max_ms=4.0521 spread_max_over_min=1.0295 wrong=0 msg_len=1
+RESULT time v=3 mode=turbo op=verify atoms=2 mhz=420 n=25 min_ms=0.8545 q1_ms=0.8753 median_ms=0.8828 q3_ms=0.8934 max_ms=0.9166 spread_max_over_min=1.0726 wrong=0
+RESULT time v=3 mode=turbo op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=0.8869 q1_ms=0.8960 median_ms=0.8984 q3_ms=0.9017 max_ms=0.9100 spread_max_over_min=1.0260 wrong=0
+RESULT summary mode=turbo mismatches=0 ALL_MATCH
+-- mode mini exit=0
+RESULT check v=0 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=0 mode=mini op=keygen atoms=2 mhz=420 n=25 min_ms=0.1709 q1_ms=0.1741 median_ms=0.1769 q3_ms=0.1861 max_ms=0.2029 spread_max_over_min=1.1875 wrong=0
+RESULT time v=0 mode=mini op=sign atoms=2 mhz=420 n=25 min_ms=3.4631 q1_ms=3.4802 median_ms=3.4949 q3_ms=3.5252 max_ms=3.7905 spread_max_over_min=1.0946 wrong=0 msg_len=0
+RESULT time v=0 mode=mini op=verify atoms=2 mhz=420 n=25 min_ms=1.1537 q1_ms=1.1655 median_ms=1.1763 q3_ms=1.2029 max_ms=1.2994 spread_max_over_min=1.1263 wrong=0
+RESULT time v=0 mode=mini op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1753 q1_ms=1.1802 median_ms=1.1833 q3_ms=1.1866 max_ms=1.1976 spread_max_over_min=1.0190 wrong=0
+RESULT check v=1 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=1 mode=mini op=keygen atoms=2 mhz=420 n=25 min_ms=0.1699 q1_ms=0.1780 median_ms=0.1850 q3_ms=0.1862 max_ms=0.1900 spread_max_over_min=1.1181 wrong=0
+RESULT time v=1 mode=mini op=sign atoms=2 mhz=420 n=25 min_ms=3.4959 q1_ms=3.5051 median_ms=3.5097 q3_ms=3.5194 max_ms=3.5568 spread_max_over_min=1.0174 wrong=0 msg_len=1024
+RESULT time v=1 mode=mini op=verify atoms=2 mhz=420 n=25 min_ms=1.1743 q1_ms=1.1829 median_ms=1.1874 q3_ms=1.1926 max_ms=1.2155 spread_max_over_min=1.0351 wrong=0
+RESULT time v=1 mode=mini op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1816 q1_ms=1.1924 median_ms=1.1975 q3_ms=1.1995 max_ms=1.2073 spread_max_over_min=1.0217 wrong=0
+RESULT check v=2 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=2 mode=mini op=keygen atoms=2 mhz=420 n=25 min_ms=0.1723 q1_ms=0.1765 median_ms=0.1772 q3_ms=0.1777 max_ms=0.1892 spread_max_over_min=1.0978 wrong=0
+RESULT time v=2 mode=mini op=sign atoms=2 mhz=420 n=25 min_ms=3.4699 q1_ms=3.4726 median_ms=3.4813 q3_ms=3.4846 max_ms=3.5159 spread_max_over_min=1.0132 wrong=0 msg_len=33
+RESULT time v=2 mode=mini op=verify atoms=2 mhz=420 n=25 min_ms=1.1755 q1_ms=1.1797 median_ms=1.1853 q3_ms=1.1888 max_ms=1.2197 spread_max_over_min=1.0376 wrong=0
+RESULT time v=2 mode=mini op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1747 q1_ms=1.1869 median_ms=1.1899 q3_ms=1.1946 max_ms=1.2024 spread_max_over_min=1.0236 wrong=0
+RESULT check v=3 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=3 mode=mini op=keygen atoms=2 mhz=420 n=25 min_ms=0.1726 q1_ms=0.1769 median_ms=0.1776 q3_ms=0.1782 max_ms=0.1860 spread_max_over_min=1.0779 wrong=0
+RESULT time v=3 mode=mini op=sign atoms=2 mhz=420 n=25 min_ms=3.4683 q1_ms=3.4760 median_ms=3.4791 q3_ms=3.4838 max_ms=3.5033 spread_max_over_min=1.0101 wrong=0 msg_len=1
+RESULT time v=3 mode=mini op=verify atoms=2 mhz=420 n=25 min_ms=1.1682 q1_ms=1.1730 median_ms=1.1760 q3_ms=1.1845 max_ms=1.2084 spread_max_over_min=1.0344 wrong=0
+RESULT time v=3 mode=mini op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1704 q1_ms=1.1801 median_ms=1.1830 q3_ms=1.1870 max_ms=1.2125 spread_max_over_min=1.0360 wrong=0
+RESULT summary mode=mini mismatches=0 ALL_MATCH
+-- mode hybrid exit=0
+RESULT check v=0 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=0 mode=hybrid op=keygen atoms=2 mhz=420 n=25 min_ms=0.1678 q1_ms=0.1720 median_ms=0.1726 q3_ms=0.1747 max_ms=0.1853 spread_max_over_min=1.1046 wrong=0
+RESULT time v=0 mode=hybrid op=sign atoms=2 mhz=420 n=25 min_ms=3.5452 q1_ms=3.5566 median_ms=3.5657 q3_ms=3.5736 max_ms=3.7268 spread_max_over_min=1.0512 wrong=0 msg_len=0
+RESULT time v=0 mode=hybrid op=verify atoms=2 mhz=420 n=25 min_ms=1.1087 q1_ms=1.1164 median_ms=1.1223 q3_ms=1.1265 max_ms=1.1612 spread_max_over_min=1.0473 wrong=0
+RESULT time v=0 mode=hybrid op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1148 q1_ms=1.1188 median_ms=1.1213 q3_ms=1.1242 max_ms=1.1479 spread_max_over_min=1.0297 wrong=0
+RESULT check v=1 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=1 mode=hybrid op=keygen atoms=2 mhz=420 n=25 min_ms=0.1674 q1_ms=0.1729 median_ms=0.1741 q3_ms=0.1777 max_ms=0.1842 spread_max_over_min=1.1004 wrong=0
+RESULT time v=1 mode=hybrid op=sign atoms=2 mhz=420 n=25 min_ms=3.5291 q1_ms=3.5386 median_ms=3.5525 q3_ms=3.5585 max_ms=3.5833 spread_max_over_min=1.0154 wrong=0 msg_len=1024
+RESULT time v=1 mode=hybrid op=verify atoms=2 mhz=420 n=25 min_ms=1.1269 q1_ms=1.1434 median_ms=1.1535 q3_ms=1.1556 max_ms=1.1714 spread_max_over_min=1.0395 wrong=0
+RESULT time v=1 mode=hybrid op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1241 q1_ms=1.1281 median_ms=1.1344 q3_ms=1.1375 max_ms=1.1468 spread_max_over_min=1.0202 wrong=0
+RESULT check v=2 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=2 mode=hybrid op=keygen atoms=2 mhz=420 n=25 min_ms=0.1667 q1_ms=0.1726 median_ms=0.1734 q3_ms=0.1745 max_ms=0.1942 spread_max_over_min=1.1648 wrong=0
+RESULT time v=2 mode=hybrid op=sign atoms=2 mhz=420 n=25 min_ms=3.5303 q1_ms=3.5438 median_ms=3.5469 q3_ms=3.5540 max_ms=3.8924 spread_max_over_min=1.1026 wrong=0 msg_len=33
+RESULT time v=2 mode=hybrid op=verify atoms=2 mhz=420 n=25 min_ms=1.1425 q1_ms=1.1472 median_ms=1.1496 q3_ms=1.1528 max_ms=1.2059 spread_max_over_min=1.0555 wrong=0
+RESULT time v=2 mode=hybrid op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1265 q1_ms=1.1337 median_ms=1.1355 q3_ms=1.1386 max_ms=1.1999 spread_max_over_min=1.0651 wrong=0
+RESULT check v=3 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=3 mode=hybrid op=keygen atoms=2 mhz=420 n=25 min_ms=0.1670 q1_ms=0.1727 median_ms=0.1732 q3_ms=0.1740 max_ms=0.1809 spread_max_over_min=1.0832 wrong=0
+RESULT time v=3 mode=hybrid op=sign atoms=2 mhz=420 n=25 min_ms=3.5424 q1_ms=3.5499 median_ms=3.5528 q3_ms=3.5608 max_ms=3.5959 spread_max_over_min=1.0151 wrong=0 msg_len=1
+RESULT time v=3 mode=hybrid op=verify atoms=2 mhz=420 n=25 min_ms=1.1125 q1_ms=1.1357 median_ms=1.1394 q3_ms=1.1421 max_ms=1.2124 spread_max_over_min=1.0898 wrong=0
+RESULT time v=3 mode=hybrid op=verify_on_1_of_2_atoms mhz=420 n=25 min_ms=1.1154 q1_ms=1.1211 median_ms=1.1241 q3_ms=1.1288 max_ms=1.1566 spread_max_over_min=1.0369 wrong=0
+RESULT summary mode=hybrid mismatches=0 ALL_MATCH
+-- mode fw exit=0
+RESULT check v=fw mode=fw prehash=shake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw mode=fw op=signer_total n=25 min_ms=6.4753 q1_ms=6.4860 median_ms=6.4927 q3_ms=6.4986 max_ms=6.6699 spread_max_over_min=1.0301 wrong=0
+RESULT time v=fw mode=fw op=signer_hash_1MB n=25 min_ms=0.9112 q1_ms=0.9116 median_ms=0.9130 q3_ms=0.9249 max_ms=0.9362 spread_max_over_min=1.0275
+RESULT time v=fw mode=fw op=signer_sign n=25 min_ms=5.5633 q1_ms=5.5695 median_ms=5.5737 q3_ms=5.5803 max_ms=5.7337 spread_max_over_min=1.0306
+RESULT time v=fw mode=fw op=verifier_total n=25 min_ms=1.8755 q1_ms=1.8866 median_ms=1.8956 q3_ms=1.8980 max_ms=1.9497 spread_max_over_min=1.0396 wrong=0
+RESULT time v=fw mode=fw op=verifier_hash_1MB n=25 min_ms=0.9123 q1_ms=0.9152 median_ms=0.9168 q3_ms=0.9180 max_ms=0.9335 spread_max_over_min=1.0232
+RESULT time v=fw mode=fw op=verifier_verify n=25 min_ms=0.9582 q1_ms=0.9690 median_ms=0.9778 q3_ms=0.9824 max_ms=1.0296 spread_max_over_min=1.0745
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+-- mode fw-turbo exit=0
+RESULT check v=fw mode=fw-turbo prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PAS
+RESULT time v=fw mode=fw-turbo op=signer_total n=25 min_ms=4.6538 q1_ms=4.6682 median_ms=4.6749 q3_ms=4.6800 max_ms=4.8081 spread_max_over_min=1.0332 wrong=0
+RESULT time v=fw mode=fw-turbo op=signer_hash_1MB n=25 min_ms=0.6880 q1_ms=0.6913 median_ms=0.6917 q3_ms=0.6923 max_ms=0.7126 spread_max_over_min=1.0357
+RESULT time v=fw mode=fw-turbo op=signer_sign n=25 min_ms=3.9617 q1_ms=3.9777 median_ms=3.9825 q3_ms=3.9880 max_ms=4.1125 spread_max_over_min=1.0381
+RESULT time v=fw mode=fw-turbo op=verifier_total n=25 min_ms=1.5604 q1_ms=1.5679 median_ms=1.5727 q3_ms=1.5773 max_ms=1.5903 spread_max_over_min=1.0192 wrong=0
+RESULT time v=fw mode=fw-turbo op=verifier_hash_1MB n=25 min_ms=0.6903 q1_ms=0.6940 median_ms=0.6948 q3_ms=0.6956 max_ms=0.7135 spread_max_over_min=1.0336
+RESULT time v=fw mode=fw-turbo op=verifier_verify n=25 min_ms=0.8653 q1_ms=0.8718 median_ms=0.8772 q3_ms=0.8803 max_ms=0.8947 spread_max_over_min=1.0339
+RESULT summary mode=fw-turbo mismatches=0 ALL_MATCH
+-- mode fw-mini exit=0
+RESULT check v=fw mode=fw-mini prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw mode=fw-mini op=signer_total n=25 min_ms=4.1677 q1_ms=4.1727 median_ms=4.1761 q3_ms=4.1824 max_ms=4.3406 spread_max_over_min=1.0415 wrong=0
+RESULT time v=fw mode=fw-mini op=signer_hash_1MB n=25 min_ms=0.6875 q1_ms=0.6921 median_ms=0.6925 q3_ms=0.6933 max_ms=0.6992 spread_max_over_min=1.0170
+RESULT time v=fw mode=fw-mini op=signer_sign n=25 min_ms=3.4753 q1_ms=3.4806 median_ms=3.4836 q3_ms=3.4884 max_ms=3.6413 spread_max_over_min=1.0478
+RESULT time v=fw mode=fw-mini op=verifier_total n=25 min_ms=1.8502 q1_ms=1.8609 median_ms=1.8693 q3_ms=1.8814 max_ms=1.9005 spread_max_over_min=1.0272 wrong=0
+RESULT time v=fw mode=fw-mini op=verifier_hash_1MB n=25 min_ms=0.6899 q1_ms=0.6945 median_ms=0.6958 q3_ms=0.6965 max_ms=0.7057 spread_max_over_min=1.0228
+RESULT time v=fw mode=fw-mini op=verifier_verify n=25 min_ms=1.1572 q1_ms=1.1656 median_ms=1.1737 q3_ms=1.1786 max_ms=1.2042 spread_max_over_min=1.0406
+RESULT summary mode=fw-mini mismatches=0 ALL_MATCH
+-- mode fw-hybrid exit=0
+RESULT check v=fw mode=fw-hybrid prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PA
+RESULT time v=fw mode=fw-hybrid op=signer_total n=25 min_ms=4.2200 q1_ms=4.2423 median_ms=4.2503 q3_ms=4.2615 max_ms=4.4276 spread_max_over_min=1.0492 wrong=0
+RESULT time v=fw mode=fw-hybrid op=signer_hash_1MB n=25 min_ms=0.6899 q1_ms=0.6914 median_ms=0.6927 q3_ms=0.6935 max_ms=0.7145 spread_max_over_min=1.0356
+RESULT time v=fw mode=fw-hybrid op=signer_sign n=25 min_ms=3.5269 q1_ms=3.5454 median_ms=3.5567 q3_ms=3.5659 max_ms=3.7328 spread_max_over_min=1.0584
+RESULT time v=fw mode=fw-hybrid op=verifier_total n=25 min_ms=1.7835 q1_ms=1.8020 median_ms=1.8162 q3_ms=1.8245 max_ms=1.8462 spread_max_over_min=1.0352 wrong=0
+RESULT time v=fw mode=fw-hybrid op=verifier_hash_1MB n=25 min_ms=0.6927 q1_ms=0.6948 median_ms=0.7000 q3_ms=0.7112 max_ms=0.7266 spread_max_over_min=1.0489
+RESULT time v=fw mode=fw-hybrid op=verifier_verify n=25 min_ms=1.0907 q1_ms=1.1060 median_ms=1.1106 q3_ms=1.1159 max_ms=1.1263 spread_max_over_min=1.0326
+RESULT summary mode=fw-hybrid mismatches=0 ALL_MATCH
+== atom_v3_n4_400 01:30:33
+loaded
+-- mode std exit=0
+RESULT check v=0 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=0 mode=std op=keygen atoms=4 mhz=400 n=25 min_ms=0.2002 q1_ms=0.2046 median_ms=0.2127 q3_ms=0.2238 max_ms=0.2479 spread_max_over_min=1.2383 wrong=0
+RESULT time v=0 mode=std op=sign atoms=4 mhz=400 n=25 min_ms=3.6827 q1_ms=3.6953 median_ms=3.7269 q3_ms=3.8118 max_ms=3.9202 spread_max_over_min=1.0645 wrong=0 msg_len=0
+RESULT time v=0 mode=std op=verify atoms=4 mhz=400 n=25 min_ms=1.1956 q1_ms=1.2128 median_ms=1.2329 q3_ms=1.2754 max_ms=1.3328 spread_max_over_min=1.1147 wrong=0
+RESULT time v=0 mode=std op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.0981 q1_ms=1.1055 median_ms=1.1119 q3_ms=1.1263 max_ms=1.1543 spread_max_over_min=1.0512 wrong=0
+RESULT time v=0 mode=std op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=0.9873 q1_ms=1.0006 median_ms=1.0131 q3_ms=1.0212 max_ms=1.1215 spread_max_over_min=1.1359 wrong=0
+RESULT check v=1 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=1 mode=std op=keygen atoms=4 mhz=400 n=25 min_ms=0.1968 q1_ms=0.2045 median_ms=0.2052 q3_ms=0.2067 max_ms=0.2403 spread_max_over_min=1.2210 wrong=0
+RESULT time v=1 mode=std op=sign atoms=4 mhz=400 n=25 min_ms=3.6433 q1_ms=3.6722 median_ms=3.6833 q3_ms=3.6867 max_ms=3.7387 spread_max_over_min=1.0262 wrong=0 msg_len=1024
+RESULT time v=1 mode=std op=verify atoms=4 mhz=400 n=25 min_ms=1.2009 q1_ms=1.2237 median_ms=1.2358 q3_ms=1.2697 max_ms=1.2923 spread_max_over_min=1.0761 wrong=0
+RESULT time v=1 mode=std op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1073 q1_ms=1.1128 median_ms=1.1144 q3_ms=1.1173 max_ms=1.1278 spread_max_over_min=1.0185 wrong=0
+RESULT time v=1 mode=std op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.0093 q1_ms=1.0135 median_ms=1.0153 q3_ms=1.0173 max_ms=1.0391 spread_max_over_min=1.0295 wrong=0
+RESULT check v=2 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=2 mode=std op=keygen atoms=4 mhz=400 n=25 min_ms=0.1958 q1_ms=0.2044 median_ms=0.2057 q3_ms=0.2068 max_ms=0.2168 spread_max_over_min=1.1076 wrong=0
+RESULT time v=2 mode=std op=sign atoms=4 mhz=400 n=25 min_ms=3.6545 q1_ms=3.6682 median_ms=3.6817 q3_ms=3.6858 max_ms=3.7232 spread_max_over_min=1.0188 wrong=0 msg_len=33
+RESULT time v=2 mode=std op=verify atoms=4 mhz=400 n=25 min_ms=1.2069 q1_ms=1.2382 median_ms=1.2560 q3_ms=1.2657 max_ms=1.2859 spread_max_over_min=1.0654 wrong=0
+RESULT time v=2 mode=std op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1111 q1_ms=1.1181 median_ms=1.1205 q3_ms=1.1227 max_ms=1.1448 spread_max_over_min=1.0304 wrong=0
+RESULT time v=2 mode=std op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.0041 q1_ms=1.0085 median_ms=1.0133 q3_ms=1.0193 max_ms=1.0275 spread_max_over_min=1.0233 wrong=0
+RESULT check v=3 mode=std keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=true
+RESULT time v=3 mode=std op=keygen atoms=4 mhz=400 n=25 min_ms=0.1966 q1_ms=0.2045 median_ms=0.2054 q3_ms=0.2066 max_ms=0.2279 spread_max_over_min=1.1595 wrong=0
+RESULT time v=3 mode=std op=sign atoms=4 mhz=400 n=25 min_ms=3.6519 q1_ms=3.6618 median_ms=3.6655 q3_ms=3.6736 max_ms=3.7140 spread_max_over_min=1.0170 wrong=0 msg_len=1
+RESULT time v=3 mode=std op=verify atoms=4 mhz=400 n=25 min_ms=1.2080 q1_ms=1.2444 median_ms=1.2512 q3_ms=1.2564 max_ms=1.2888 spread_max_over_min=1.0669 wrong=0
+RESULT time v=3 mode=std op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1255 q1_ms=1.1370 median_ms=1.1387 q3_ms=1.1412 max_ms=1.1486 spread_max_over_min=1.0205 wrong=0
+RESULT time v=3 mode=std op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.0088 q1_ms=1.0099 median_ms=1.0197 q3_ms=1.0240 max_ms=1.0408 spread_max_over_min=1.0318 wrong=0
+RESULT summary mode=std mismatches=0 ALL_MATCH
+-- mode turbo exit=0
+RESULT check v=0 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=0 mode=turbo op=keygen atoms=4 mhz=400 n=25 min_ms=0.1649 q1_ms=0.1683 median_ms=0.1692 q3_ms=0.1700 max_ms=0.1812 spread_max_over_min=1.0990 wrong=0
+RESULT time v=0 mode=turbo op=sign atoms=4 mhz=400 n=25 min_ms=2.9969 q1_ms=3.0183 median_ms=3.0262 q3_ms=3.0351 max_ms=3.1336 spread_max_over_min=1.0456 wrong=0 msg_len=0
+RESULT time v=0 mode=turbo op=verify atoms=4 mhz=400 n=25 min_ms=1.1889 q1_ms=1.1931 median_ms=1.2256 q3_ms=1.2369 max_ms=1.2656 spread_max_over_min=1.0645 wrong=0
+RESULT time v=0 mode=turbo op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=0.9129 q1_ms=0.9158 median_ms=0.9203 q3_ms=0.9247 max_ms=0.9320 spread_max_over_min=1.0209 wrong=0
+RESULT time v=0 mode=turbo op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=0.8797 q1_ms=0.8923 median_ms=0.8947 q3_ms=0.8992 max_ms=0.9160 spread_max_over_min=1.0412 wrong=0
+RESULT check v=1 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=1 mode=turbo op=keygen atoms=4 mhz=400 n=25 min_ms=0.1640 q1_ms=0.1715 median_ms=0.1823 q3_ms=0.1858 max_ms=0.2148 spread_max_over_min=1.3093 wrong=0
+RESULT time v=1 mode=turbo op=sign atoms=4 mhz=400 n=25 min_ms=2.9735 q1_ms=2.9943 median_ms=3.0019 q3_ms=3.0160 max_ms=3.0438 spread_max_over_min=1.0236 wrong=0 msg_len=1024
+RESULT time v=1 mode=turbo op=verify atoms=4 mhz=400 n=25 min_ms=1.1909 q1_ms=1.2362 median_ms=1.2427 q3_ms=1.2560 max_ms=1.2865 spread_max_over_min=1.0802 wrong=0
+RESULT time v=1 mode=turbo op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=0.9163 q1_ms=0.9269 median_ms=0.9285 q3_ms=0.9311 max_ms=0.9646 spread_max_over_min=1.0527 wrong=0
+RESULT time v=1 mode=turbo op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=0.9043 q1_ms=0.9086 median_ms=0.9110 q3_ms=0.9176 max_ms=0.9288 spread_max_over_min=1.0271 wrong=0
+RESULT check v=2 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=2 mode=turbo op=keygen atoms=4 mhz=400 n=25 min_ms=0.1653 q1_ms=0.1709 median_ms=0.1719 q3_ms=0.1730 max_ms=0.1821 spread_max_over_min=1.1015 wrong=0
+RESULT time v=2 mode=turbo op=sign atoms=4 mhz=400 n=25 min_ms=2.9969 q1_ms=3.0096 median_ms=3.0151 q3_ms=3.0191 max_ms=3.0676 spread_max_over_min=1.0236 wrong=0 msg_len=33
+RESULT time v=2 mode=turbo op=verify atoms=4 mhz=400 n=25 min_ms=1.2204 q1_ms=1.2431 median_ms=1.2572 q3_ms=1.2798 max_ms=1.2932 spread_max_over_min=1.0597 wrong=0
+RESULT time v=2 mode=turbo op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=0.9149 q1_ms=0.9280 median_ms=0.9300 q3_ms=0.9340 max_ms=0.9405 spread_max_over_min=1.0280 wrong=0
+RESULT time v=2 mode=turbo op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=0.8972 q1_ms=0.9033 median_ms=0.9089 q3_ms=0.9180 max_ms=0.9698 spread_max_over_min=1.0809 wrong=0
+RESULT check v=3 mode=turbo keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tr
+RESULT time v=3 mode=turbo op=keygen atoms=4 mhz=400 n=25 min_ms=0.1649 q1_ms=0.1718 median_ms=0.1726 q3_ms=0.1733 max_ms=0.1779 spread_max_over_min=1.0786 wrong=0
+RESULT time v=3 mode=turbo op=sign atoms=4 mhz=400 n=25 min_ms=2.9901 q1_ms=3.0009 median_ms=3.0088 q3_ms=3.0213 max_ms=3.0363 spread_max_over_min=1.0155 wrong=0 msg_len=1
+RESULT time v=3 mode=turbo op=verify atoms=4 mhz=400 n=25 min_ms=1.2038 q1_ms=1.2247 median_ms=1.2377 q3_ms=1.2459 max_ms=1.2669 spread_max_over_min=1.0525 wrong=0
+RESULT time v=3 mode=turbo op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=0.9161 q1_ms=0.9262 median_ms=0.9267 q3_ms=0.9274 max_ms=0.9581 spread_max_over_min=1.0458 wrong=0
+RESULT time v=3 mode=turbo op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=0.9029 q1_ms=0.9059 median_ms=0.9086 q3_ms=0.9189 max_ms=0.9290 spread_max_over_min=1.0288 wrong=0
+RESULT summary mode=turbo mismatches=0 ALL_MATCH
+-- mode mini exit=0
+RESULT check v=0 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=0 mode=mini op=keygen atoms=4 mhz=400 n=25 min_ms=0.1580 q1_ms=0.1613 median_ms=0.1623 q3_ms=0.1644 max_ms=0.1752 spread_max_over_min=1.1090 wrong=0
+RESULT time v=0 mode=mini op=sign atoms=4 mhz=400 n=25 min_ms=3.0593 q1_ms=3.0854 median_ms=3.0968 q3_ms=3.1119 max_ms=3.2400 spread_max_over_min=1.0591 wrong=0 msg_len=0
+RESULT time v=0 mode=mini op=verify atoms=4 mhz=400 n=25 min_ms=1.1956 q1_ms=1.2122 median_ms=1.2169 q3_ms=1.2304 max_ms=1.2461 spread_max_over_min=1.0423 wrong=0
+RESULT time v=0 mode=mini op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1802 q1_ms=1.1840 median_ms=1.1875 q3_ms=1.1921 max_ms=1.2082 spread_max_over_min=1.0237 wrong=0
+RESULT time v=0 mode=mini op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.1788 q1_ms=1.1932 median_ms=1.1958 q3_ms=1.2002 max_ms=1.2227 spread_max_over_min=1.0372 wrong=0
+RESULT check v=1 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=1 mode=mini op=keygen atoms=4 mhz=400 n=25 min_ms=0.1579 q1_ms=0.1640 median_ms=0.1742 q3_ms=0.1754 max_ms=0.1813 spread_max_over_min=1.1482 wrong=0
+RESULT time v=1 mode=mini op=sign atoms=4 mhz=400 n=25 min_ms=3.0927 q1_ms=3.1116 median_ms=3.1168 q3_ms=3.1236 max_ms=3.1585 spread_max_over_min=1.0213 wrong=0 msg_len=1024
+RESULT time v=1 mode=mini op=verify atoms=4 mhz=400 n=25 min_ms=1.2306 q1_ms=1.2448 median_ms=1.2496 q3_ms=1.2605 max_ms=1.2971 spread_max_over_min=1.0540 wrong=0
+RESULT time v=1 mode=mini op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1926 q1_ms=1.1988 median_ms=1.2015 q3_ms=1.2041 max_ms=1.2097 spread_max_over_min=1.0143 wrong=0
+RESULT time v=1 mode=mini op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.2003 q1_ms=1.2049 median_ms=1.2067 q3_ms=1.2148 max_ms=1.2317 spread_max_over_min=1.0262 wrong=0
+RESULT check v=2 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=2 mode=mini op=keygen atoms=4 mhz=400 n=25 min_ms=0.1579 q1_ms=0.1631 median_ms=0.1641 q3_ms=0.1652 max_ms=0.2003 spread_max_over_min=1.2683 wrong=0
+RESULT time v=2 mode=mini op=sign atoms=4 mhz=400 n=25 min_ms=3.0715 q1_ms=3.0827 median_ms=3.1018 q3_ms=3.1292 max_ms=3.2137 spread_max_over_min=1.0463 wrong=0 msg_len=33
+RESULT time v=2 mode=mini op=verify atoms=4 mhz=400 n=25 min_ms=1.2320 q1_ms=1.2397 median_ms=1.2458 q3_ms=1.2621 max_ms=1.3148 spread_max_over_min=1.0671 wrong=0
+RESULT time v=2 mode=mini op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1787 q1_ms=1.1845 median_ms=1.1864 q3_ms=1.1955 max_ms=1.2423 spread_max_over_min=1.0540 wrong=0
+RESULT time v=2 mode=mini op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.1858 q1_ms=1.1932 median_ms=1.1992 q3_ms=1.2053 max_ms=1.2176 spread_max_over_min=1.0268 wrong=0
+RESULT check v=3 mode=mini keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=tru
+RESULT time v=3 mode=mini op=keygen atoms=4 mhz=400 n=25 min_ms=0.1557 q1_ms=0.1641 median_ms=0.1647 q3_ms=0.1661 max_ms=0.1847 spread_max_over_min=1.1859 wrong=0
+RESULT time v=3 mode=mini op=sign atoms=4 mhz=400 n=25 min_ms=3.0717 q1_ms=3.0806 median_ms=3.0849 q3_ms=3.0921 max_ms=3.1299 spread_max_over_min=1.0189 wrong=0 msg_len=1
+RESULT time v=3 mode=mini op=verify atoms=4 mhz=400 n=25 min_ms=1.2126 q1_ms=1.2336 median_ms=1.2376 q3_ms=1.2465 max_ms=1.2814 spread_max_over_min=1.0567 wrong=0
+RESULT time v=3 mode=mini op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1879 q1_ms=1.1909 median_ms=1.1935 q3_ms=1.2002 max_ms=1.2111 spread_max_over_min=1.0195 wrong=0
+RESULT time v=3 mode=mini op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.1915 q1_ms=1.1961 median_ms=1.1999 q3_ms=1.2031 max_ms=1.2221 spread_max_over_min=1.0257 wrong=0
+RESULT summary mode=mini mismatches=0 ALL_MATCH
+-- mode hybrid exit=0
+RESULT check v=0 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=0 mode=hybrid op=keygen atoms=4 mhz=400 n=25 min_ms=0.1551 q1_ms=0.1577 median_ms=0.1592 q3_ms=0.1679 max_ms=0.1758 spread_max_over_min=1.1339 wrong=0
+RESULT time v=0 mode=hybrid op=sign atoms=4 mhz=400 n=25 min_ms=3.1459 q1_ms=3.1785 median_ms=3.1947 q3_ms=3.2107 max_ms=3.5160 spread_max_over_min=1.1176 wrong=0 msg_len=0
+RESULT time v=0 mode=hybrid op=verify atoms=4 mhz=400 n=25 min_ms=1.1486 q1_ms=1.1660 median_ms=1.1855 q3_ms=1.1895 max_ms=1.2076 spread_max_over_min=1.0514 wrong=0
+RESULT time v=0 mode=hybrid op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1399 q1_ms=1.1455 median_ms=1.1471 q3_ms=1.1525 max_ms=1.1882 spread_max_over_min=1.0424 wrong=0
+RESULT time v=0 mode=hybrid op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.1390 q1_ms=1.1427 median_ms=1.1450 q3_ms=1.1486 max_ms=1.1604 spread_max_over_min=1.0188 wrong=0
+RESULT check v=1 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=1 mode=hybrid op=keygen atoms=4 mhz=400 n=25 min_ms=0.1535 q1_ms=0.1591 median_ms=0.1617 q3_ms=0.1708 max_ms=0.1927 spread_max_over_min=1.2557 wrong=0
+RESULT time v=1 mode=hybrid op=sign atoms=4 mhz=400 n=25 min_ms=3.1481 q1_ms=3.1730 median_ms=3.1934 q3_ms=3.2094 max_ms=3.3089 spread_max_over_min=1.0511 wrong=0 msg_len=1024
+RESULT time v=1 mode=hybrid op=verify atoms=4 mhz=400 n=25 min_ms=1.1735 q1_ms=1.1948 median_ms=1.2046 q3_ms=1.2101 max_ms=1.2797 spread_max_over_min=1.0905 wrong=0
+RESULT time v=1 mode=hybrid op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1465 q1_ms=1.1504 median_ms=1.1544 q3_ms=1.1571 max_ms=1.1716 spread_max_over_min=1.0219 wrong=0
+RESULT time v=1 mode=hybrid op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.1503 q1_ms=1.1551 median_ms=1.1584 q3_ms=1.1668 max_ms=1.1954 spread_max_over_min=1.0392 wrong=0
+RESULT check v=2 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=2 mode=hybrid op=keygen atoms=4 mhz=400 n=25 min_ms=0.1538 q1_ms=0.1618 median_ms=0.1716 q3_ms=0.1735 max_ms=0.1751 spread_max_over_min=1.1387 wrong=0
+RESULT time v=2 mode=hybrid op=sign atoms=4 mhz=400 n=25 min_ms=3.1491 q1_ms=3.1689 median_ms=3.1815 q3_ms=3.2001 max_ms=3.2403 spread_max_over_min=1.0289 wrong=0 msg_len=33
+RESULT time v=2 mode=hybrid op=verify atoms=4 mhz=400 n=25 min_ms=1.1798 q1_ms=1.2071 median_ms=1.2092 q3_ms=1.2195 max_ms=1.2315 spread_max_over_min=1.0438 wrong=0
+RESULT time v=2 mode=hybrid op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1512 q1_ms=1.1540 median_ms=1.1595 q3_ms=1.1616 max_ms=1.1785 spread_max_over_min=1.0237 wrong=0
+RESULT time v=2 mode=hybrid op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.1477 q1_ms=1.1541 median_ms=1.1572 q3_ms=1.1633 max_ms=1.1693 spread_max_over_min=1.0189 wrong=0
+RESULT check v=3 mode=hybrid keygen_match_sw=true sign_match_sw=true top_root_is_pk_root=true atom_verify_good=true atom_reject_flipped=6/6 atom_reject_wrong_msg=true sw_verify_good=true sw_reject_flipped=6/6 sw_reject_wrong_msg=t
+RESULT time v=3 mode=hybrid op=keygen atoms=4 mhz=400 n=25 min_ms=0.1556 q1_ms=0.1604 median_ms=0.1616 q3_ms=0.1637 max_ms=0.1912 spread_max_over_min=1.2291 wrong=0
+RESULT time v=3 mode=hybrid op=sign atoms=4 mhz=400 n=25 min_ms=3.1517 q1_ms=3.1668 median_ms=3.1711 q3_ms=3.1973 max_ms=3.3917 spread_max_over_min=1.0762 wrong=0 msg_len=1
+RESULT time v=3 mode=hybrid op=verify atoms=4 mhz=400 n=25 min_ms=1.1697 q1_ms=1.1901 median_ms=1.1956 q3_ms=1.2046 max_ms=1.2262 spread_max_over_min=1.0483 wrong=0
+RESULT time v=3 mode=hybrid op=verify_on_1_of_4_atoms mhz=400 n=25 min_ms=1.1244 q1_ms=1.1317 median_ms=1.1358 q3_ms=1.1388 max_ms=1.1574 spread_max_over_min=1.0293 wrong=0
+RESULT time v=3 mode=hybrid op=verify_on_2_of_4_atoms mhz=400 n=25 min_ms=1.1346 q1_ms=1.1395 median_ms=1.1438 q3_ms=1.1488 max_ms=1.1579 spread_max_over_min=1.0206 wrong=0
+RESULT summary mode=hybrid mismatches=0 ALL_MATCH
+-- mode fw exit=0
+RESULT check v=fw mode=fw prehash=shake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw mode=fw op=signer_total n=25 min_ms=4.6129 q1_ms=4.6344 median_ms=4.6382 q3_ms=4.6474 max_ms=4.8167 spread_max_over_min=1.0442 wrong=0
+RESULT time v=fw mode=fw op=signer_hash_1MB n=25 min_ms=0.9460 q1_ms=0.9507 median_ms=0.9513 q3_ms=0.9523 max_ms=0.9776 spread_max_over_min=1.0335
+RESULT time v=fw mode=fw op=signer_sign n=25 min_ms=3.6582 q1_ms=3.6837 median_ms=3.6866 q3_ms=3.6962 max_ms=3.8391 spread_max_over_min=1.0494
+RESULT time v=fw mode=fw op=verifier_total n=25 min_ms=2.1494 q1_ms=2.1675 median_ms=2.1757 q3_ms=2.1803 max_ms=2.2118 spread_max_over_min=1.0291 wrong=0
+RESULT time v=fw mode=fw op=verifier_hash_1MB n=25 min_ms=0.9519 q1_ms=0.9536 median_ms=0.9545 q3_ms=0.9553 max_ms=0.9693 spread_max_over_min=1.0183
+RESULT time v=fw mode=fw op=verifier_verify n=25 min_ms=1.1957 q1_ms=1.2125 median_ms=1.2184 q3_ms=1.2275 max_ms=1.2580 spread_max_over_min=1.0520
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+-- mode fw-turbo exit=0
+RESULT check v=fw mode=fw-turbo prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PAS
+RESULT time v=fw mode=fw-turbo op=signer_total n=25 min_ms=3.7133 q1_ms=3.7277 median_ms=3.7395 q3_ms=3.7455 max_ms=3.8615 spread_max_over_min=1.0399 wrong=0
+RESULT time v=fw mode=fw-turbo op=signer_hash_1MB n=25 min_ms=0.7180 q1_ms=0.7201 median_ms=0.7211 q3_ms=0.7218 max_ms=0.7357 spread_max_over_min=1.0247
+RESULT time v=fw mode=fw-turbo op=signer_sign n=25 min_ms=2.9926 q1_ms=3.0058 median_ms=3.0173 q3_ms=3.0215 max_ms=3.1397 spread_max_over_min=1.0492
+RESULT time v=fw mode=fw-turbo op=verifier_total n=25 min_ms=1.9268 q1_ms=1.9589 median_ms=1.9745 q3_ms=1.9906 max_ms=2.0485 spread_max_over_min=1.0631 wrong=0
+RESULT time v=fw mode=fw-turbo op=verifier_hash_1MB n=25 min_ms=0.7205 q1_ms=0.7232 median_ms=0.7244 q3_ms=0.7261 max_ms=0.7446 spread_max_over_min=1.0334
+RESULT time v=fw mode=fw-turbo op=verifier_verify n=25 min_ms=1.2023 q1_ms=1.2375 median_ms=1.2502 q3_ms=1.2578 max_ms=1.3080 spread_max_over_min=1.0879
+RESULT summary mode=fw-turbo mismatches=0 ALL_MATCH
+-- mode fw-mini exit=0
+RESULT check v=fw mode=fw-mini prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw mode=fw-mini op=signer_total n=25 min_ms=3.7966 q1_ms=3.8057 median_ms=3.8089 q3_ms=3.8237 max_ms=3.9732 spread_max_over_min=1.0465 wrong=0
+RESULT time v=fw mode=fw-mini op=signer_hash_1MB n=25 min_ms=0.7188 q1_ms=0.7207 median_ms=0.7215 q3_ms=0.7288 max_ms=0.7303 spread_max_over_min=1.0160
+RESULT time v=fw mode=fw-mini op=signer_sign n=25 min_ms=3.0747 q1_ms=3.0815 median_ms=3.0869 q3_ms=3.0961 max_ms=3.2465 spread_max_over_min=1.0559
+RESULT time v=fw mode=fw-mini op=verifier_total n=25 min_ms=1.9233 q1_ms=1.9401 median_ms=1.9472 q3_ms=1.9534 max_ms=2.0062 spread_max_over_min=1.0431 wrong=0
+RESULT time v=fw mode=fw-mini op=verifier_hash_1MB n=25 min_ms=0.7183 q1_ms=0.7237 median_ms=0.7247 q3_ms=0.7253 max_ms=0.7477 spread_max_over_min=1.0410
+RESULT time v=fw mode=fw-mini op=verifier_verify n=25 min_ms=1.2006 q1_ms=1.2165 median_ms=1.2235 q3_ms=1.2278 max_ms=1.2819 spread_max_over_min=1.0677
+RESULT summary mode=fw-mini mismatches=0 ALL_MATCH
+-- mode fw-hybrid exit=0
+RESULT check v=fw mode=fw-hybrid prehash=turboshake256 keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PA
+RESULT time v=fw mode=fw-hybrid op=signer_total n=25 min_ms=3.8578 q1_ms=3.8849 median_ms=3.9011 q3_ms=3.9197 max_ms=4.0390 spread_max_over_min=1.0470 wrong=0
+RESULT time v=fw mode=fw-hybrid op=signer_hash_1MB n=25 min_ms=0.7179 q1_ms=0.7205 median_ms=0.7215 q3_ms=0.7224 max_ms=0.7391 spread_max_over_min=1.0296
+RESULT time v=fw mode=fw-hybrid op=signer_sign n=25 min_ms=3.1360 q1_ms=3.1655 median_ms=3.1787 q3_ms=3.1989 max_ms=3.3163 spread_max_over_min=1.0575
+RESULT time v=fw mode=fw-hybrid op=verifier_total n=25 min_ms=1.8579 q1_ms=1.8885 median_ms=1.8976 q3_ms=1.9052 max_ms=1.9292 spread_max_over_min=1.0384 wrong=0
+RESULT time v=fw mode=fw-hybrid op=verifier_hash_1MB n=25 min_ms=0.7206 q1_ms=0.7273 median_ms=0.7404 q3_ms=0.7417 max_ms=0.7515 spread_max_over_min=1.0428
+RESULT time v=fw mode=fw-hybrid op=verifier_verify n=25 min_ms=1.1372 q1_ms=1.1535 median_ms=1.1599 q3_ms=1.1668 max_ms=1.1844 spread_max_over_min=1.0415
+RESULT summary mode=fw-hybrid mismatches=0 ALL_MATCH
+DONE 01:33:41

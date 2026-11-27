@@ -1,0 +1,15 @@
+RESULT apps engines=1 engine_mhz=450 ids=52552021
+RESULT refvec minishake256 dom=01 msg=00..2f out32=00850cf6f508ca45bdd1c95aacacb3faecf6538991d0147bb9ddb2636d083401
+RESULT refvec minishake128 dom=01 msg=00..63 out16=fc00c17cd8e8e20016e54e455bc7a685
+RESULT minishake256_check atom=0 digests=122 mismatches=0 first=[]
+RESULT app=mldsa_expand_16x840 alg=shake128 atoms=1 jobs=16 len=34 olen=840 run_us=16.71 e2e_us=24.87 hw_clocks_max=4849 hw_us=16.16 run_ns_per_job=1044.4 hw_ns_per_job=1010.2 jobs_per_s=957510 in_GB_per_s=0.033 out_GB_per_s=0.804 mismatches=0 VERIFIED
+RESULT app=mlkem_expand_9x504 alg=shake128 atoms=1 jobs=9 len=34 olen=504 run_us=6.06 e2e_us=9.69 hw_clocks_max=1654 hw_us=5.51 run_ns_per_job=673.3 hw_ns_per_job=612.6 jobs_per_s=1485149 in_GB_per_s=0.050 out_GB_per_s=0.749 mismatches=0 VERIFIED
+RESULT app=mldsa_expand_1024x840 alg=shake128 atoms=1 jobs=1024 len=34 olen=840 run_us=1007.13 e2e_us=1504.62 hw_clocks_max=301962 hw_us=1006.54 run_ns_per_job=983.5 hw_ns_per_job=982.9 jobs_per_s=1016750 in_GB_per_s=0.035 out_GB_per_s=0.854 mismatches=0 VERIFIED
+RESULT app=mlkem_expand_576x504 alg=shake128 atoms=1 jobs=576 len=34 olen=504 run_us=340.26 e2e_us=491.34 hw_clocks_max=101930 hw_us=339.77 run_ns_per_job=590.7 hw_ns_per_job=589.9 jobs_per_s=1692823 in_GB_per_s=0.058 out_GB_per_s=0.853 mismatches=0 VERIFIED
+RESULT app=firmware_1MB_turboshake128 alg=turboshake128 atoms=1 jobs=1 len=1048576 olen=32 run_us=474.21 e2e_us=907.65 hw_clocks_max=142109 hw_us=473.70 run_ns_per_job=474210.0 hw_ns_per_job=473696.7 jobs_per_s=2109 in_GB_per_s=2.211 out_GB_per_s=0.000 mismatches=0 VERIFIED
+RESULT app=firmware_1MB_shake128 alg=shake128 atoms=1 jobs=1 len=1048576 olen=32 run_us=639.03 e2e_us=1051.11 hw_clocks_max=191544 hw_us=638.48 run_ns_per_job=639030.0 hw_ns_per_job=638480.0 jobs_per_s=1565 in_GB_per_s=1.641 out_GB_per_s=0.000 mismatches=0 VERIFIED
+RESULT app=log_200x232_turboshake256 alg=turboshake256 atoms=1 jobs=200 len=232 olen=32 run_us=29.88 e2e_us=48.69 hw_clocks_max=8825 hw_us=29.42 run_ns_per_job=149.4 hw_ns_per_job=147.1 jobs_per_s=6693440 in_GB_per_s=1.553 out_GB_per_s=0.214 mismatches=0 VERIFIED
+RESULT app=log_4000x232_turboshake256 alg=turboshake256 atoms=1 jobs=4000 len=232 olen=32 run_us=578.88 e2e_us=1152.90 hw_clocks_max=173496 hw_us=578.32 run_ns_per_job=144.7 hw_ns_per_job=144.6 jobs_per_s=6909883 in_GB_per_s=1.603 out_GB_per_s=0.221 mismatches=0 VERIFIED
+RESULT app=tags_10000x100_minishake128 alg=minishake128 atoms=1 jobs=10000 len=100 olen=16 run_us=678.78 e2e_us=1400.58 hw_clocks_max=203491 hw_us=678.30 run_ns_per_job=67.9 hw_ns_per_job=67.8 jobs_per_s=14732292 in_GB_per_s=1.473 out_GB_per_s=0.236 mismatches=0 VERIFIED
+RESULT app=keys_10000x48_minishake256 alg=minishake256 atoms=1 jobs=10000 len=48 olen=32 run_us=623.31 e2e_us=1089.93 hw_clocks_max=186828 hw_us=622.76 run_ns_per_job=62.3 hw_ns_per_job=62.3 jobs_per_s=16043356 in_GB_per_s=0.770 out_GB_per_s=0.513 mismatches=0 VERIFIED
+RESULT apps summary mismatches=0 ALL_MATCH

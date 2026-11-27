@@ -1,0 +1,15 @@
+RUTY atom: forecasts filed BEFORE the measurements. Filed 2026-11-26 14:35 PST. Do not edit after the runs.
+
+A. Fixed-width builds in the same system shell (one atom, bus 300 MHz, same sequencer, width bit tied to a constant)
+   Reference, measured earlier: run-time atom, 1 atom system = 10,006 LUT; atom with sequencer = 8,064 LUT / 4,400 FF; closes 450 MHz (wns +0.022 ns).
+   Forecast fixed 1x1600 (dual = 0): atom block 7,100 to 7,500 LUT (7% to 12% below the run-time atom); closes 450 MHz; closes 480 MHz with less than 0.05 ns to spare or misses by less than 0.10 ns.
+   Forecast fixed 2x800  (dual = 1): atom block 7,000 to 7,500 LUT; same clock behaviour as the fixed 1x1600 within 0.05 ns.
+   Consequence stated in advance: the run-time split costs under 15% in LUTs and under 7% in clock against either fixed build.
+   The claim FAILS if the run-time atom needs more than 1.8 times the LUTs of the fixed 1x1600 build, or if the fixed build closes a clock more than 10% higher.
+
+B. Two tenants on the 4-atom image (400 MHz): tenant S = SHAKE256 chains (64-byte template, 15 steps, wide atoms), tenant T = MiniSHAKE128 tags 100 -> 16 bytes (split atoms)
+   Chains do not use the port while they run, tags do.
+   Forecast S: time to finish its chains on k atoms while T runs on the other 4-k atoms is within 3% of S alone on k atoms (k = 1, 2, 3).
+   Forecast T: tags per second on m atoms while S runs is within 5% of T alone on m atoms for m = 1; for m = 2 and 3 it equals T alone on m atoms (already at the port limit, about 23.5 M tags/s), within 5%.
+   Forecast re-formation: an atom that was wide in one job and split in the next gives correct digests in both, every time; the register writes that re-shape one atom take under 5 microseconds on the processor.
+   The claim FAILS if either tenant loses more than 10% against running alone on the same number of atoms, or if any digest is wrong after a width change.

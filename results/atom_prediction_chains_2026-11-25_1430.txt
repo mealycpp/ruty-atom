@@ -1,0 +1,28 @@
+RUTY atom model: predicted chain throughput for 2, 4, 8 engines
+Written 2026-11-25 14:30 PST, BEFORE any multi-engine chain-mode image existed (builds n2/n8 were in placement).
+
+Calibration (measured, 1 engine, engine 600 MHz, bus 300 MHz, aup2, results\board_chain_v23_n1_600_aup2.txt):
+  SHAKE256      165 ns/step  = 99 engine clocks per step
+  TurboSHAKE256 105 ns/step  = 63 engine clocks per step
+  MiniSHAKE128   65 ns/step per chain = 78 engine clocks per pass, two chains per pass
+  Port: one 64-bit word per bus clock; plain 32-byte hashing saturates near 37 M hashes/s (measured at 4 and 8 engines).
+
+Model:
+  A chain step never touches the port, so step time = engine clocks / engine frequency.
+  A 15-step chain costs the port 8 words in and 2 words out, whatever the function.
+  chains/s = engines x f_engine / (15 x clocks per chain-step), as long as port load stays under one word per clock.
+
+Predictions (M chains/s, 15 steps per chain):
+  engines  f_eng   SHAKE256  TurboSHAKE256  MiniSHAKE128   port load (Mini)
+  1        600     0.404     0.635          1.026          3%    (measured)
+  2        600     0.808     1.270          2.051          5%
+  4        550     1.481     2.328          3.761          10%
+  8        450     2.424     3.810          6.154          16%
+
+Claims to be tested on the board:
+  1. Chains scale with engines x engine clock at every count; no port ceiling up to 8 engines.
+  2. 8 engines at 450 MHz beat 4 engines at 550 MHz by 1.64x for chains. For plain short hashes they gave no gain (37.25 vs 37.26 M/s).
+  3. The gain from narrowing (SHAKE256 -> MiniSHAKE128) stays 2.5x at every engine count.
+  4. The port would saturate for chains only near 50 engines (MiniSHAKE128, 450 MHz); the chip holds 8.
+If an image closes timing at a different engine clock, scale its row by the clock ratio.
+Assumption: the multi-engine top hands chain jobs to engines the same way it hands plain jobs.

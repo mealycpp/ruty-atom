@@ -1,0 +1,76 @@
+START 03:24:12 reps=25 ks=12,16,20 hapi units active: 0
+7c5df4c18626c52bb7c7a5111c635c9128a9c3b189588ae02f228ff9e6fa203d  ruty_modes.rs
+2a718a39d49ef643f03b982781379056fc4838683825428a029375118b24bad8  modes_bench.c
+== software baseline 03:24:32: CPU part	: 0xd03 x4, gcc -O3 -mcpu=cortex-a53
+RESULT swvec summary threads=1 ok=18 of 18 ALL_RFC9861_VECTORS_MATCH
+RESULT swvec summary threads=4 ok=18 of 18 ALL_RFC9861_VECTORS_MATCH
+RESULT swkt mlen=65536 threads=1 n=25 min_us=374.06 q1_us=374.39 median_us=374.87 q3_us=375.14 max_us=439.07 spread_max_over_min=1.1738 GBps_median=0.1748 Gbps_median=1.399 kt128=a18da3a6b2cda25e05c98
+RESULT swflat alg=shake128 mlen=65536 threads=1 n=25 min_us=683.69 q1_us=684.02 median_us=684.32 q3_us=685.73 max_us=905.30 spread_max_over_min=1.3241 GBps_median=0.0958 Gbps_median=0.766 digest=b8f5b
+RESULT swflat alg=turboshake128 mlen=65536 threads=1 n=25 min_us=375.00 q1_us=375.14 median_us=375.35 q3_us=375.74 max_us=397.82 spread_max_over_min=1.0609 GBps_median=0.1746 Gbps_median=1.397 digest=
+RESULT swkt mlen=1048576 threads=1 n=25 min_us=5954.55 q1_us=5957.88 median_us=5963.37 q3_us=5986.17 max_us=6048.51 spread_max_over_min=1.0158 GBps_median=0.1758 Gbps_median=1.407 kt128=836017a6fd13f7
+RESULT swflat alg=shake128 mlen=1048576 threads=1 n=25 min_us=10944.77 q1_us=10950.02 median_us=10955.27 q3_us=10982.51 max_us=11204.00 spread_max_over_min=1.0237 GBps_median=0.0957 Gbps_median=0.766 
+RESULT swflat alg=turboshake128 mlen=1048576 threads=1 n=25 min_us=6001.50 q1_us=6006.33 median_us=6017.91 q3_us=6037.35 max_us=6100.62 spread_max_over_min=1.0165 GBps_median=0.1742 Gbps_median=1.394 
+RESULT swkt mlen=16777216 threads=1 n=25 min_us=96362.52 q1_us=96542.88 median_us=96676.80 q3_us=96912.44 max_us=98407.71 spread_max_over_min=1.0212 GBps_median=0.1735 Gbps_median=1.388 kt128=9eb044fa
+RESULT swflat alg=shake128 mlen=16777208 threads=1 n=25 min_us=175913.90 q1_us=176043.67 median_us=176190.42 q3_us=176600.58 max_us=181380.32 spread_max_over_min=1.0311 GBps_median=0.0952 Gbps_median=
+RESULT swflat alg=turboshake128 mlen=16777208 threads=1 n=25 min_us=96515.84 q1_us=97592.16 median_us=98055.35 q3_us=99202.93 max_us=133264.81 spread_max_over_min=1.3808 GBps_median=0.1711 Gbps_median
+RESULT swkt mlen=65536 threads=4 n=25 min_us=142.11 q1_us=142.26 median_us=142.56 q3_us=142.68 max_us=170.70 spread_max_over_min=1.2012 GBps_median=0.4597 Gbps_median=3.678 kt128=a18da3a6b2cda25e05c98
+RESULT swkt mlen=1048576 threads=4 n=25 min_us=1552.81 q1_us=1554.73 median_us=1567.69 q3_us=1582.45 max_us=2107.47 spread_max_over_min=1.3572 GBps_median=0.6689 Gbps_median=5.351 kt128=836017a6fd13f7
+RESULT swkt mlen=16777216 threads=4 n=25 min_us=24412.52 q1_us=24573.28 median_us=24734.95 q3_us=30467.99 max_us=51534.78 spread_max_over_min=2.1110 GBps_median=0.6783 Gbps_median=5.426 kt128=9eb044fa
+== atom_v3_n1_450 03:29:19
+loaded
+-- kt exit=0
+RESULT ktvec summary vectors=18 atom_runs=18 atom_runs_ok=18 ALL_RFC9861_VECTORS_MATCH
+RESULT ktedge summary runs=15 ok=15 ALL_MATCH
+RESULT summary what=kt mismatches=0 ALL_MATCH
+-- merkle exit=0
+RESULT summary what=merkle mismatches=0 ALL_MATCH
+== atom_v3_n2_420 03:33:35
+loaded
+-- kt exit=0
+RESULT ktvec summary vectors=18 atom_runs=36 atom_runs_ok=36 ALL_RFC9861_VECTORS_MATCH
+RESULT ktedge summary runs=30 ok=30 ALL_MATCH
+RESULT summary what=kt mismatches=0 ALL_MATCH
+-- merkle exit=0
+RESULT summary what=merkle mismatches=0 ALL_MATCH
+== atom_v3_n4_400 03:37:48
+loaded
+-- kt exit=0
+RESULT ktvec summary vectors=18 atom_runs=54 atom_runs_ok=54 ALL_RFC9861_VECTORS_MATCH
+RESULT ktedge summary runs=45 ok=45 ALL_MATCH
+RESULT summary what=kt mismatches=0 ALL_MATCH
+-- merkle exit=0
+RESULT summary what=merkle mismatches=0 ALL_MATCH
+DONE 03:42:09
+XSTART 03:42:09 xkcp commit fa7033a212c831249b7e17e785ee1a4e24fc04c4
+RESULT xkcp_impl p800="generic 32-bit optimized implementation (alternate flavor, all rounds unrolled)" p1600="generic 64-bit optimized implementation (all rounds unrolled)"
+GATE refvec rust_ruty_apps=out16=fc00c17cd8e8e20016e54e455bc7a685 xkcp=out16=fc00c17cd8e8e20016e54e455bc7a685
+GATE keccak_bench(C, ours) vs xkcp: 33 digests checked, bad=0
+GATE root k=12 minishake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+GATE root k=12 turboshake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+GATE root k=12 shake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+GATE root k=16 minishake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+GATE root k=16 turboshake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+GATE root k=16 shake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+GATE root k=20 minishake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+GATE root k=20 turboshake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+GATE root k=20 shake128 agree (xkcp = modes_bench C = ruty_modes Rust)
+XKCP GATE PASSED 03:43:05
+RESULT xkcpmerkle k=12 alg=minishake128 threads=1 hashes=8191 n=25 min_us=8278.99 q1_us=8281.42 median_us=8282.41 q3_us=8289.31 max_us=8345.23 spread_max_over_min=1.0080 Mhash_per_s=0.9890 root=99a36c
+RESULT xkcpmerkle k=12 alg=turboshake128 threads=1 hashes=8191 n=25 min_us=8524.21 q1_us=8525.68 median_us=8536.33 q3_us=8569.42 max_us=8699.92 spread_max_over_min=1.0206 Mhash_per_s=0.9595 root=5f2fe
+RESULT xkcpmerkle k=12 alg=shake128 threads=1 hashes=8191 n=25 min_us=14975.46 q1_us=14982.72 median_us=14987.55 q3_us=14995.35 max_us=15020.10 spread_max_over_min=1.0030 Mhash_per_s=0.5465 root=1dce4
+RESULT xkcpmerkle k=16 alg=minishake128 threads=1 hashes=131071 n=25 min_us=133593.22 q1_us=133640.98 median_us=133741.06 q3_us=133905.64 max_us=136239.01 spread_max_over_min=1.0198 Mhash_per_s=0.9800
+RESULT xkcpmerkle k=16 alg=turboshake128 threads=1 hashes=131071 n=25 min_us=137547.25 q1_us=137590.62 median_us=137655.58 q3_us=137735.98 max_us=138934.23 spread_max_over_min=1.0101 Mhash_per_s=0.952
+RESULT xkcpmerkle k=16 alg=shake128 threads=1 hashes=131071 n=25 min_us=240891.27 q1_us=241033.26 median_us=241213.26 q3_us=241396.17 max_us=242591.37 spread_max_over_min=1.0071 Mhash_per_s=0.5434 roo
+RESULT xkcpmerkle k=20 alg=minishake128 threads=1 hashes=2097151 n=25 min_us=2141711.20 q1_us=2142687.79 median_us=2143909.11 q3_us=2147738.90 max_us=2499704.61 spread_max_over_min=1.1672 Mhash_per_s=
+RESULT xkcpmerkle k=20 alg=turboshake128 threads=1 hashes=2097151 n=25 min_us=2204988.31 q1_us=2205676.99 median_us=2206663.01 q3_us=2214467.37 max_us=2389955.53 spread_max_over_min=1.0839 Mhash_per_s
+RESULT xkcpmerkle k=20 alg=shake128 threads=1 hashes=2097151 n=25 min_us=3859720.44 q1_us=3862959.32 median_us=3867714.58 q3_us=3871754.42 max_us=4243618.00 spread_max_over_min=1.0995 Mhash_per_s=0.54
+RESULT xkcpmerkle k=12 alg=minishake128 threads=4 hashes=8191 n=25 min_us=2069.46 q1_us=2070.00 median_us=2075.73 q3_us=2086.32 max_us=2273.85 spread_max_over_min=1.0988 Mhash_per_s=3.9461 root=99a36c
+RESULT xkcpmerkle k=12 alg=turboshake128 threads=4 hashes=8191 n=25 min_us=2127.75 q1_us=2128.53 median_us=2134.74 q3_us=2136.39 max_us=2158.59 spread_max_over_min=1.0145 Mhash_per_s=3.8370 root=5f2fe
+RESULT xkcpmerkle k=12 alg=shake128 threads=4 hashes=8191 n=25 min_us=3742.85 q1_us=3748.49 median_us=3749.33 q3_us=3763.01 max_us=4538.96 spread_max_over_min=1.2127 Mhash_per_s=2.1847 root=1dce4d842a
+RESULT xkcpmerkle k=16 alg=minishake128 threads=4 hashes=131071 n=25 min_us=33395.83 q1_us=33455.77 median_us=33505.33 q3_us=33743.35 max_us=34031.71 spread_max_over_min=1.0190 Mhash_per_s=3.9119 root
+RESULT xkcpmerkle k=16 alg=turboshake128 threads=4 hashes=131071 n=25 min_us=34364.83 q1_us=34419.67 median_us=34516.60 q3_us=34720.39 max_us=36706.44 spread_max_over_min=1.0681 Mhash_per_s=3.7973 roo
+RESULT xkcpmerkle k=16 alg=shake128 threads=4 hashes=131071 n=25 min_us=60221.67 q1_us=60260.33 median_us=60296.21 q3_us=60367.86 max_us=60634.19 spread_max_over_min=1.0069 Mhash_per_s=2.1738 root=bd5
+RESULT xkcpmerkle k=20 alg=minishake128 threads=4 hashes=2097151 n=25 min_us=536251.69 q1_us=536737.23 median_us=537824.19 q3_us=543691.34 max_us=665224.51 spread_max_over_min=1.2405 Mhash_per_s=3.899
+RESULT xkcpmerkle k=20 alg=turboshake128 threads=4 hashes=2097151 n=25 min_us=551571.50 q1_us=552517.32 median_us=557602.28 q3_us=670159.50 max_us=969021.24 spread_max_over_min=1.7568 Mhash_per_s=3.76
+RESULT xkcpmerkle k=20 alg=shake128 threads=4 hashes=2097151 n=25 min_us=965512.86 q1_us=968760.91 median_us=983407.07 q3_us=1121876.51 max_us=1825537.85 spread_max_over_min=1.8907 Mhash_per_s=2.1325 
+XDONE 03:48:08

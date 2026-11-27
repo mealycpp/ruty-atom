@@ -1,0 +1,27 @@
+
+RESULT bufg ruty_core_m8 period=1.400 wns=-0.117 whs=0.014 fmax=659.2 levels=5 lut=4321 ff=1918 muxf=349
+RESULT bufg ruty_core_m32 period=1.700 wns=0.028 whs=0.017 fmax=598.1 levels=5 lut=6046 ff=1904 muxf=915
+RESULT bufg ruty_core_m16 period=1.500 wns=0.004 whs=0.010 fmax=668.4 levels=5 lut=4927 ff=1907 muxf=521
+RESULT bufg keccak_single_m8 period=1.400 wns=-0.029 whs=0.013 fmax=699.8 levels=4 lut=4260 ff=1879 muxf=192
+RESULT bufg ruty_core_m4 period=1.400 wns=-0.064 whs=0.007 fmax=683.1 levels=5 lut=4090 ff=1910 muxf=267
+RESULT bufg keccak_dual_m8 period=1.400 wns=-0.176 whs=0.004 fmax=634.5 levels=4 lut=4286 ff=1910 muxf=192
+RESULT bufg ruty_core_m4 period=1.500 wns=-0.080 whs=0.006 fmax=632.9 levels=4 lut=4090 ff=1910 muxf=267
+RESULT bufg ruty_core_m8 period=1.500 wns=0.019 whs=0.010 fmax=675.2 levels=5 lut=4319 ff=1906 muxf=349
+RESULT bufg keccak_single_m8 period=1.500 wns=-0.004 whs=0.013 fmax=664.9 levels=4 lut=4260 ff=1869 muxf=192
+RESULT bufg keccak_dual_m8 period=1.500 wns=-0.009 whs=0.016 fmax=662.7 levels=4 lut=4286 ff=1922 muxf=192
+RESULT bufg ruty_core_m16 period=1.451 wns=-0.039 whs=0.009 fmax=671.1 levels=5 lut=4927 ff=1920 muxf=521
+RESULT bufg ruty_core_m4 period=1.401 wns=-0.058 whs=0.006 fmax=685.4 levels=1 lut=4091 ff=1925 muxf=267
+RESULT bufg keccak_single_m16 period=1.500 wns=0.024 whs=0.020 fmax=677.5 levels=1 lut=4879 ff=1880 muxf=192
+RESULT bufg keccak_dual_m16 period=1.500 wns=-0.213 whs=0.015 fmax=583.8 levels=4 lut=4904 ff=1902 muxf=192
+RESULT bufg ref_chain period=2.500 wns=0.343 whs=0.005 fmax=463.6 levels=1 lut=2924 ff=2120 muxf=0
+RESULT bufg ref_chain period=2.000 wns=0.154 whs=0.010 fmax=541.7 levels=1 lut=2924 ff=2120 muxf=0
+RESULT bufg atom_core period=2.600 wns=0.307 whs=0.012 fmax=436.1 levels=4 lut=3909 ff=2624 muxf=0
+RESULT bufg atom_core period=2.200 wns=0.127 whs=0.010 fmax=482.4 levels=4 lut=3909 ff=2624 muxf=0
+RESULT bufg atom_core period=1.800 wns=-0.092 whs=0.011 fmax=528.5 levels=4 lut=3909 ff=2624 muxf=0
+RESULT bufg ref_chain period=1.700 wns=-0.145 whs=0.010 fmax=542.0 levels=4 lut=2924 ff=2120 muxf=0
+RESULT bufg ref_chain period=1.500 wns=-0.304 whs=0.011 fmax=554.3 levels=2 lut=2925 ff=2120 muxf=0
+RESULT bufg atom_core period=1.600 wns=-0.430 whs=0.010 fmax=492.6 levels=4 lut=3909 ff=2625 muxf=0
+RESULT bufg atom_seq period=2.200 wns=-0.692 whs=0.009 fmax=345.8 levels=7 lut=7443 ff=3492 muxf=202
+RESULT bufg atom_seq period=2.500 wns=-0.330 whs=0.015 fmax=353.4 levels=9 lut=7442 ff=3489 muxf=202
+RESULT bufg atom_seq3 period=2.500 wns=0.059 whs=0.015 fmax=409.7 levels=0 lut=7896 ff=3591 muxf=192
+RESULT bufg atom_seq3 period=2.200 wns=0.051 whs=0.015 fmax=465.3 levels=0 lut=7896 ff=3586 muxf=192

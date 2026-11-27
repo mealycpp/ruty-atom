@@ -1,0 +1,14 @@
+RESULT sched engines=8 engine_mhz=450 id=52552017 job=22_trees_of_SLH-DSA-128f hashes_per_job=98890
+RESULT sched alg=shake256 atoms=1 ms=30.688 batches=132 roots_wrong=0 reference_software_ms=5430.2
+RESULT sched alg=shake256 atoms=2 ms=16.203 batches=132 roots_wrong=0 reference_software_ms=5430.2
+RESULT sched alg=shake256 atoms=4 ms=11.535 batches=132 roots_wrong=0 reference_software_ms=5430.2
+RESULT sched alg=shake256 atoms=8 ms=11.068 batches=132 roots_wrong=0 reference_software_ms=5430.2
+RESULT sched alg=turboshake256 atoms=1 ms=22.851 batches=132 roots_wrong=0 reference_software_ms=2940.9
+RESULT sched alg=turboshake256 atoms=2 ms=12.086 batches=132 roots_wrong=0 reference_software_ms=2940.9
+RESULT sched alg=turboshake256 atoms=4 ms=10.981 batches=132 roots_wrong=0 reference_software_ms=2940.9
+RESULT sched alg=turboshake256 atoms=8 ms=10.565 batches=132 roots_wrong=0 reference_software_ms=2940.9
+RESULT sched alg=minishake128 atoms=1 ms=25.855 batches=132 roots_wrong=0 reference_software_ms=2785.4
+RESULT sched alg=minishake128 atoms=2 ms=18.818 batches=132 roots_wrong=0 reference_software_ms=2785.4
+RESULT sched alg=minishake128 atoms=4 ms=18.745 batches=132 roots_wrong=0 reference_software_ms=2785.4
+RESULT sched alg=minishake128 atoms=8 ms=18.708 batches=132 roots_wrong=0 reference_software_ms=2785.4
+RESULT sched summary roots_wrong=0 ALL_MATCH

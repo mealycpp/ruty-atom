@@ -1,0 +1,43 @@
+thread 'main' panicked at 'failed printing to stdout: Broken pipe (os error 32)', library/std/src/io/stdio.rs:1201:9
+CmaFree:          122364 kB
+RESULT engine=0 id=52552016 buffer_pa=0x78600000
+RESULT engine=1 id=52552016 buffer_pa=0x78800000
+RESULT check engine=0 digests=720 mismatches=0
+RESULT check engine=1 digests=720 mismatches=0
+RESULT time alg=shake128 len=32 jobs=20000 hw_ns_per_hash=170.0 program_ns_per_hash=170.1 mismatches=0
+RESULT time alg=shake128 len=64 jobs=16000 hw_ns_per_hash=180.0 program_ns_per_hash=180.1 mismatches=0
+RESULT time alg=shake128 len=136 jobs=6000 hw_ns_per_hash=195.1 program_ns_per_hash=195.3 mismatches=0
+RESULT time alg=shake128 len=4096 jobs=200 hw_ns_per_hash=4258.3 program_ns_per_hash=4262.1 mismatches=0
+RESULT time alg=shake256 len=32 jobs=20000 hw_ns_per_hash=170.0 program_ns_per_hash=170.1 mismatches=0
+RESULT time alg=turboshake128 len=32 jobs=20000 hw_ns_per_hash=110.0 program_ns_per_hash=110.1 mismatches=0
+RESULT time alg=turboshake128 len=4096 jobs=200 hw_ns_per_hash=2758.3 program_ns_per_hash=2761.5 mismatches=0
+RESULT time alg=minishake128 len=32 jobs=20000 hw_ns_per_hash=72.5 program_ns_per_hash=72.6 mismatches=0
+RESULT time alg=minishake128 len=64 jobs=16000 hw_ns_per_hash=77.6 program_ns_per_hash=77.6 mismatches=0
+RESULT time alg=minishake256 len=32 jobs=20000 hw_ns_per_hash=72.5 program_ns_per_hash=72.6 mismatches=0
+RESULT app=chains alg=shake128 engines=1 hashes_each=1005 ns_per_round_of_kernels=187038 ns_per_kernel=187038 mismatches=0
+RESULT app=merkle alg=shake128 engines=1 leaves=256 ns_per_round_of_kernels=99782 ns_per_kernel=99782 mismatches=0
+RESULT app=chains alg=turboshake128 engines=1 hashes_each=1005 ns_per_round_of_kernels=126216 ns_per_kernel=126216 mismatches=0
+RESULT app=merkle alg=turboshake128 engines=1 leaves=256 ns_per_round_of_kernels=69316 ns_per_kernel=69316 mismatches=0
+RESULT app=chains alg=minishake128 engines=1 hashes_each=1020 ns_per_round_of_kernels=91210 ns_per_kernel=91210 mismatches=0
+RESULT app=merkle alg=minishake128 engines=1 leaves=256 ns_per_round_of_kernels=47860 ns_per_kernel=47860 mismatches=0
+RESULT port alg=shake128 len=32 engines=1 ns_per_hash_each=170.0 mean=170.0 hashes_per_us_all=5.88 mismatches=0
+RESULT port alg=turboshake128 len=32 engines=1 ns_per_hash_each=110.0 mean=110.0 hashes_per_us_all=9.08 mismatches=0
+RESULT port alg=minishake128 len=32 engines=1 ns_per_hash_each=72.5 mean=72.5 hashes_per_us_all=13.78 mismatches=0
+RESULT port alg=shake128 len=136 engines=1 ns_per_hash_each=195.1 mean=195.1 hashes_per_us_all=5.12 mismatches=0
+RESULT port alg=shake128 len=1024 engines=1 ns_per_hash_each=1185.9 mean=1185.9 hashes_per_us_all=0.84 mismatches=0
+RESULT port alg=shake128 len=4096 engines=1 ns_per_hash_each=4258.5 mean=4258.5 hashes_per_us_all=0.23 mismatches=0
+RESULT port alg=turboshake128 len=4096 engines=1 ns_per_hash_each=2758.3 mean=2758.3 hashes_per_us_all=0.36 mismatches=0
+RESULT app=chains alg=shake128 engines=2 hashes_each=1005 ns_per_round_of_kernels=201025 ns_per_kernel=100513 mismatches=0
+RESULT app=merkle alg=shake128 engines=2 leaves=256 ns_per_round_of_kernels=105150 ns_per_kernel=52575 mismatches=0
+RESULT app=chains alg=turboshake128 engines=2 hashes_each=1005 ns_per_round_of_kernels=140232 ns_per_kernel=70116 mismatches=0
+RESULT app=merkle alg=turboshake128 engines=2 leaves=256 ns_per_round_of_kernels=74342 ns_per_kernel=37171 mismatches=0
+RESULT app=chains alg=minishake128 engines=2 hashes_each=1020 ns_per_round_of_kernels=104710 ns_per_kernel=52355 mismatches=0
+RESULT app=merkle alg=minishake128 engines=2 leaves=256 ns_per_round_of_kernels=52784 ns_per_kernel=26392 mismatches=0
+RESULT port alg=shake128 len=32 engines=2 ns_per_hash_each=170.0/170.1 mean=170.0 hashes_per_us_all=11.76 mismatches=0
+RESULT port alg=turboshake128 len=32 engines=2 ns_per_hash_each=110.0/110.1 mean=110.1 hashes_per_us_all=18.16 mismatches=0
+RESULT port alg=minishake128 len=32 engines=2 ns_per_hash_each=72.5/72.6 mean=72.5 hashes_per_us_all=27.54 mismatches=0
+RESULT port alg=shake128 len=136 engines=2 ns_per_hash_each=195.1/195.2 mean=195.2 hashes_per_us_all=10.24 mismatches=0
+RESULT port alg=shake128 len=1024 engines=2 ns_per_hash_each=1185.9/1186.6 mean=1186.3 hashes_per_us_all=1.68 mismatches=0
+RESULT port alg=shake128 len=4096 engines=2 ns_per_hash_each=4258.3/4262.4 mean=4260.4 hashes_per_us_all=0.47 mismatches=0
+RESULT port alg=turboshake128 len=4096 engines=2 ns_per_hash_each=3416.9/3419.3 mean=3418.1 hashes_per_us_all=0.58 mismatches=0
+RESULT summary mismatches=0 ALL_MATCH

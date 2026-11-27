@@ -1,0 +1,8 @@
+RESULT sched engines=1 engine_mhz=450 id=52552021 job=22_trees_of_SLH-DSA-128f hashes_per_job=98890
+RESULT sched root alg=shake256 tree0=133c17ec811a9bc1fc2fc10ff4e8a3df tree21=9207af64aea5b7733a23268d86e663fe
+RESULT sched2 alg=shake256 atoms=1 ms=7.479 batches=132 roots_wrong=0
+RESULT sched root alg=turboshake256 tree0=3acd7d22d4becaebb2de2c5d7d8565f4 tree21=daf77a8da40808a6362c2a9897248467
+RESULT sched2 alg=turboshake256 atoms=1 ms=4.820 batches=132 roots_wrong=0
+RESULT sched root alg=minishake128 tree0=ce90096fb711c4a03502236f5f4da442 tree21=420b83217937211ac780d4c1181487ed
+RESULT sched2 alg=minishake128 atoms=1 ms=3.802 batches=132 roots_wrong=0
+RESULT sched2 summary roots_wrong=0 ALL_MATCH

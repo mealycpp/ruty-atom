@@ -1,0 +1,36 @@
+START 00:34:13 modes=fw reps=25 hapi units active: 0
+54862c12652a572e475df04b52b273058c33e1c2f640567179c4c52e99fa98f4  ruty_sign.rs
+== atom_v3_n1_450 00:34:40
+loaded
+-- mode fw exit=0
+RESULT check v=fw keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw op=signer_total n=25 min_ms=10.5463 q1_ms=10.5655 median_ms=10.5783 q3_ms=10.5860 max_ms=10.7678 spread_max_over_min=1.0210 wrong=0
+RESULT time v=fw op=signer_hash_1MB n=25 min_ms=0.8729 q1_ms=0.8740 median_ms=0.8758 q3_ms=0.8765 max_ms=0.8981 spread_max_over_min=1.0289
+RESULT time v=fw op=signer_sign n=25 min_ms=9.6700 q1_ms=9.6905 median_ms=9.7026 q3_ms=9.7109 max_ms=9.8697 spread_max_over_min=1.0206
+RESULT time v=fw op=verifier_total n=25 min_ms=1.9013 q1_ms=1.9125 median_ms=1.9183 q3_ms=1.9249 max_ms=1.9486 spread_max_over_min=1.0249 wrong=0
+RESULT time v=fw op=verifier_hash_1MB n=25 min_ms=0.8748 q1_ms=0.8773 median_ms=0.8798 q3_ms=0.8827 max_ms=0.9024 spread_max_over_min=1.0315
+RESULT time v=fw op=verifier_verify n=25 min_ms=1.0222 q1_ms=1.0351 median_ms=1.0371 q3_ms=1.0403 max_ms=1.0615 spread_max_over_min=1.0384
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+== atom_v3_n2_420 00:35:05
+loaded
+-- mode fw exit=0
+RESULT check v=fw keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw op=signer_total n=25 min_ms=6.5821 q1_ms=6.6138 median_ms=6.6246 q3_ms=6.6345 max_ms=6.7607 spread_max_over_min=1.0271 wrong=0
+RESULT time v=fw op=signer_hash_1MB n=25 min_ms=0.9239 q1_ms=0.9254 median_ms=0.9275 q3_ms=0.9379 max_ms=0.9542 spread_max_over_min=1.0328
+RESULT time v=fw op=signer_sign n=25 min_ms=5.6551 q1_ms=5.6859 median_ms=5.6945 q3_ms=5.7073 max_ms=5.8318 spread_max_over_min=1.0312
+RESULT time v=fw op=verifier_total n=25 min_ms=1.9058 q1_ms=1.9089 median_ms=1.9173 q3_ms=1.9230 max_ms=1.9323 spread_max_over_min=1.0139 wrong=0
+RESULT time v=fw op=verifier_hash_1MB n=25 min_ms=0.9263 q1_ms=0.9292 median_ms=0.9311 q3_ms=0.9321 max_ms=0.9464 spread_max_over_min=1.0216
+RESULT time v=fw op=verifier_verify n=25 min_ms=0.9764 q1_ms=0.9798 median_ms=0.9836 q3_ms=0.9879 max_ms=0.9968 spread_max_over_min=1.0209
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+== atom_v3_n4_400 00:35:27
+loaded
+-- mode fw exit=0
+RESULT check v=fw keygen_match_sw=true digest_match_sw=true sign_match_sw=true atom_verify_good=true atom_reject_tampered_image=true atom_reject_flipped_sig=true sw_verify_good=true errors=0 PASS
+RESULT time v=fw op=signer_total n=25 min_ms=4.6545 q1_ms=4.6832 median_ms=4.6877 q3_ms=4.6992 max_ms=4.8159 spread_max_over_min=1.0347 wrong=0
+RESULT time v=fw op=signer_hash_1MB n=25 min_ms=0.9588 q1_ms=0.9640 median_ms=0.9647 q3_ms=0.9659 max_ms=0.9795 spread_max_over_min=1.0215
+RESULT time v=fw op=signer_sign n=25 min_ms=3.6910 q1_ms=3.7088 median_ms=3.7200 q3_ms=3.7373 max_ms=3.8425 spread_max_over_min=1.0410
+RESULT time v=fw op=verifier_total n=25 min_ms=2.1673 q1_ms=2.1901 median_ms=2.2000 q3_ms=2.2218 max_ms=2.2514 spread_max_over_min=1.0388 wrong=0
+RESULT time v=fw op=verifier_hash_1MB n=25 min_ms=0.9652 q1_ms=0.9677 median_ms=0.9686 q3_ms=0.9699 max_ms=0.9855 spread_max_over_min=1.0210
+RESULT time v=fw op=verifier_verify n=25 min_ms=1.2008 q1_ms=1.2222 median_ms=1.2257 q3_ms=1.2509 max_ms=1.2680 spread_max_over_min=1.0560
+RESULT summary mode=fw mismatches=0 ALL_MATCH
+DONE 00:35:47

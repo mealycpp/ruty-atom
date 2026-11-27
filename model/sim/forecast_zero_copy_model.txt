@@ -1,0 +1,18 @@
+RUTY atom: MODEL forecast for the no-copy scheduler, filed BEFORE the measurement.
+Model: sim/dfg_sim.py, processor costs fitted to the 36 board runs of 2026-11-26 (mean error 2.9%, worst 8.3%).
+Change under test: stream nodes (tags, firmware) are no longer copied into the atom's own buffer. The atom reads the tenant's buffer in place;
+the scheduler only flushes the cache lines and points the atom at them. The model ranks this change first of 13 options.
+The flush cost is not known to the model; the range below assumes it is between 0% and 15% of the copy it replaces.
+Policy graph+rule. Milliseconds: today's design (board) -> forecast range.
+  atoms=4 tags= 4 fw=1   3.848 -> 2.68 to 2.75   (28% to 30% faster)
+  atoms=4 tags= 8 fw=2   5.354 -> 3.05 to 3.28   (39% to 43% faster)
+  atoms=4 tags=16 fw=4   8.858 -> 3.79 to 4.48   (49% to 57% faster)
+  atoms=4 tags=16 fw=0   5.781 -> 3.11 to 3.36   (42% to 46% faster)
+  atoms=4 tags= 0 fw=4   5.239 -> 2.70 to 2.99   (43% to 48% faster)
+  atoms=2 tags= 4 fw=1   5.795 -> 4.86 to 5.05   (13% to 16% faster)
+  atoms=2 tags= 8 fw=2   7.439 -> 5.47 to 5.81   (22% to 27% faster)
+  atoms=2 tags=16 fw=4   10.819 -> 6.99 to 7.66   (29% to 35% faster)
+  atoms=2 tags=16 fw=0   7.565 -> 5.66 to 5.89   (22% to 25% faster)
+  atoms=2 tags= 0 fw=4   7.377 -> 4.78 to 5.31   (28% to 35% faster)
+The forecast FAILS for a row if the measured time is outside the range by more than 10% of the measured time.
+Trees only (no stream nodes) must not change by more than 3%.
