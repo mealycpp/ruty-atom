@@ -186,6 +186,17 @@ The simulator with those costs and nothing fitted, against the logged board time
 python3 model/sim/dfg_sim_gem5.py
 ```
 
+The thirteen scheduler designs ranked on those same gem5 costs, nothing fitted (the Design method paragraph and Fig. 1 of the letter):
+
+```
+python3 model/sim/rank13_gem5.py            # writes the table kept in model/sim/design_ranking_gem5.txt
+python3 model/sim/rank13_gem5.py fitted     # reproduces model/sim/design_ranking.txt from the fitted costs
+```
+
+On four atoms and the five mixed jobs the board ran, the nine designs that keep the processor's copy change the job time by -8.1% to +31.9%;
+reading the buffer in place (no copy) saves 24.0% to 44.8% (board: 30.6% to 43.1%), and a second core doing the copy saves 28.7% to 53.5%.
+This ranking was run on 2026-11-27, after the board measurements; the forecast filed before the no-copy run used the fitted costs (`results/forecast_dfg_no_copy_MODEL_2026-11-26.txt`).
+
 ## Every claim, and the file behind it
 
 | Claim in the letter | Value | Where to look |
