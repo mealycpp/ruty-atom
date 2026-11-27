@@ -23,8 +23,8 @@
 ## The idea
 
 An embedded root of trust must now serve several Keccak hash families: SHAKE for the post-quantum standards, the 12-round TurboSHAKE
-for speed, and the narrow MiniSHAKE for many short messages. A hash core is built around one state width, so the narrow family needs
-a second core. RUTY-ATOM does it with the register the root of trust already owns.
+for speed, and the narrow MiniSHAKE for many short messages. A hash core holds one state at a time, so a narrow state leaves half of
+its register idle. RUTY-ATOM does it with the register the root of trust already owns.
 
 <p align="center"><img src="docs/img/split.png" alt="One 25-lane register as one Keccak-p[1600] state or as two Keccak-p[800] states, switched by one register write" width="100%"></p>
 
