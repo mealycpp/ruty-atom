@@ -104,7 +104,7 @@ txt(wx + ww * 0.25, wy2 + wh / 2, "4 of b", fs=5.4, c=B); txt(wx + ww * 0.75, wy
 
 # ============================== (c) where the time goes
 import json, os
-D = [("SHAKE256", 3.68, 2.27, False), ("TurboSHAKE256", 3.00, 2.28, False), ("MiniSHAKE128", 3.12, 2.65, True)]
+D = [("SHAKE256", 3.68, 2.35, False), ("TurboSHAKE256", 3.00, 2.35, False), ("MiniSHAKE128", 3.12, 2.73, True)]
 if os.path.exists("sign_bars.json"):
     D = [tuple(r) for r in json.load(open("sign_bars.json"))]
 x0, x1 = 5.58, 7.06; sc = (x1 - x0) / 4.4

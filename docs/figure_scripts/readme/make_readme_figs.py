@@ -120,7 +120,7 @@ def amdahl():
         ff = (1 - p) * RS; ax.plot([ff, ff], [Gm, 1 / ((1 - ff) + ff / 2)], color=GOLD, lw=2.0, zorder=3)
         ax.plot([ff], [Gm], "o", ms=10, color=GOLD, mec=CARD, mew=1.6, zorder=4, label="full signature, measured" if k == 0 else None)
         ax.annotate(t, (ff, Gm), textcoords="offset points", xytext=(0, 11) if k == 1 else (0, -17), ha="center", color=TXT, fontsize=9.5)
-    ax.plot([RS], [1.80], "s", ms=10, color=BLUE, mec=CARD, mew=1.6, zorder=4, label="hash-chain step in the atom, measured"); ax.annotate("1.80×", (RS, 1.80), textcoords="offset points", xytext=(-12, 6), ha="right", color=TXT, fontsize=9.5)
+    ax.plot([RS], [1.807], "s", ms=10, color=BLUE, mec=CARD, mew=1.6, zorder=4, label="hash-chain step in the atom, measured"); ax.annotate("1.81×", (RS, 1.807), textcoords="offset points", xytext=(-12, 6), ha="right", color=TXT, fontsize=9.5)
     ax.plot([24 / 406.0], [1.024], "D", ms=9, color=GREY, mec=CARD, mew=1.6, zorder=4, label="Karl et al., from their cycle counts"); ax.annotate("2.4%", (24 / 406.0, 1.024), textcoords="offset points", xytext=(10, 8), color=SUB, fontsize=9.5)
     ax.set_xlim(0, 1); ax.set_ylim(0.96, 2.04); ax.set_xlabel("f : share of time spent in permutation rounds", color=SUB, fontsize=10, labelpad=6); ax.set_ylabel("gain from halving the rounds", color=SUB, fontsize=10, labelpad=6)
     ax.legend(loc="upper left", fontsize=9.3, frameon=False, labelcolor=TXT, labelspacing=0.5, handlelength=2.2)

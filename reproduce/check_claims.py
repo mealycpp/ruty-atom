@@ -281,13 +281,13 @@ CH = {}
 def chain():
     """Hash-chain step: time, gain of fewer rounds, gain of the split, Amdahl's law"""
     p = "results/fixcheck_rt_n1_450_aup1.txt"
-    for alg, letter in (("shake256", "59.7"), ("turboshake256", "33.1"), ("minishake128", "18.4")):
+    for alg, letter in (("shake256", "59.7"), ("turboshake256", "33.0"), ("minishake128", "18.4")):
         v, calc = chain_ns(p, alg)
         CH[alg] = v
         check("chain step, %s%s" % (alg, " (per chain; two advance together)" if alg == "minishake128" else ""), letter, v, p, calc, unit=" ns")
     g_r = CH["shake256"] / CH["turboshake256"]
     g_s = CH["turboshake256"] / CH["minishake128"]
-    check("gain of halving the rounds on a chain step", "1.80", g_r, p, "%.3f / %.3f" % (CH["shake256"], CH["turboshake256"]), unit="x")
+    check("gain of halving the rounds on a chain step", "1.81", g_r, p, "%.3f / %.3f" % (CH["shake256"], CH["turboshake256"]), unit="x")
     check("throughput gain of the split on a chain step", "1.80", g_s, p, "%.3f / %.3f" % (CH["turboshake256"], CH["minishake128"]), unit="x")
     clocks = CH["shake256"] * 1e-9 * N_CLOCK[1] * 1e6
     check("clocks per SHAKE256 chain step", "26.9", clocks, p, "%.3f ns x %d MHz" % (CH["shake256"], N_CLOCK[1]))
@@ -399,9 +399,9 @@ def gains():
     lay_same = float(d["processor_layout_total_ms"])
     p2 = "results/sign_128f_4atoms_aup1.txt"
     lay_prof = float(kv(lines_of(p2, "RESULT breakdown v=1 op=sign")[0])["processor_layout_total_ms"])
-    ok = abs(rnd(lay_same, 2) - 2.27) < 0.005
-    add("PASS" if ok else "FAIL", "call layout within the 3.68 ms standard signature at N=4", "2.27 ms", "%.4f ms in the run that gives 3.68 ms" % lay_same, p,
-        "'RESULT breakdown v=1 op=sign' processor_layout_total_ms. The letter's 2.27 ms is the layout of the separate profiling run (%s: %.4f ms of 3.62 ms); it is printed next to the 3.68 ms of another run" % (p2, lay_prof))
+    ok = abs(rnd(lay_same, 2) - 2.35) < 0.005
+    add("PASS" if ok else "FAIL", "call layout within the 3.68 ms standard signature at N=4", "2.35 ms", "%.4f ms in the run that gives 3.68 ms" % lay_same, p,
+        "'RESULT breakdown v=1 op=sign' processor_layout_total_ms of the same run (the separate profiling run %s has %.4f ms of 3.62 ms)" % (p2, lay_prof))
     p = "results/sign4_128f_mini_NONSTANDARD_4atoms_aup1.txt"
     lay_mini = float(kv(lines_of(p, "RESULT breakdown v=1 op=sign")[0])["processor_layout_total_ms"])
     alt = []
@@ -411,8 +411,8 @@ def gains():
             alt.append("%s: %.4f ms layout, median %.4f ms" % (fn, float(kv(l)["processor_layout_total_ms"]), med("results/" + fn, 1, "sign")))
         except Exception:
             pass
-    ok = abs(rnd(lay_mini, 2) - 2.65) < 0.005
-    add("PASS" if ok else "FAIL", "processor layout within the 3.12 ms split signature at N=4", "2.65 ms", "%.4f ms in the run that gives 3.12 ms" % lay_mini, p,
+    ok = abs(rnd(lay_mini, 2) - 2.73) < 0.005
+    add("PASS" if ok else "FAIL", "processor layout within the 3.12 ms split signature at N=4", "2.73 ms", "%.4f ms in the run that gives 3.12 ms" % lay_mini, p,
         "'RESULT breakdown v=1 op=sign' processor_layout_total_ms" + ("; other run: " + "; ".join(alt) if alt else ""))
     p = "results/sign4_128f_tenants_4atoms_aup1.txt"
     rat = []
@@ -475,8 +475,8 @@ def kt_and_tree(meas, law):
     for i, n in enumerate((1, 2, 4)):
         check("Merkle tree: split over TurboSHAKE128 on the wide atom, N=%d" % n, ("1.35", "1.16", "1.01")[i], g[n], src, "%.4f / %.4f ms" % (T[("MK_turboshake128", n)], T[("MK_minishake128", n)]), unit="x")
     rates = [T[("MKrate_" + m, 4)] for m in ("minishake128", "turboshake128", "shake128")]
-    ok = all(abs(rnd(r, 0) - 33) < 0.5 for r in rates)
-    add("PASS" if ok else "FAIL", "at N=4 all three functions reach 33 million hashes per second", "33, 33, 33", "%.2f (MiniSHAKE128), %.2f (TurboSHAKE128), %.2f (SHAKE128)" % tuple(rates),
+    ok = all(rnd(r, 0) in (32.0, 33.0) for r in rates)
+    add("PASS" if ok else "FAIL", "at N=4 the three functions reach 32 to 33 million hashes per second", "32 to 33", "%.2f (MiniSHAKE128), %.2f (TurboSHAKE128), %.2f (SHAKE128)" % tuple(rates),
         "results/modes_merkle_4atoms_aup1.txt", "'RESULT merkle k=16 ... atoms=4' Mhash_per_s of each of the three modes")
     check("interleaving the leaf values for the split layout", "1.7", T[("MK_pack", 1)], "results/modes_merkle_1atoms_aup1.txt", "'RESULT merkle k=16 mode=minishake128...' layout_pack_us / 1000", unit=" ms")
     wins = [n for n in (1, 2, 4) if T[("MK_e2e_mini", n)] < T[("MK_e2e_turbo", n)]]
@@ -488,7 +488,7 @@ def kt_and_tree(meas, law):
         d = kv(l)
         x[(d["alg"], int(d["threads"]))] = float(d["median_us"]) / 1000.0
     check("the designers' C code builds the tree on four Cortex-A53 cores in", "33.5", x[("minishake128", 4)], p, "'RESULT xkcpmerkle k=16 alg=minishake128 threads=4' median_us / 1000", unit=" ms")
-    check("that is behind four atoms by", "8.5", x[("minishake128", 4)] / T[("MK_minishake128", 4)], p + ", " + src, "%.3f / %.4f ms" % (x[("minishake128", 4)], T[("MK_minishake128", 4)]), unit="x")
+    check("that is behind four atoms by", "8.6", x[("minishake128", 4)] / T[("MK_minishake128", 4)], p + ", " + src, "%.3f / %.4f ms" % (x[("minishake128", 4)], T[("MK_minishake128", 4)]), unit="x")
     check("in that code the narrow state takes this share of the 1600-bit time", "0.97", x[("minishake128", 1)] / x[("turboshake128", 1)], p,
           "%.3f / %.3f ms, one core" % (x[("minishake128", 1)], x[("turboshake128", 1)]))
     # the forecasts of the law for the tree, as filed, and the accuracy the abstract states

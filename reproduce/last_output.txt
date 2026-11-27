@@ -152,16 +152,16 @@ PASS    chain step, shake256
           letter: 59.7 ns | recomputed: 59.7126 ns
           source: results/fixcheck_rt_n1_450_aup1.txt
           how:    1100623 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
-FAIL    chain step, turboshake256
-          letter: 33.1 ns | recomputed: 33.0456 ns
+PASS    chain step, turboshake256
+          letter: 33.0 ns | recomputed: 33.0456 ns
           source: results/fixcheck_rt_n1_450_aup1.txt
           how:    609097 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
 PASS    chain step, minishake128 (per chain; two advance together)
           letter: 18.4 ns | recomputed: 18.3792 ns
           source: results/fixcheck_rt_n1_450_aup1.txt
           how:    338765 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
-FAIL    gain of halving the rounds on a chain step
-          letter: 1.80x | recomputed: 1.80697x
+PASS    gain of halving the rounds on a chain step
+          letter: 1.81x | recomputed: 1.80697x
           source: results/fixcheck_rt_n1_450_aup1.txt
           how:    59.713 / 33.046
 PASS    throughput gain of the split on a chain step
@@ -396,12 +396,12 @@ PASS    verification on two of the four atoms
           letter: 1.02 ms | recomputed: 1.01530 ms
           source: results/sign4_128f_std_4atoms_aup1.txt
           how:    'RESULT time v=1 op=verify_on_2_of_4_atoms' median_ms
-FAIL    call layout within the 3.68 ms standard signature at N=4
-          letter: 2.27 ms | recomputed: 2.3478 ms in the run that gives 3.68 ms
+PASS    call layout within the 3.68 ms standard signature at N=4
+          letter: 2.35 ms | recomputed: 2.3478 ms in the run that gives 3.68 ms
           source: results/sign4_128f_std_4atoms_aup1.txt
-          how:    'RESULT breakdown v=1 op=sign' processor_layout_total_ms. The letter's 2.27 ms is the layout of the separate profiling run (results/sign_128f_4atoms_aup1.txt: 2.2655 ms of 3.62 ms); it is printed next to the 3.68 ms of another run
-FAIL    processor layout within the 3.12 ms split signature at N=4
-          letter: 2.65 ms | recomputed: 2.7318 ms in the run that gives 3.12 ms
+          how:    'RESULT breakdown v=1 op=sign' processor_layout_total_ms of the same run (the separate profiling run results/sign_128f_4atoms_aup1.txt has 2.2655 ms of 3.62 ms)
+PASS    processor layout within the 3.12 ms split signature at N=4
+          letter: 2.73 ms | recomputed: 2.7318 ms in the run that gives 3.12 ms
           source: results/sign4_128f_mini_NONSTANDARD_4atoms_aup1.txt
           how:    'RESULT breakdown v=1 op=sign' processor_layout_total_ms; other run: sign3_128f_mini_NONSTANDARD_word_4atoms_aup1.txt: 2.7371 ms layout, median 3.1337 ms
 PASS    two tenants slow each other by at most
@@ -476,8 +476,8 @@ PASS    Merkle tree: split over TurboSHAKE128 on the wide atom, N=4
           letter: 1.01x | recomputed: 1.01118x
           source: results/modes_merkle_*atoms_aup1.txt
           how:    3.9599 / 3.9161 ms
-FAIL    at N=4 all three functions reach 33 million hashes per second
-          letter: 33, 33, 33 | recomputed: 33.47 (MiniSHAKE128), 33.10 (TurboSHAKE128), 31.76 (SHAKE128)
+PASS    at N=4 the three functions reach 32 to 33 million hashes per second
+          letter: 32 to 33 | recomputed: 33.47 (MiniSHAKE128), 33.10 (TurboSHAKE128), 31.76 (SHAKE128)
           source: results/modes_merkle_4atoms_aup1.txt
           how:    'RESULT merkle k=16 ... atoms=4' Mhash_per_s of each of the three modes
 PASS    interleaving the leaf values for the split layout
@@ -492,8 +492,8 @@ PASS    the designers' C code builds the tree on four Cortex-A53 cores in
           letter: 33.5 ms | recomputed: 33.5053 ms
           source: results/modes_xkcp_sw_a53_aup1.txt
           how:    'RESULT xkcpmerkle k=16 alg=minishake128 threads=4' median_us / 1000
-FAIL    that is behind four atoms by
-          letter: 8.5x | recomputed: 8.5557x
+PASS    that is behind four atoms by
+          letter: 8.6x | recomputed: 8.5557x
           source: results/modes_xkcp_sw_a53_aup1.txt, results/modes_merkle_*atoms_aup1.txt
           how:    33.505 / 3.9161 ms
 PASS    in that code the narrow state takes this share of the 1600-bit time
@@ -580,7 +580,7 @@ PASS    forecast file older than the first log of its run: forecast_sign_2026-11
           how:    modification times (UTC) recorded when the release was staged: results/forecast_sign_2026-11-26.txt against results/sign_128f_1atoms_aup1.txt
 
 == Summary
-mandatory checks: 129   PASS 121   FAIL 6   MISSING 2
+mandatory checks: 129   PASS 127   FAIL 0   MISSING 2
 informational checks: 13   PASS 13   other 0
 
 Discrepancies:
@@ -588,34 +588,10 @@ Discrepancies:
       letter: 3,411, 0 mismatches | recomputed: no vector run of build id 52552021
       source: results/*kat*
       vector logs in the repository: atom_kat_v1_n1_350_aup1.txt: build id 5255201e, 3411 vectors, 0 mismatches; board_kat_nist_600.txt: build id 52552012, 3391 vectors, 9 mismatches; board_kat_rfc9861_600.txt: build id 52552012, 29 vectors, 0 mismatches; board_kat_v22_n1_600_aup2.txt: build id 52552016, 3411 vectors, 0 mismatches. The 3,411-vector run with 0 mismatches is of an EARLIER atom build, not of the build that produced the letter's measurements
-  FAIL  chain step, turboshake256
-      letter: 33.1 ns | recomputed: 33.0456 ns
-      source: results/fixcheck_rt_n1_450_aup1.txt
-      609097 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
-  FAIL  gain of halving the rounds on a chain step
-      letter: 1.80x | recomputed: 1.80697x
-      source: results/fixcheck_rt_n1_450_aup1.txt
-      59.713 / 33.046
   MISSING  the 25 individual run times behind each Table I median
       letter: 25 times per cell | recomputed: not logged
       source: results/sign4_*, results/modes_*
       the board programs print n, min, quartiles, median and max of each cell, not the 25 times, so a median cannot be recomputed from individual runs; every Table I check above compares the letter with the median the board program printed (files with sample lists: board_chain_v23_n8_450_aup2.txt)
-  FAIL  call layout within the 3.68 ms standard signature at N=4
-      letter: 2.27 ms | recomputed: 2.3478 ms in the run that gives 3.68 ms
-      source: results/sign4_128f_std_4atoms_aup1.txt
-      'RESULT breakdown v=1 op=sign' processor_layout_total_ms. The letter's 2.27 ms is the layout of the separate profiling run (results/sign_128f_4atoms_aup1.txt: 2.2655 ms of 3.62 ms); it is printed next to the 3.68 ms of another run
-  FAIL  processor layout within the 3.12 ms split signature at N=4
-      letter: 2.65 ms | recomputed: 2.7318 ms in the run that gives 3.12 ms
-      source: results/sign4_128f_mini_NONSTANDARD_4atoms_aup1.txt
-      'RESULT breakdown v=1 op=sign' processor_layout_total_ms; other run: sign3_128f_mini_NONSTANDARD_word_4atoms_aup1.txt: 2.7371 ms layout, median 3.1337 ms
-  FAIL  at N=4 all three functions reach 33 million hashes per second
-      letter: 33, 33, 33 | recomputed: 33.47 (MiniSHAKE128), 33.10 (TurboSHAKE128), 31.76 (SHAKE128)
-      source: results/modes_merkle_4atoms_aup1.txt
-      'RESULT merkle k=16 ... atoms=4' Mhash_per_s of each of the three modes
-  FAIL  that is behind four atoms by
-      letter: 8.5x | recomputed: 8.5557x
-      source: results/modes_xkcp_sw_a53_aup1.txt, results/modes_merkle_*atoms_aup1.txt
-      33.505 / 3.9161 ms
 
 Not covered by this script (no log in the repository can decide them): the count of 754 one-bit multiplexers (10, 712, 32), which is a property of rtl/atom/atom_seq3.v;
 the figures of other authors (SLotH, SPHINCSLET, Trident, Sun et al., Karl et al., the Keccak team's desktop figures), which are quoted from their papers.

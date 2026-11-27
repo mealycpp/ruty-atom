@@ -73,12 +73,12 @@ def cost():
         y = 0.86 - i * 0.26; ax.add_patch(Rectangle((0, y - 0.085), 0.018, 0.17, fc=GOLD, ec="none"))
         ax.text(0.06, y + 0.03, big, color=TXT, fontsize=17, fontweight="semibold", va="center"); ax.text(0.06, y - 0.065, small, color=SUB, fontsize=9.4, va="center")
     ax = axs[2]; axstyle(ax, "One step of a hash chain", "nanoseconds per chain, in the atom at 450 MHz (lower is better)")
-    rows = [("SHAKE256\n24 rounds", 59.7, AQUA), ("TurboSHAKE256\n12 rounds", 33.1, BLUE), ("MiniSHAKE128\ntwo at once", 18.4, GOLD)]
+    rows = [("SHAKE256\n24 rounds", 59.7, AQUA), ("TurboSHAKE256\n12 rounds", 33.0, BLUE), ("MiniSHAKE128\ntwo at once", 18.4, GOLD)]
     for i, (n, v, col) in enumerate(rows):
         ax.bar(i, v, width=0.5, color=col, ec="none"); ax.text(i, v + 1.6, "%.1f" % v, color=TXT, fontsize=10.5, ha="center")
     for i in (0, 1):
         ax.annotate("", xy=(i + 0.78, rows[i + 1][1] + 9), xytext=(i + 0.22, rows[i][1] + 2 if i else rows[i][1] - 6), arrowprops=dict(arrowstyle="-|>", color=TXT, lw=1.2, connectionstyle="arc3,rad=-0.25"))
-        ax.text(i + 0.62, (rows[i][1] + rows[i + 1][1]) / 2 + 11, "1.80×", color=TXT, fontsize=10, ha="center")
+        ax.text(i + 0.62, (rows[i][1] + rows[i + 1][1]) / 2 + 11, ("1.81×", "1.80×")[i], color=TXT, fontsize=10, ha="center")
     ax.set_xticks(range(3)); ax.set_xticklabels([r[0] for r in rows], fontsize=9.2, color=TXT); ax.set_ylim(0, 72); ax.set_xlim(-0.55, 2.55); ax.grid(axis="x", lw=0)
     fig.text(0.115, 0.925, "The cost, and the gain inside the core", color=TXT, fontsize=16, fontweight="medium")
     save(fig, "cost.png")
@@ -94,7 +94,7 @@ def signature():
     ax.set_xticks(N); ax.set_xlim(0.75, 4.25); ax.set_ylim(0, 11.5); ax.set_xlabel("atoms", color=SUB, fontsize=9.5, labelpad=4)
     ax.legend(loc="upper right", fontsize=9, frameon=False, labelcolor=TXT, handlelength=2.2, labelspacing=0.4)
     ax = axs[1]; axstyle(ax, "Where the time goes on four atoms", "ms per signature: processor laying out calls, then atoms and memory port")
-    rows = [("SHAKE256", 2.27, 3.68, AQUA), ("TurboSHAKE256", 2.28, 3.00, BLUE), ("MiniSHAKE128, split", 2.65, 3.12, GOLD)]
+    rows = [("SHAKE256", 2.35, 3.68, AQUA), ("TurboSHAKE256", 2.35, 3.00, BLUE), ("MiniSHAKE128, split", 2.73, 3.12, GOLD)]
     for i, (n, p, t, col) in enumerate(rows[::-1]):
         ax.barh(i, p, height=0.5, color=GREY, ec="none"); ax.barh(i, t - p - 0.03, left=p + 0.03, height=0.5, color=col, ec="none")
         ax.text(p / 2, i, "processor %.2f" % p, color=BG, fontsize=9.3, ha="center", va="center", fontweight="medium"); ax.text(t + 0.07, i, "%.2f" % t, color=TXT, fontsize=10, va="center")

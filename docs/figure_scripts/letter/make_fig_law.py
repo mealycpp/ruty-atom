@@ -23,7 +23,7 @@ for p, G, t in P:
     ax.plot([ff], [G], "o", ms=4.6, mfc=B, mec=B, zorder=4)
     ax.annotate(t, (ff, G), textcoords="offset points", xytext=(0, -9.5), ha="center", fontsize=6.0, color=B)
 ax.annotate("full signature,\nRUTY-ATOM", (0.535, 1.401), textcoords="offset points", xytext=(-2, 14), ha="center", fontsize=6.0, color=B)
-ax.plot([RS], [1.80], "s", ms=4.4, mfc=B, mec=B, zorder=4); ax.annotate("chain step\nin the atom", (RS, 1.80), textcoords="offset points", xytext=(-7, 2), ha="right", va="center", fontsize=6.0, color=B)
+ax.plot([RS], [1.807], "s", ms=4.4, mfc=B, mec=B, zorder=4); ax.annotate("chain step\nin the atom", (RS, 1.807), textcoords="offset points", xytext=(-7, 2), ha="right", va="center", fontsize=6.0, color=B)
 fk = 24 / 406.0
 ax.plot([fk], [1.024], "s", ms=4.6, mfc="w", mec="k", mew=0.9, zorder=4); ax.annotate("Karl et al. " + ref("karl2025"), (fk, 1.024), textcoords="offset points", xytext=(7, -1), ha="left", va="center", fontsize=6.2)
 ax.set_xlim(0, 1); ax.set_ylim(0.97, 2.03); ax.set_xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0]); ax.set_yticks([1.0, 1.2, 1.4, 1.6, 1.8, 2.0])

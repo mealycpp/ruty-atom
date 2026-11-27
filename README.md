@@ -43,7 +43,7 @@ One real application per hash family, each run end to end on the board and set b
 | **SHAKE** | SLH-DSA-SHAKE-128f keygen / sign / verify | 0.21 / 3.68 / 1.24 ms on four atoms, byte-identical to FIPS 205 | signs faster than SLotH, SPHINCSLET and Trident's hypertree part; Sun et al. are faster on every operation and Trident verifies faster |
 | **SHAKE** | Firmware authentication, 1 MiB | 1.90 ms on one atom | no prior design reports megabyte messages |
 | **TurboSHAKE** | KangarooTwelve (RFC 9861), 16 MiB | 19.1 Gb/s, all 18 RFC vectors reproduced | 3.5× the board's four Cortex-A53 cores |
-| **MiniSHAKE** | Merkle tree, 2¹⁶ leaves | 33.5 million hashes per second | 8.5× the Keccak team's C code on four cores |
+| **MiniSHAKE** | Merkle tree, 2¹⁶ leaves | 33.5 million hashes per second | 8.6× the Keccak team's C code on four cores |
 
 MiniSHAKE is a preprint construction, not a standard, and it has no published test vectors; here four implementations agree,
 one of them built on the Keccak team's own permutation code. Signatures made with TurboSHAKE or MiniSHAKE are not FIPS 205 signatures.
