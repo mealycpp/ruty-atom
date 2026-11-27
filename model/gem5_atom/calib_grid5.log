@@ -1,0 +1,9 @@
+15:37:06 done r5_m6: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 6
+15:37:08 done r5_m6_l2pf2: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 6 --l2pf 2
+15:37:08 done r5_m6_l2pf1: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 6 --l2pf 1
+15:37:08 done r5_m4_l2pf4: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 4 --l2pf 4
+15:37:09 done r5_m4_l2pf2: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 4 --l2pf 2
+15:37:09 done r5_m4_l2pf8: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 4 --l2pf 8
+15:37:10 done r5_m5_l2pf2: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 5 --l2pf 2
+15:37:11 done r5_m5_l2pf4: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 5 --l2pf 4
+ALL_DONE

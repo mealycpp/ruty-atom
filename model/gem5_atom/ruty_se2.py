@@ -3,6 +3,8 @@
 """ruty_se2.py : gem5 SE-mode model of the AUP-ZU3 application processor, with the knobs needed to CALIBRATE it against the real Cortex-A53.
     build/ARM/gem5.opt -d <outdir> ruty_se2.py --cmd <binary> --options "<args>" [--cpu minor|hpi|o3] [--clock 1.2GHz]
         [--l1pf N] [--l2pf N] [--l1lat N] [--l2lat N] [--mem DDR4_2400_8x8|DDR4_2400_16x4|simple] [--memlat 30ns]
+        round 4 additions (defaults reproduce rounds 1-3 exactly):
+        [--l1resp N] [--l2resp N] [--l1mshr N] [--l2mshr N] [--pflat N] [--pfq N] [--pfmiss 0|1]
 The stock model (no prefetcher, 12-cycle L2) copies memory about 4 times slower than the board; the options below close that gap."""
 import argparse, m5, sys, os
 from m5.objects import *
@@ -14,6 +16,13 @@ ap.add_argument("--l1pf", type=int, default=0); ap.add_argument("--l2pf", type=i
 ap.add_argument("--l1lat", type=int, default=2); ap.add_argument("--l2lat", type=int, default=12)
 ap.add_argument("--mem", default="DDR4_2400_8x8"); ap.add_argument("--memlat", default="30ns")
 ap.add_argument("--wb", type=int, default=8)
+ap.add_argument("--l1resp", type=int, default=1, help="L1 response latency (cycles)")
+ap.add_argument("--l2resp", type=int, default=2, help="L2 response latency (cycles)")
+ap.add_argument("--l1mshr", type=int, default=8, help="L1 data cache miss buffers (line-fill buffers)")
+ap.add_argument("--l2mshr", type=int, default=16, help="L2 miss buffers")
+ap.add_argument("--pflat", type=int, default=1, help="stride prefetcher: cycles before a generated prefetch may issue")
+ap.add_argument("--pfq", type=int, default=32, help="stride prefetcher: queue size")
+ap.add_argument("--pfmiss", type=int, default=0, help="stride prefetcher: 1 = train on misses only")
 args = ap.parse_args()
 if args.cpu == "hpi":
     from common.cores.arm import HPI
@@ -21,20 +30,21 @@ if args.cpu == "hpi":
 else:
     CPU = {"minor": ArmMinorCPU, "o3": ArmO3CPU, "timing": ArmTimingSimpleCPU}[args.cpu]
 class L1(Cache):
-    assoc = 4; tag_latency = args.l1lat; data_latency = args.l1lat; response_latency = 1; mshrs = 8; tgts_per_mshr = 8; write_buffers = args.wb
+    assoc = 4; tag_latency = args.l1lat; data_latency = args.l1lat; response_latency = args.l1resp; mshrs = 8; tgts_per_mshr = 8; write_buffers = args.wb
 class L2(Cache):
-    size = "1MB"; assoc = 16; tag_latency = args.l2lat; data_latency = args.l2lat; response_latency = 2; mshrs = 16; tgts_per_mshr = 8; write_buffers = 16
+    size = "1MB"; assoc = 16; tag_latency = args.l2lat; data_latency = args.l2lat; response_latency = args.l2resp; mshrs = args.l2mshr; tgts_per_mshr = 8; write_buffers = 16
+def PF(degree): return StridePrefetcher(degree=degree, latency=args.pflat, queue_size=args.pfq, on_miss=bool(args.pfmiss))
 system = System()
 system.clk_domain = SrcClockDomain(clock=args.clock, voltage_domain=VoltageDomain())
 system.mem_mode = "timing"; system.mem_ranges = [AddrRange("512MB")]
 system.cpu = CPU()
-system.cpu.icache = L1(size="32kB", assoc=2); system.cpu.dcache = L1(size="32kB")
-if args.l1pf: system.cpu.dcache.prefetcher = StridePrefetcher(degree=args.l1pf)
+system.cpu.icache = L1(size="32kB", assoc=2); system.cpu.dcache = L1(size="32kB", mshrs=args.l1mshr)
+if args.l1pf: system.cpu.dcache.prefetcher = PF(args.l1pf)
 system.cpu.icache.cpu_side = system.cpu.icache_port; system.cpu.dcache.cpu_side = system.cpu.dcache_port
 system.l2bus = L2XBar()
 system.cpu.icache.mem_side = system.l2bus.cpu_side_ports; system.cpu.dcache.mem_side = system.l2bus.cpu_side_ports
 system.l2 = L2()
-if args.l2pf: system.l2.prefetcher = StridePrefetcher(degree=args.l2pf)
+if args.l2pf: system.l2.prefetcher = PF(args.l2pf)
 system.l2.cpu_side = system.l2bus.mem_side_ports
 system.membus = SystemXBar(); system.l2.mem_side = system.membus.cpu_side_ports
 system.cpu.createInterruptController(); system.system_port = system.membus.cpu_side_ports

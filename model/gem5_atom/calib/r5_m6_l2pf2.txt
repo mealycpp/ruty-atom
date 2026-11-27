@@ -1,0 +1,16 @@
+COST start flush=false reps=3
+COST fill_secrets_280 min_ns=15384 mean_ns=15494 reps=3
+COST fill_chains_280 min_ns=13603 mean_ns=13657 reps=3
+COST fill_compress_8 min_ns=2094 mean_ns=2299 reps=3
+COST fill_level_4 min_ns=335 mean_ns=440 reps=3
+COST collect_280 min_ns=1709 mean_ns=1780 reps=3
+COST collect_8 min_ns=77 mean_ns=126 reps=3
+COST tags_copy_240kB min_ns=69918 mean_ns=79584 reps=3
+COST tags_collect_38kB min_ns=9336 mean_ns=9395 reps=3
+COST firmware_copy_1MB min_ns=433194 mean_ns=436216 reps=3
+COST tags_flush_only_240kB min_ns=109 mean_ns=140 reps=3
+COST firmware_flush_only_1MB min_ns=121 mean_ns=147 reps=3
+COST poll_1000_reads min_ns=3363 mean_ns=3392 reps=3
+COST shape_5_writes min_ns=30 mean_ns=80 reps=3
+COST end acc=0 sink=0
+gem5 exit @ tick 56625639014: exiting with last active thread context

@@ -1,0 +1,621 @@
+
+== 1. Cost of the second width
+PASS    splittable atom block, LUTs
+          letter: 8,064 | recomputed: 8064
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_util_hier.rpt
+          how:    row 'inst ... ruty_top', column Total LUTs
+PASS    splittable atom block, flip-flops
+          letter: 4,400 | recomputed: 4400
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_util_hier.rpt
+          how:    same row, column FFs
+PASS    fixed 1x1600 atom block, LUTs
+          letter: 7,419 | recomputed: 7419
+          source: synthesis/reports/atom_fix2w_n1_m16_300_450/route_util_hier.rpt
+          how:    row 'inst ... ruty_top', column Total LUTs
+PASS    fixed 1x1600 atom block, flip-flops
+          letter: 4,397 | recomputed: 4397
+          source: synthesis/reports/atom_fix2w_n1_m16_300_450/route_util_hier.rpt
+          how:    same row, column FFs
+PASS    LUTs added by the second width
+          letter: 645 | recomputed: 645
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_util_hier.rpt - synthesis/reports/atom_fix2w_n1_m16_300_450/route_util_hier.rpt
+          how:    8064 - 7419
+PASS    LUT overhead of the second width
+          letter: 8.7% | recomputed: 8.6939%
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_util_hier.rpt / synthesis/reports/atom_fix2w_n1_m16_300_450/route_util_hier.rpt
+          how:    100 * 645 / 7419
+PASS    fixed 2x800 atom block, LUTs (README)  (info)
+          letter: 7,421 | recomputed: 7421
+          source: synthesis/reports/atom_fix2n_n1_m16_300_450/route_util_hier.rpt
+          how:    row 'inst ... ruty_top'
+PASS    one-atom system, LUTs
+          letter: 10,006 | recomputed: 10006
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_util_hier.rpt
+          how:    row 'ruty_wrapper (top)'
+PASS    tool that produced the reports  (info)
+          letter: Vivado 2022.2 | recomputed: Vivado v.2022.2
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_util_hier.rpt
+          how:    report header
+PASS    splittable build meets timing at 480 MHz
+          letter: 480 MHz, met | recomputed: 480.1 MHz, WNS +0.021 ns, WHS +0.006 ns, met
+          source: synthesis/reports/atom_v3_n1_m16_300_480/route_timing.rpt
+          how:    Design Timing Summary; 1000 / period of the atom clock
+PASS    fixed 1x1600 build meets timing at 480 MHz
+          letter: 480 MHz, met | recomputed: 480.1 MHz, WNS +0.020 ns, WHS +0.013 ns, met
+          source: synthesis/reports/atom_fix2w_n1_m16_300_480/route_timing.rpt
+          how:    Design Timing Summary; 1000 / period of the atom clock
+PASS    LUT overhead in the two 480 MHz builds (info: the letter's 645 is from the 450 MHz builds)  (info)
+          letter: not printed | recomputed: 703 LUTs, 9.5%
+          source: synthesis/reports/atom_v3_n1_m16_300_480/route_util_hier.rpt - synthesis/reports/atom_fix2w_n1_m16_300_480/route_util_hier.rpt
+          how:    8127 - 7424
+PASS    N=1 system build: 450 MHz, timing met
+          letter: 450 MHz, met | recomputed: 450.0 MHz, WNS +0.022 ns, WHS +0.013 ns, met
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_timing.rpt
+          how:    Design Timing Summary
+PASS    bus and memory-port clock
+          letter: 300 MHz | recomputed: 300.03 MHz
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_timing.rpt
+          how:    1000 / period of clk_pl_0
+PASS    N=2 system build: 420 MHz, timing met
+          letter: 420 MHz, met | recomputed: 420.0 MHz, WNS +0.049 ns, WHS +0.009 ns, met
+          source: synthesis/reports/atom_v3_n2_m16_300_420/route_timing.rpt
+          how:    Design Timing Summary
+PASS    N=4 system build: 400 MHz, timing met
+          letter: 400 MHz, met | recomputed: 400.0 MHz, WNS +0.029 ns, WHS +0.009 ns, met
+          source: synthesis/reports/atom_v3_n4_m16_300_400/route_timing.rpt
+          how:    Design Timing Summary
+
+== 2. Correctness
+MISSING 3,411 NIST and RFC vectors pass on the atom build of the letter (id 52552021)
+          letter: 3,411, 0 mismatches | recomputed: no vector run of build id 52552021
+          source: results/*kat*
+          how:    vector logs in the repository: atom_kat_v1_n1_350_aup1.txt: build id 5255201e, 3411 vectors, 0 mismatches; board_kat_nist_600.txt: build id 52552012, 3391 vectors, 9 mismatches; board_kat_rfc9861_600.txt: build id 52552012, 29 vectors, 0 mismatches; board_kat_v22_n1_600_aup2.txt: build id 52552016, 3411 vectors, 0 mismatches. The 3,411-vector run with 0 mismatches is of an EARLIER atom build, not of the build that produced the letter's measurements
+PASS    N=1: 4 keys and messages, public key and 17,088-byte signature identical, one NIST signature
+          letter: 4 identical, 1 NIST, 0 failed | recomputed: 4 identical, 1 NIST, 0 failed
+          source: results/check_sign4_128f_std_1atoms_aup1_fips205.txt
+          how:    output of the independent check (software/check_sign_fips205.py) on the signatures in results/sign4_128f_std_1atoms_aup1.txt
+PASS    N=1: board program's own checks (software signature equal, verify accepts, 6 flipped signatures and a wrong message rejected)
+          letter: 4 of 4, errors 0 | recomputed: 4 of 4 with errors=0
+          source: results/sign4_128f_std_1atoms_aup1.txt
+          how:    'RESULT check' lines
+PASS    N=1: every log is of the atom build of the letter  (info)
+          letter: 52552021 | recomputed: 52552021
+          source: results/sign4_128f_std_1atoms_aup1.txt
+          how:    'ids=' of the header line
+PASS    N=2: 4 keys and messages, public key and 17,088-byte signature identical, one NIST signature
+          letter: 4 identical, 1 NIST, 0 failed | recomputed: 4 identical, 1 NIST, 0 failed
+          source: results/check_sign4_128f_std_2atoms_aup1_fips205.txt
+          how:    output of the independent check (software/check_sign_fips205.py) on the signatures in results/sign4_128f_std_2atoms_aup1.txt
+PASS    N=2: board program's own checks (software signature equal, verify accepts, 6 flipped signatures and a wrong message rejected)
+          letter: 4 of 4, errors 0 | recomputed: 4 of 4 with errors=0
+          source: results/sign4_128f_std_2atoms_aup1.txt
+          how:    'RESULT check' lines
+PASS    N=2: every log is of the atom build of the letter  (info)
+          letter: 52552021 | recomputed: 52552021
+          source: results/sign4_128f_std_2atoms_aup1.txt
+          how:    'ids=' of the header line
+PASS    N=4: 4 keys and messages, public key and 17,088-byte signature identical, one NIST signature
+          letter: 4 identical, 1 NIST, 0 failed | recomputed: 4 identical, 1 NIST, 0 failed
+          source: results/check_sign4_128f_std_4atoms_aup1_fips205.txt
+          how:    output of the independent check (software/check_sign_fips205.py) on the signatures in results/sign4_128f_std_4atoms_aup1.txt
+PASS    N=4: board program's own checks (software signature equal, verify accepts, 6 flipped signatures and a wrong message rejected)
+          letter: 4 of 4, errors 0 | recomputed: 4 of 4 with errors=0
+          source: results/sign4_128f_std_4atoms_aup1.txt
+          how:    'RESULT check' lines
+PASS    N=4: every log is of the atom build of the letter  (info)
+          letter: 52552021 | recomputed: 52552021
+          source: results/sign4_128f_std_4atoms_aup1.txt
+          how:    'ids=' of the header line
+PASS    firmware authentication: tampered image and flipped signature rejected
+          letter: rejected | recomputed: tampered=true flipped=true errors=0
+          source: results/sign4_128f_fw_1atoms_aup1.txt
+          how:    'RESULT check' line
+PASS    firmware image size (1 MiB)
+          letter: 1,048,576 bytes | recomputed: 1048576
+          source: results/sign4_128f_fw_1atoms_aup1.txt
+          how:    'KEY' line, image_len
+PASS    width changes of atoms between jobs
+          letter: 116 | recomputed: 116
+          source: results/atom_tenants_n4_400_aup1.txt
+          how:    'RESULT tenants reform' line, width_changes
+PASS    of which to the split state / back
+          letter: 57 / 59 | recomputed: 57 / 59 (sum 116)
+          source: results/atom_tenants_n4_400_aup1.txt
+          how:    wide_to_split / split_to_wide; their sum must equal width_changes
+PASS    wrong digests across the width changes
+          letter: 0 | recomputed: 0
+          source: results/atom_tenants_n4_400_aup1.txt
+          how:    mismatches
+PASS    setting width, round range and window: five register writes
+          letter: 151 ns | recomputed: 151 ns
+          source: results/atom_tenants_n4_400_aup1.txt
+          how:    shape_ns_per_atom
+PASS    that run is of the atom build of the letter  (info)
+          letter: 52552021 | recomputed: 52552021
+          source: results/atom_tenants_n4_400_aup1.txt
+          how:    'ids=' of the header line
+PASS    splittable build on the board: digests and chains against software
+          letter: 0 mismatches | recomputed: 0 mismatches
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    sum of 'mismatches=' over the hash_check and chain_check lines
+PASS    fixed 1x1600 build on the board: digests and chains against software
+          letter: 0 mismatches | recomputed: 0 mismatches
+          source: results/fixcheck_fix2w_n1_450_aup1.txt
+          how:    sum of 'mismatches=' over the hash_check and chain_check lines
+PASS    fixed 2x800 build on the board: digests and chains against software
+          letter: 0 mismatches | recomputed: 0 mismatches
+          source: results/fixcheck_fix2n_n1_450_aup1.txt
+          how:    sum of 'mismatches=' over the hash_check and chain_check lines
+
+== 3. Hash-chain step and Amdahl's law
+PASS    chain step, shake256
+          letter: 59.7 ns | recomputed: 59.7126 ns
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    1100623 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
+FAIL    chain step, turboshake256
+          letter: 33.1 ns | recomputed: 33.0456 ns
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    609097 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
+PASS    chain step, minishake128 (per chain; two advance together)
+          letter: 18.4 ns | recomputed: 18.3792 ns
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    338765 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
+FAIL    gain of halving the rounds on a chain step
+          letter: 1.80x | recomputed: 1.80697x
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    59.713 / 33.046
+PASS    throughput gain of the split on a chain step
+          letter: 1.80x | recomputed: 1.79799x
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    33.046 / 18.379
+PASS    clocks per SHAKE256 chain step
+          letter: 26.9 | recomputed: 26.8707
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    59.713 ns x 450 MHz
+PASS    share of a chain step spent in rounds, f
+          letter: 0.89 | recomputed: 0.89317
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    24 / 26.871
+PASS    Amdahl's law for the chain step
+          letter: 1.81x | recomputed: 1.80696x
+          source: results/fixcheck_rt_n1_450_aup1.txt
+          how:    1 / ((1 - f) + f / 2), f = 0.8932
+PASS    fixed-width build gives the same chain-step time, shake256
+          letter: same (59.713 ns) | recomputed: 59.713 ns
+          source: results/fixcheck_fix2w_n1_450_aup1.txt
+          how:    1100624 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
+PASS    fixed-width build gives the same chain-step time, turboshake256
+          letter: same (33.046 ns) | recomputed: 33.046 ns
+          source: results/fixcheck_fix2w_n1_450_aup1.txt
+          how:    609103 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
+PASS    fixed-width build gives the same chain-step time, minishake128
+          letter: same (18.379 ns) | recomputed: 18.379 ns
+          source: results/fixcheck_fix2n_n1_450_aup1.txt
+          how:    338761 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
+
+== 4. Table I
+PASS    Key generation, SHAKE256, N=1
+          letter: 0.41 ms | recomputed: 0.41020 ms
+          source: results/sign4_128f_std_1atoms_aup1.txt
+          how:    'RESULT time v=1 op=keygen' median_ms (n=25)
+PASS    Key generation, SHAKE256, N=2
+          letter: 0.27 ms | recomputed: 0.26860 ms
+          source: results/sign4_128f_std_2atoms_aup1.txt
+          how:    'RESULT time v=1 op=keygen' median_ms (n=25)
+PASS    Key generation, SHAKE256, N=4
+          letter: 0.21 ms | recomputed: 0.20520 ms
+          source: results/sign4_128f_std_4atoms_aup1.txt
+          how:    'RESULT time v=1 op=keygen' median_ms (n=25)
+PASS    Sign, SHAKE256, N=1
+          letter: 9.78 ms | recomputed: 9.77890 ms
+          source: results/sign4_128f_std_1atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    Sign, SHAKE256, N=2
+          letter: 5.56 ms | recomputed: 5.55610 ms
+          source: results/sign4_128f_std_2atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    Sign, SHAKE256, N=4
+          letter: 3.68 ms | recomputed: 3.68330 ms
+          source: results/sign4_128f_std_4atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    Verify, SHAKE256, N=1
+          letter: 1.02 ms | recomputed: 1.02130 ms
+          source: results/sign4_128f_std_1atoms_aup1.txt
+          how:    'RESULT time v=1 op=verify' median_ms (n=25)
+PASS    Verify, SHAKE256, N=2
+          letter: 1.00 ms | recomputed: 0.99720 ms
+          source: results/sign4_128f_std_2atoms_aup1.txt
+          how:    'RESULT time v=1 op=verify' median_ms (n=25)
+PASS    Verify, SHAKE256, N=4
+          letter: 1.24 ms | recomputed: 1.23580 ms
+          source: results/sign4_128f_std_4atoms_aup1.txt
+          how:    'RESULT time v=1 op=verify' median_ms (n=25)
+PASS    Firmware authentication, SHAKE256, N=1
+          letter: 1.90 ms | recomputed: 1.89680 ms
+          source: results/sign4_128f_fw_1atoms_aup1.txt
+          how:    'RESULT time v=fw op=verifier_total' median_ms (n=25)
+PASS    Firmware authentication, SHAKE256, N=2
+          letter: 1.90 ms | recomputed: 1.89560 ms
+          source: results/sign4_128f_fw_2atoms_aup1.txt
+          how:    'RESULT time v=fw op=verifier_total' median_ms (n=25)
+PASS    Firmware authentication, SHAKE256, N=4
+          letter: 2.18 ms | recomputed: 2.17570 ms
+          source: results/sign4_128f_fw_4atoms_aup1.txt
+          how:    'RESULT time v=fw op=verifier_total' median_ms (n=25)
+PASS    Sign, TurboSHAKE256, N=1
+          letter: 6.81 ms | recomputed: 6.80660 ms
+          source: results/sign4_128f_turbo_NONSTANDARD_1atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    Sign, TurboSHAKE256, N=2
+          letter: 3.97 ms | recomputed: 3.96570 ms
+          source: results/sign4_128f_turbo_NONSTANDARD_2atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    Sign, TurboSHAKE256, N=4
+          letter: 3.00 ms | recomputed: 3.00190 ms
+          source: results/sign4_128f_turbo_NONSTANDARD_4atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    Sign, MiniSHAKE128 split, N=1
+          letter: 5.41 ms | recomputed: 5.41120 ms
+          source: results/sign4_128f_mini_NONSTANDARD_1atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    Sign, MiniSHAKE128 split, N=2
+          letter: 3.51 ms | recomputed: 3.50970 ms
+          source: results/sign4_128f_mini_NONSTANDARD_2atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    Sign, MiniSHAKE128 split, N=4
+          letter: 3.12 ms | recomputed: 3.11680 ms
+          source: results/sign4_128f_mini_NONSTANDARD_4atoms_aup1.txt
+          how:    'RESULT time v=1 op=sign' median_ms (n=25)
+PASS    KangarooTwelve, 16 MiB, N=1
+          letter: 7.68 ms | recomputed: 7.67919 ms
+          source: results/modes_kt_1atoms_aup1.txt
+          how:    'RESULT kt mlen=16777216 atoms=1' median_us / 1000 (n=25, mismatches=0)
+PASS    Merkle tree, 2^16 leaves, MiniSHAKE128 split, N=1
+          letter: 6.28 ms | recomputed: 6.28249 ms
+          source: results/modes_merkle_1atoms_aup1.txt
+          how:    'RESULT merkle k=16 mode=minishake128_split...' median_us / 1000
+PASS    KangarooTwelve, 16 MiB, N=2
+          letter: 7.04 ms | recomputed: 7.03619 ms
+          source: results/modes_kt_2atoms_aup1.txt
+          how:    'RESULT kt mlen=16777216 atoms=2' median_us / 1000 (n=25, mismatches=0)
+PASS    Merkle tree, 2^16 leaves, MiniSHAKE128 split, N=2
+          letter: 3.96 ms | recomputed: 3.95854 ms
+          source: results/modes_merkle_2atoms_aup1.txt
+          how:    'RESULT merkle k=16 mode=minishake128_split...' median_us / 1000
+PASS    KangarooTwelve, 16 MiB, N=4
+          letter: 7.04 ms | recomputed: 7.03762 ms
+          source: results/modes_kt_4atoms_aup1.txt
+          how:    'RESULT kt mlen=16777216 atoms=4' median_us / 1000 (n=25, mismatches=0)
+PASS    Merkle tree, 2^16 leaves, MiniSHAKE128 split, N=4
+          letter: 3.92 ms | recomputed: 3.91613 ms
+          source: results/modes_merkle_4atoms_aup1.txt
+          how:    'RESULT merkle k=16 mode=minishake128_split...' median_us / 1000
+MISSING the 25 individual run times behind each Table I median
+          letter: 25 times per cell | recomputed: not logged
+          source: results/sign4_*, results/modes_*
+          how:    the board programs print n, min, quartiles, median and max of each cell, not the 25 times, so a median cannot be recomputed from individual runs; every Table I check above compares the letter with the median the board program printed (files with sample lists: board_chain_v23_n8_450_aup2.txt)
+
+== 5. Gains and limits
+PASS    measured gain of a TurboSHAKE256 signature over SHAKE256, N=1
+          letter: 1.44x | recomputed: 1.43668x
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    9.7789 / 6.8066
+PASS    measured gain of a TurboSHAKE256 signature over SHAKE256, N=2
+          letter: 1.40x | recomputed: 1.40104x
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    5.5561 / 3.9657
+PASS    measured gain of a TurboSHAKE256 signature over SHAKE256, N=4
+          letter: 1.23x | recomputed: 1.22699x
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    3.6833 / 3.0019
+PASS    profiling run, N=1: processor layout
+          letter: 2.18 ms | recomputed: 2.18180 ms
+          source: results/sign_128f_1atoms_aup1.txt
+          how:    'RESULT breakdown v=1 op=sign' processor_layout_total_ms
+PASS    profiling run, N=1: signature time
+          letter: 9.61 ms | recomputed: 9.60930 ms
+          source: results/sign_128f_1atoms_aup1.txt
+          how:    same line, mean_total_ms
+PASS    share of a signature spent in rounds, f, N=1
+          letter: 0.69 | recomputed: 0.69037
+          source: results/sign_128f_1atoms_aup1.txt
+          how:    0.8932 x (1 - 2.1818 / 9.6093)
+PASS    Amdahl's law for the TurboSHAKE256 signature, N=1
+          letter: 1.53x | recomputed: 1.52715x
+          source: results/sign_128f_1atoms_aup1.txt
+          how:    1 / ((1 - f) + f / 2), f = 0.6904
+PASS    profiling run, N=2: processor layout
+          letter: 2.23 ms | recomputed: 2.22680 ms
+          source: results/sign_128f_2atoms_aup1.txt
+          how:    'RESULT breakdown v=1 op=sign' processor_layout_total_ms
+PASS    profiling run, N=2: signature time
+          letter: 5.55 ms | recomputed: 5.55310 ms
+          source: results/sign_128f_2atoms_aup1.txt
+          how:    same line, mean_total_ms
+PASS    share of a signature spent in rounds, f, N=2
+          letter: 0.54 | recomputed: 0.53501
+          source: results/sign_128f_2atoms_aup1.txt
+          how:    0.8932 x (1 - 2.2268 / 5.5531)
+PASS    Amdahl's law for the TurboSHAKE256 signature, N=2
+          letter: 1.37x | recomputed: 1.36519x
+          source: results/sign_128f_2atoms_aup1.txt
+          how:    1 / ((1 - f) + f / 2), f = 0.5350
+PASS    profiling run, N=4: processor layout
+          letter: 2.27 ms | recomputed: 2.26550 ms
+          source: results/sign_128f_4atoms_aup1.txt
+          how:    'RESULT breakdown v=1 op=sign' processor_layout_total_ms
+PASS    profiling run, N=4: signature time
+          letter: 3.62 ms | recomputed: 3.61720 ms
+          source: results/sign_128f_4atoms_aup1.txt
+          how:    same line, mean_total_ms
+PASS    share of a signature spent in rounds, f, N=4
+          letter: 0.33 | recomputed: 0.33376
+          source: results/sign_128f_4atoms_aup1.txt
+          how:    0.8932 x (1 - 2.2655 / 3.6172)
+PASS    Amdahl's law for the TurboSHAKE256 signature, N=4
+          letter: 1.20x | recomputed: 1.20031x
+          source: results/sign_128f_4atoms_aup1.txt
+          how:    1 / ((1 - f) + f / 2), f = 0.3338
+PASS    split signature over TurboSHAKE256, one atom
+          letter: 1.26x | recomputed: 1.25787x
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    6.8066 / 5.4112
+PASS    TurboSHAKE256 faster than the split signature on four atoms
+          letter: 4% | recomputed: 3.828%
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    100 x (3.1168 / 3.0019 - 1)
+PASS    one split atom beats two standard atoms
+          letter: 5.41 < 5.56 ms | recomputed: 5.4112 < 5.5561 ms
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    N=1 MiniSHAKE128 sign against N=2 SHAKE256 sign
+PASS    one atom signs in (million clocks of wall time)
+          letter: 4.40 M | recomputed: 4.40050 M
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    9.7789 ms x 450 MHz
+PASS    clocks of wall time per hash call, one atom
+          letter: 42 | recomputed: 41.939
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    4400505 clocks / 104,926 hash calls (call count of SLH-DSA-128f as published by Saarinen)
+PASS    LUTs x signing time: Sun et al. ahead of one atom by
+          letter: 5.8x | recomputed: 5.8056x
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    (10,006 LUTs x 9.7789 ms) / (64,084 LUTs x 0.263 ms as published)
+PASS    signing fit t(N) = tp + (ta/N)(450/F_N) reproduces the measured times to within
+          letter: 8% | recomputed: 7.75% worst
+          source: results/sign4_128f_{std,turbo,mini}_*atoms_aup1.txt
+          how:    least squares on N = 1, 2, 4 for SHAKE256, TurboSHAKE256 and MiniSHAKE128; largest |fit - measured| / measured
+PASS    verification batches, N=1
+          letter: 119 | recomputed: 119.000
+          source: results/sign4_128f_std_1atoms_aup1.txt
+          how:    'RESULT breakdown v=1 op=verify' mean_batches
+PASS    verification batches, N=4
+          letter: 206 | recomputed: 206.000
+          source: results/sign4_128f_std_4atoms_aup1.txt
+          how:    'RESULT breakdown v=1 op=verify' mean_batches
+PASS    verification on two of the four atoms
+          letter: 1.02 ms | recomputed: 1.01530 ms
+          source: results/sign4_128f_std_4atoms_aup1.txt
+          how:    'RESULT time v=1 op=verify_on_2_of_4_atoms' median_ms
+FAIL    call layout within the 3.68 ms standard signature at N=4
+          letter: 2.27 ms | recomputed: 2.3478 ms in the run that gives 3.68 ms
+          source: results/sign4_128f_std_4atoms_aup1.txt
+          how:    'RESULT breakdown v=1 op=sign' processor_layout_total_ms. The letter's 2.27 ms is the layout of the separate profiling run (results/sign_128f_4atoms_aup1.txt: 2.2655 ms of 3.62 ms); it is printed next to the 3.68 ms of another run
+FAIL    processor layout within the 3.12 ms split signature at N=4
+          letter: 2.65 ms | recomputed: 2.7318 ms in the run that gives 3.12 ms
+          source: results/sign4_128f_mini_NONSTANDARD_4atoms_aup1.txt
+          how:    'RESULT breakdown v=1 op=sign' processor_layout_total_ms; other run: sign3_128f_mini_NONSTANDARD_word_4atoms_aup1.txt: 2.7371 ms layout, median 3.1337 ms
+PASS    two tenants slow each other by at most
+          letter: 1.7% | recomputed: 1.7100%
+          source: results/sign4_128f_tenants_4atoms_aup1.txt
+          how:    largest of S_ratio and T_ratio over the three splits, minus 1 (medians of n=25, shared / alone)
+PASS    of the 1.90 ms firmware authentication, hashing 1 MiB
+          letter: 0.88 ms | recomputed: 0.87860 ms
+          source: results/sign4_128f_fw_1atoms_aup1.txt
+          how:    'RESULT time v=fw op=verifier_hash_1MB' median_ms
+PASS    KangarooTwelve on one atom
+          letter: 17.5 Gb/s | recomputed: 17.4781 Gb/s
+          source: results/modes_kt_*atoms_aup1.txt
+          how:    16,777,216 bytes x 8 / 7.6792 ms
+PASS    KangarooTwelve on two or four atoms
+          letter: 19.1 Gb/s | recomputed: 19.0753 Gb/s
+          source: results/modes_kt_*atoms_aup1.txt
+          how:    16,777,216 bytes x 8 / 7.0362 ms
+PASS    the same on four atoms
+          letter: 19.1 Gb/s | recomputed: 19.0715 Gb/s
+          source: results/modes_kt_*atoms_aup1.txt
+          how:    16,777,216 bytes x 8 / 7.0376 ms
+PASS    memory port: 64 bits at the bus clock
+          letter: 19.2 Gb/s | recomputed: 19.2000 Gb/s
+          source: synthesis/reports/atom_v3_n1_m16_300_450/route_timing.rpt
+          how:    64 bits x 300 MHz
+PASS    share of the port on two atoms
+          letter: 99% | recomputed: 99.351%
+          source: results/modes_kt_*atoms_aup1.txt
+          how:    19.075 / 19.2
+PASS    processor busy during KangarooTwelve
+          letter: 0.2% | recomputed: 0.2000%
+          source: results/modes_kt_*atoms_aup1.txt
+          how:    'RESULT kt mlen=16777216 atoms=2' proc_share
+PASS    RFC 9861 KangarooTwelve vectors reproduced on the 1-atom build
+          letter: 18 | recomputed: 1 atom(s): 18
+          source: results/modes_kt_1atoms_aup1.txt
+          how:    'RESULT ktvec' lines with sw_ok=true and atoms_ok=true, distinct idx, for each number of atoms used
+PASS    RFC 9861 KangarooTwelve vectors reproduced on the 2-atom build
+          letter: 18 | recomputed: 1 atom(s): 18 2 atom(s): 18
+          source: results/modes_kt_2atoms_aup1.txt
+          how:    'RESULT ktvec' lines with sw_ok=true and atoms_ok=true, distinct idx, for each number of atoms used
+PASS    RFC 9861 KangarooTwelve vectors reproduced on the 4-atom build
+          letter: 18 | recomputed: 1 atom(s): 18 2 atom(s): 18 4 atom(s): 18
+          source: results/modes_kt_4atoms_aup1.txt
+          how:    'RESULT ktvec' lines with sw_ok=true and atoms_ok=true, distinct idx, for each number of atoms used
+PASS    KangarooTwelve on the four Cortex-A53 cores of the board
+          letter: 5.4 Gb/s | recomputed: 5.4262 Gb/s
+          source: results/modes_sw_a53_aup1.txt
+          how:    'RESULT swkt mlen=16777216 threads=4': 16,777,216 x 8 / median_us
+PASS    four atoms over four cores
+          letter: 3.5x | recomputed: 3.5147x
+          source: results/modes_kt_*atoms_aup1.txt, results/modes_sw_a53_aup1.txt
+          how:    19.071 / 5.426
+PASS    KangarooTwelve on four atoms over one flat TurboSHAKE128 sponge
+          letter: 1.21x | recomputed: 1.20873x
+          source: results/modes_kt_4atoms_aup1.txt
+          how:    8.5066 ms / 7.0376 ms
+PASS    and over flat SHAKE128
+          letter: 1.63x | recomputed: 1.63208x
+          source: results/modes_kt_4atoms_aup1.txt
+          how:    11.4860 ms / 7.0376 ms
+PASS    Merkle tree: split over TurboSHAKE128 on the wide atom, N=1
+          letter: 1.35x | recomputed: 1.34769x
+          source: results/modes_merkle_*atoms_aup1.txt
+          how:    8.4669 / 6.2825 ms
+PASS    Merkle tree: split over TurboSHAKE128 on the wide atom, N=2
+          letter: 1.16x | recomputed: 1.15612x
+          source: results/modes_merkle_*atoms_aup1.txt
+          how:    4.5765 / 3.9585 ms
+PASS    Merkle tree: split over TurboSHAKE128 on the wide atom, N=4
+          letter: 1.01x | recomputed: 1.01118x
+          source: results/modes_merkle_*atoms_aup1.txt
+          how:    3.9599 / 3.9161 ms
+FAIL    at N=4 all three functions reach 33 million hashes per second
+          letter: 33, 33, 33 | recomputed: 33.47 (MiniSHAKE128), 33.10 (TurboSHAKE128), 31.76 (SHAKE128)
+          source: results/modes_merkle_4atoms_aup1.txt
+          how:    'RESULT merkle k=16 ... atoms=4' Mhash_per_s of each of the three modes
+PASS    interleaving the leaf values for the split layout
+          letter: 1.7 ms | recomputed: 1.7141 ms
+          source: results/modes_merkle_1atoms_aup1.txt
+          how:    'RESULT merkle k=16 mode=minishake128...' layout_pack_us / 1000
+PASS    with the interleave counted, the split wins only at N=1
+          letter: N=1 only | recomputed: split wins at N=[1]
+          source: results/modes_merkle_*atoms_aup1.txt
+          how:    e2e_with_layout_us of the split tree against the TurboSHAKE128 tree: N=1 8.217 vs 8.714 ms, N=2 6.052 vs 4.796 ms, N=4 5.764 vs 4.180 ms
+PASS    the designers' C code builds the tree on four Cortex-A53 cores in
+          letter: 33.5 ms | recomputed: 33.5053 ms
+          source: results/modes_xkcp_sw_a53_aup1.txt
+          how:    'RESULT xkcpmerkle k=16 alg=minishake128 threads=4' median_us / 1000
+FAIL    that is behind four atoms by
+          letter: 8.5x | recomputed: 8.5557x
+          source: results/modes_xkcp_sw_a53_aup1.txt, results/modes_merkle_*atoms_aup1.txt
+          how:    33.505 / 3.9161 ms
+PASS    in that code the narrow state takes this share of the 1600-bit time
+          letter: 0.97 | recomputed: 0.97156
+          source: results/modes_xkcp_sw_a53_aup1.txt
+          how:    133.741 / 137.656 ms, one core
+PASS    the law's forecast for the tree, as filed before the run
+          letter: 1.25, 1.10, 1.00 | recomputed: 1.25, 1.10, 1.00
+          source: results/forecast_modes_2026-11-26.txt
+          how:    section 5 of the forecast file, lines 'N = 1/2/4: ... G ='
+PASS    Amdahl's law predicts the gains of a chain, a signature and a tree to within
+          letter: 8% | recomputed: 7.25% worst (tree N=1: law 1.250, measured 1.348)
+          source: the checks above
+          how:    largest |law - measured| / measured over: chain step 1.807 vs 1.807; signature N=1 1.527 vs 1.437; signature N=2 1.365 vs 1.401; signature N=4 1.200 vs 1.227; tree N=1 1.250 vs 1.348; tree N=2 1.100 vs 1.156; tree N=4 1.000 vs 1.011
+PASS    Karl et al.: cycles per hash call  (info)
+          letter: 406 | recomputed: 406.000
+          source: published values (not in this repository)
+          how:    42.6 million cycles / 104,926 calls
+PASS    the law for that share  (info)
+          letter: 3.0% | recomputed: 3.0457%
+          source: published values (not in this repository)
+          how:    f = 24 / 406; 1 / ((1 - f) + f / 2) - 1
+
+== 6. Model and forecasts
+PASS    board times the simulator is compared with are the logged ones (36 with copy)
+          letter: 36 equal | recomputed: 36 runs read, all equal to model/sim/dfg_sim.py
+          source: results/atom_dfg_n{4_400,2_420}_aup1.txt
+          how:    field ms= (best of 7) of every 'RESULT dfg mix=' line
+PASS    and the 10 no-copy rows
+          letter: 10 equal | recomputed: 10 rows read, all equal to model/sim/dfg_sim_gem5.py
+          source: results/atom_dfg2_nocopy_n{4_400,2_420}_aup1.txt
+          how:    section 'mode no_copy=true', policy graph+rule
+PASS    gem5 processor costs used by the simulator are the output of the frozen gem5 run
+          letter: 10 routines equal | recomputed: 10 of 10 equal
+          source: model/gem5_atom/calib/r4_pflat4.txt against model/sim/gem5_costs.json
+          how:    mean_ns of each 'COST' line
+PASS    cache-flush costs used by the simulator are board measurements
+          letter: 7 routines equal | recomputed: 7 of 7 equal
+          source: results/cost_native_a53_aup1.txt - results/cost_native_a53_noflush_aup1.txt
+          how:    mean_ns with flush minus mean_ns without
+PASS    number of board runs the simulator is checked on
+          letter: 46 | recomputed: 46
+          source: results/atom_dfg_n{4_400,2_420}_aup1.txt and the no-copy logs
+          how:    36 with copy + 10 without
+PASS    simulator against the board, mean error
+          letter: 4.9% | recomputed: 4.8972%
+          source: model/sim/dfg_sim_gem5.py run on the logged board times
+          how:    mean |simulated - board| / board over the 46 runs; 36 runs 4.92%, 10 runs 4.83%
+PASS    simulator against the board, worst error
+          letter: 9.5% | recomputed: 9.4769%
+          source: model/sim/dfg_sim_gem5.py run on the logged board times
+          how:    largest |simulated - board| / board over the 46 runs
+PASS    reading in place made mixed jobs faster on the board by
+          letter: 31 to 43% | recomputed: 30.6 to 43.1%
+          source: results/atom_dfg2_nocopy_n4_400_aup1.txt
+          how:    four atoms, policy graph+rule, same run: (with copy - no copy) / with copy over the five mixed jobs: 30.6, 39.4, 41.7, 42.1, 43.1
+PASS    scheduler designs ranked by the model
+          letter: 13 | recomputed: 13
+          source: model/sim/design_ranking.txt
+          how:    distinct design names in the ranking
+PASS    deriving the secret inside the chain step would save
+          letter: 2 to 6% | recomputed: 2.0 to 6.1%
+          source: model/sim/design_ranking.txt
+          how:    rows 'secrets+chains as one hardware node' over the job mixes
+PASS    the simulator's forecast of the split signature failed, optimistically, by
+          letter: 26 to 77% | recomputed: 25.9 to 77.4%
+          source: results/forecast_sign3_split_layout_2026-11-26.txt against results/sign3_128f_{mini,hybrid}_NONSTANDARD_word_*atoms_aup1.txt
+          how:    measured median / forecast - 1 for the six rows: +25.9, +35.7, +74.1, +30.7, +36.8, +77.4
+PASS    forecast file older than the first log of its run: forecast_modes_2026-11-26.txt  (info)
+          letter: forecast first | recomputed: 2026-11-27T03:23:23Z < 2026-11-27T03:51:02Z
+          source: MANIFEST.sha256
+          how:    modification times (UTC) recorded when the release was staged: results/forecast_modes_2026-11-26.txt against results/modes_kt_1atoms_aup1.txt
+PASS    forecast file older than the first log of its run: forecast_modes_2026-11-26.txt  (info)
+          letter: forecast first | recomputed: 2026-11-27T03:23:23Z < 2026-11-27T03:51:04Z
+          source: MANIFEST.sha256
+          how:    modification times (UTC) recorded when the release was staged: results/forecast_modes_2026-11-26.txt against results/modes_merkle_1atoms_aup1.txt
+PASS    forecast file older than the first log of its run: forecast_sign3_split_layout_2026-11-26.txt  (info)
+          letter: forecast first | recomputed: 2026-11-27T00:56:41Z < 2026-11-27T01:16:40Z
+          source: MANIFEST.sha256
+          how:    modification times (UTC) recorded when the release was staged: results/forecast_sign3_split_layout_2026-11-26.txt against results/sign3_128f_mini_NONSTANDARD_word_1atoms_aup1.txt
+PASS    forecast file older than the first log of its run: forecast_sign_2026-11-26.txt  (info)
+          letter: forecast first | recomputed: 2026-11-27T00:23:06Z < 2026-11-27T00:33:11Z
+          source: MANIFEST.sha256
+          how:    modification times (UTC) recorded when the release was staged: results/forecast_sign_2026-11-26.txt against results/sign_128f_1atoms_aup1.txt
+
+== Summary
+mandatory checks: 129   PASS 121   FAIL 6   MISSING 2
+informational checks: 13   PASS 13   other 0
+
+Discrepancies:
+  MISSING  3,411 NIST and RFC vectors pass on the atom build of the letter (id 52552021)
+      letter: 3,411, 0 mismatches | recomputed: no vector run of build id 52552021
+      source: results/*kat*
+      vector logs in the repository: atom_kat_v1_n1_350_aup1.txt: build id 5255201e, 3411 vectors, 0 mismatches; board_kat_nist_600.txt: build id 52552012, 3391 vectors, 9 mismatches; board_kat_rfc9861_600.txt: build id 52552012, 29 vectors, 0 mismatches; board_kat_v22_n1_600_aup2.txt: build id 52552016, 3411 vectors, 0 mismatches. The 3,411-vector run with 0 mismatches is of an EARLIER atom build, not of the build that produced the letter's measurements
+  FAIL  chain step, turboshake256
+      letter: 33.1 ns | recomputed: 33.0456 ns
+      source: results/fixcheck_rt_n1_450_aup1.txt
+      609097 bus clocks / (4096 chains x 15 steps) / 300 MHz, best of 7
+  FAIL  gain of halving the rounds on a chain step
+      letter: 1.80x | recomputed: 1.80697x
+      source: results/fixcheck_rt_n1_450_aup1.txt
+      59.713 / 33.046
+  MISSING  the 25 individual run times behind each Table I median
+      letter: 25 times per cell | recomputed: not logged
+      source: results/sign4_*, results/modes_*
+      the board programs print n, min, quartiles, median and max of each cell, not the 25 times, so a median cannot be recomputed from individual runs; every Table I check above compares the letter with the median the board program printed (files with sample lists: board_chain_v23_n8_450_aup2.txt)
+  FAIL  call layout within the 3.68 ms standard signature at N=4
+      letter: 2.27 ms | recomputed: 2.3478 ms in the run that gives 3.68 ms
+      source: results/sign4_128f_std_4atoms_aup1.txt
+      'RESULT breakdown v=1 op=sign' processor_layout_total_ms. The letter's 2.27 ms is the layout of the separate profiling run (results/sign_128f_4atoms_aup1.txt: 2.2655 ms of 3.62 ms); it is printed next to the 3.68 ms of another run
+  FAIL  processor layout within the 3.12 ms split signature at N=4
+      letter: 2.65 ms | recomputed: 2.7318 ms in the run that gives 3.12 ms
+      source: results/sign4_128f_mini_NONSTANDARD_4atoms_aup1.txt
+      'RESULT breakdown v=1 op=sign' processor_layout_total_ms; other run: sign3_128f_mini_NONSTANDARD_word_4atoms_aup1.txt: 2.7371 ms layout, median 3.1337 ms
+  FAIL  at N=4 all three functions reach 33 million hashes per second
+      letter: 33, 33, 33 | recomputed: 33.47 (MiniSHAKE128), 33.10 (TurboSHAKE128), 31.76 (SHAKE128)
+      source: results/modes_merkle_4atoms_aup1.txt
+      'RESULT merkle k=16 ... atoms=4' Mhash_per_s of each of the three modes
+  FAIL  that is behind four atoms by
+      letter: 8.5x | recomputed: 8.5557x
+      source: results/modes_xkcp_sw_a53_aup1.txt, results/modes_merkle_*atoms_aup1.txt
+      33.505 / 3.9161 ms
+
+Not covered by this script (no log in the repository can decide them): the count of 754 one-bit multiplexers (10, 712, 32), which is a property of rtl/atom/atom_seq3.v;
+the figures of other authors (SLotH, SPHINCSLET, Trident, Sun et al., Karl et al., the Keccak team's desktop figures), which are quoted from their papers.

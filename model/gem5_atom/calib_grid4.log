@@ -1,0 +1,9 @@
+15:31:38 done r4_pflat4: --cpu hpi --l1pf 2 --l1lat 1 --pflat 4
+15:31:38 done r4_l1resp2: --cpu hpi --l1pf 2 --l1lat 1 --l1resp 2
+15:31:39 done r4_hpicache: --cpu hpi --l1pf 2 --l1lat 1 --l2lat 13 --l2resp 5 --l1mshr 4 --l2mshr 4 --wb 4 --pfq 4
+15:31:39 done r4_l2lat14: --cpu hpi --l1pf 2 --l1lat 1 --l2lat 14
+15:31:40 done r4_l1mshr4: --cpu hpi --l1pf 2 --l1lat 1 --l1mshr 4
+15:31:40 done r4_l2resp5: --cpu hpi --l1pf 2 --l1lat 1 --l2resp 5
+15:31:40 done r4_pfmiss: --cpu hpi --l1pf 2 --l1lat 1 --pfmiss 1
+15:31:41 done r4_l2lat14_r5_m4: --cpu hpi --l1pf 2 --l1lat 1 --l2lat 14 --l2resp 5 --l1mshr 4
+ALL_DONE

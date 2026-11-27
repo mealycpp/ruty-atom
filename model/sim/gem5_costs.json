@@ -1,0 +1,41 @@
+{
+ "_note": "ns. board = real Cortex-A53 (aup1), no flush, mean of 40 (results/cost_native_a53_noflush_aup1.txt). gem5 = FROZEN model r4_pflat4 (--cpu hpi --l1pf 2 --l1lat 1 --pflat 4), mean of 3 (gem5_atom/calib/r4_pflat4.txt; see gem5_atom/FROZEN_MODEL.md). flush_board_routine = board with-flush minus board no-flush mean per routine (results/cost_native_a53_aup1.txt). flush_board_streams_only = tag collect flush scaled by bytes (38.4/240 x 28.5 us), no flush on tree nodes.",
+ "board": {
+  "fill_secrets_280": 13698,
+  "fill_chains_280": 12962,
+  "fill_compress_8": 2503,
+  "fill_level_4": 366,
+  "collect_280": 1621,
+  "collect_8": 128,
+  "tags_copy_240kB": 156820,
+  "tags_collect_38kB": 8878,
+  "firmware_copy_1MB": 659018,
+  "poll_1000_reads": 2572
+ },
+ "gem5": {
+  "fill_secrets_280": 15480,
+  "fill_chains_280": 13654,
+  "fill_compress_8": 3157,
+  "fill_level_4": 421,
+  "collect_280": 1785,
+  "collect_8": 126,
+  "tags_copy_240kB": 124272,
+  "tags_collect_38kB": 9395,
+  "firmware_copy_1MB": 646466,
+  "poll_1000_reads": 3402
+ },
+ "flush_240kB_ns": 28500,
+ "flush_1MB_ns": 124600,
+ "flush_board_routine": {
+  "fill_secrets_280": 1538,
+  "fill_chains_280": 2772,
+  "fill_compress_8": 1932,
+  "fill_level_4": 195,
+  "collect_280": 1723,
+  "collect_8": 280,
+  "tags_collect_38kB": 22435
+ },
+ "flush_board_streams_only": {
+  "tags_collect_38kB": 4560
+ }
+}

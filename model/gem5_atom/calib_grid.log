@@ -1,0 +1,9 @@
+15:08:08 done o3_pf8: --cpu o3 --l1pf 8 --l2pf 8 --l2lat 6
+15:08:20 done base: 
+15:08:22 done pf_l1_4: --l1pf 4
+15:08:27 done pf8_simple20: --l1pf 8 --l2pf 8 --l2lat 6 --mem simple --memlat 20ns
+15:08:28 done pf8_l2lat6_13: --l1pf 8 --l2pf 8 --l2lat 6 --clock 1.333GHz
+15:08:29 done pf_l1_8_l2_8: --l1pf 8 --l2pf 8
+15:08:29 done pf8_l2lat6: --l1pf 8 --l2pf 8 --l2lat 6
+15:08:34 done hpi_pf8: --cpu hpi --l1pf 8 --l2pf 8 --l2lat 6
+ALL_DONE

@@ -24,7 +24,7 @@
 
 An embedded root of trust must now serve several Keccak hash families: SHAKE for the post-quantum standards, the 12-round TurboSHAKE
 for speed, and the narrow MiniSHAKE for many short messages. A hash core holds one state at a time, so a narrow state leaves half of
-its register idle. RUTY-ATOM does it with the register the root of trust already owns.
+its register idle. RUTY-ATOM puts that half to work, in the register the root of trust already owns.
 
 <p align="center"><img src="docs/img/split.png" alt="One 25-lane register as one Keccak-p[1600] state or as two Keccak-p[800] states, switched by one register write" width="100%"></p>
 
@@ -104,6 +104,7 @@ the time of every file as it stood on the author's disk.
 | `software/` | Rust scheduler and applications, C baselines, run scripts and the Python checks; earlier versions in `software/history/` |
 | `results/` | Unedited board logs and every forecast file |
 | `model/` | The event simulator and the gem5 processor calibration |
+| `reproduce/` | `check_claims.py`: recomputes the letter's numbers from the files above, one command |
 | `synthesis/` | Vivado build scripts, the one-line summary of every build, and post-route timing and utilisation reports |
 | `docs/` | The figures on this page and the scripts that draw them |
 | `LICENSES/`, `MANIFEST.sha256` | The licence texts, and the hash, size and original time of every file |
@@ -130,6 +131,57 @@ checks every output against a reference inside the program, and reloads the four
 **Independent checks, on any PC with Python 3.** `check_sign_fips205.py` compares keys and signatures with an independent FIPS 205
 implementation; `check_sign_variant2.py` and `check_modes2.py` recompute the non-standard variants, KangarooTwelve and the tree roots.
 Their outputs are the `check_*` files in `results/`.
+
+## Audit the letter in one command
+
+```
+git clone https://github.com/mealycpp/ruty-atom && cd ruty-atom
+python3 reproduce/check_claims.py
+```
+
+`reproduce/check_claims.py` needs Python 3.8 or later and nothing else. It reads only what is in this repository: the board logs in `results/`,
+the routed Vivado reports in `synthesis/reports/`, and the simulator in `model/`. No measured value is typed into the script; the only numbers
+it carries are the ones printed in the letter, which are what it tests. For each claim it prints the letter's value, the value recomputed
+from the raw file, the file, and the calculation, with one of three verdicts:
+
+| Verdict | Meaning |
+|---|---|
+| `PASS` | the recomputed value, rounded to the digits the letter prints, equals the letter's value |
+| `FAIL` | the evidence is there and gives a different value |
+| `MISSING` | the evidence the claim needs is not in the repository |
+
+The exit code is 0 only when every mandatory check passes. `reproduce/last_output.txt` is the output of the script on the commit that added it,
+including the open items it found.
+
+**What it covers.** LUTs, flip-flops and clocks of every build from the implementation reports; the hash-chain step from the hardware clock
+counter; every cell of Table I from the median the board program logged over its 25 runs; the gains, limits and comparisons derived from them;
+Amdahl's law with its measured share; the 116 width changes; the test vectors; the byte-identical FIPS 205 checks; the simulator re-run against
+the 46 logged board times; the forecast errors; and the order of forecast and run from the times in `MANIFEST.sha256`.
+
+**Tools and sources behind the files.**
+
+| What | Version |
+|---|---|
+| Implementation | Vivado v2022.2 (64-bit, build 3671981), device xczu3eg-sfvc784-2-e |
+| Board | AUP-ZU3, PYNQ Linux based on Ubuntu 22.04, kernel 6.6.10-xilinx-v2024.1; `rustc` 1.58.1, `gcc` 11.2.0, Python 3.10.4 |
+| Processor model | gem5 v26.0.0.0, commit `9d368896ce119c17e1289dcbb18f33624724b843`, `build/ARM/gem5.opt`, syscall-emulation mode |
+| Keccak team's permutation code | XKCP, commit `fa7033a212c831249b7e17e785ee1a4e24fc04c4` |
+| Independent checks on a PC | Python 3.12.10; `slh-dsa` 0.2.5 (FIPS 205); `pycryptodome` 4.6.0 (KangarooTwelve) |
+
+**Commands that produced the model files.** The gem5 run of the frozen processor model, whose output is `model/gem5_atom/calib/r4_pflat4.txt`
+(all 40 settings tried and their outputs are in `model/gem5_atom/FROZEN_MODEL.md` and `calib/`):
+
+```
+build/ARM/gem5.opt -d m5out model/gem5_atom/ruty_se2.py --cmd model/gem5_atom/ruty_cost_aarch64 \
+    --options "0 3" --cpu hpi --l1pf 2 --l1lat 1 --pflat 4
+```
+
+The same static binary (`software/ruty_cost.rs`) runs on the board; its outputs are `results/cost_native_a53*_aup1.txt`.
+The simulator with those costs and nothing fitted, against the logged board times:
+
+```
+python3 model/sim/dfg_sim_gem5.py
+```
 
 ## Every claim, and the file behind it
 

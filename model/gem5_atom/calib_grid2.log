@@ -1,0 +1,9 @@
+15:14:46 done r2_pf4_simple60: --l1pf 4 --l2pf 4 --mem simple --memlat 60ns
+15:14:46 done r2_pf1: --l1pf 1 --l2pf 1
+15:14:47 done r2_pf2: --l1pf 2 --l2pf 2
+15:14:48 done r2_pf3_l2lat9: --l1pf 3 --l2lat 9
+15:14:48 done r2_pf2_l2pf4: --l1pf 2 --l2pf 4
+15:14:48 done r2_pf4_16x4: --l1pf 4 --l2pf 4 --mem DDR4_2400_16x4
+15:14:48 done r2_pf2_16x4: --l1pf 2 --l2pf 2 --mem DDR4_2400_16x4
+15:14:49 done r2_pf2_l1only: --l1pf 2
+ALL_DONE

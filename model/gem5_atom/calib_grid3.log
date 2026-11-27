@@ -1,0 +1,9 @@
+15:18:39 done r3_minor_pf3_l1lat1: --cpu minor --l1pf 3 --l1lat 1
+15:18:39 done r3_minor_pf2_l1lat1: --cpu minor --l1pf 2 --l1lat 1
+15:18:50 done r3_hpi_pf2_l1lat1: --cpu hpi --l1pf 2 --l1lat 1
+15:18:57 done r3_hpi_pf2_wb16: --cpu hpi --l1pf 2 --wb 16
+15:18:58 done r3_hpi_pf3: --cpu hpi --l1pf 3
+15:18:59 done r3_hpi_pf2_l2pf1: --cpu hpi --l1pf 2 --l2pf 1
+15:19:00 done r3_hpi_pf2_l2lat9: --cpu hpi --l1pf 2 --l2lat 9
+15:19:00 done r3_hpi_pf2: --cpu hpi --l1pf 2
+ALL_DONE
